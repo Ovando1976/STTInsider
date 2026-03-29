@@ -4,6 +4,10 @@ import { useEffect, useMemo, useRef } from "react";
 import mapboxgl, { type GeoJSONSource } from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import estatesGeoJson from "@/data/usvi-estates-firestore.json";
+import {
+  hasRenderableEstateGeometry,
+  normalizeEstateGeometry,
+} from "@/lib/usvi/estate-geometry";
 
 type IslandCode = "stt" | "stj" | "stx";
 
@@ -32,19 +36,10 @@ const ESTATE_SOURCE_ID = "estate-inset-source";
 const ESTATE_FILL_ID = "estate-inset-fill";
 const ESTATE_LINE_ID = "estate-inset-line";
 
-function hasRenderableGeometry(
-  geometry: GeoJSON.Geometry | null | undefined
-): geometry is GeoJSON.Polygon | GeoJSON.MultiPolygon {
-  return Boolean(
-    geometry &&
-      (geometry.type === "Polygon" || geometry.type === "MultiPolygon")
-  );
-}
-
 function isEstateFeature(value: GeoJSON.Feature): value is EstateFeature {
   return Boolean(
     value?.properties &&
-      hasRenderableGeometry(value.geometry) &&
+      hasRenderableEstateGeometry(value.geometry) &&
       typeof value.properties.geoid === "string"
   );
 }
@@ -100,6 +95,7 @@ export function EstateInsetMap({
 
     return {
       ...match,
+      geometry: normalizeEstateGeometry(match.geometry),
       id:
         typeof match.id === "string" || typeof match.id === "number"
           ? match.id

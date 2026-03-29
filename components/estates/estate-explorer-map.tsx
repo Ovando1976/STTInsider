@@ -9,6 +9,10 @@ import mapboxgl, {
 } from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import estatesGeoJson from "@/data/usvi-estates-firestore.json";
+import {
+  hasRenderableEstateGeometry,
+  normalizeEstateGeometry,
+} from "@/lib/usvi/estate-geometry";
 import { findEstateHistory } from "@/lib/usvi/estate-history";
 import {
   STJ_ESTATE_QUARTERS,
@@ -236,22 +240,15 @@ function compactEstateKey(value: string) {
   return normalizeEstateKey(value).replace(/\s+/g, "");
 }
 
-function hasRenderableGeometry(
-  geometry: GeoJSON.Geometry | null | undefined
-): geometry is GeoJSON.Polygon | GeoJSON.MultiPolygon {
-  return Boolean(
-    geometry &&
-      (geometry.type === "Polygon" || geometry.type === "MultiPolygon")
-  );
-}
-
 function isEstateFeatureCandidate(
   value: GeoJSON.Feature
 ): value is GeoJSON.Feature<
   GeoJSON.Polygon | GeoJSON.MultiPolygon,
   Record<string, unknown>
 > {
-  return Boolean(value?.properties && hasRenderableGeometry(value.geometry));
+  return Boolean(
+    value?.properties && hasRenderableEstateGeometry(value.geometry)
+  );
 }
 
 function estateDisplayName(properties: EstateFeatureProperties) {
@@ -490,7 +487,7 @@ export function EstateExplorerMap({ selectedIsland, onChangeIsland }: Props) {
               typeof feature.id === "string" || typeof feature.id === "number"
                 ? feature.id
                 : id,
-            geometry: feature.geometry,
+            geometry: normalizeEstateGeometry(feature.geometry),
             properties: {
               id,
               geoid,

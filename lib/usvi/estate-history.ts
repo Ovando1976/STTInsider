@@ -641,6 +641,7 @@ const RAW_ESTATE_HISTORY: EstateHistoryRecord[] = [
     fullName: "Estate Great Pond",
     island: "stx",
     quarter: "Eastend A Quarter",
+    aliases: ["Greatpond"],
     historicalSummary:
       "Great Pond Estate featured a hill and house just off Great Pond Bay, with cotton to the north and grassland elsewhere.",
     topographicNotes:
@@ -654,6 +655,7 @@ const RAW_ESTATE_HISTORY: EstateHistoryRecord[] = [
     fullName: "Estate Hard Labor",
     island: "stx",
     quarter: "Prince Quarter",
+    aliases: ["Hardlabor"],
     historicalSummary:
       "Hardlabor Estate was mostly grass, brush, and trees, with a house in a glen and a mill on a sharp spur 260 feet higher.",
     topographicNotes:
@@ -838,7 +840,7 @@ const RAW_ESTATE_HISTORY: EstateHistoryRecord[] = [
     fullName: "Estate Morning Star North",
     island: "stx",
     quarter: "Queen (Dronning) Quarter",
-    aliases: ["Morning Star South"],
+    aliases: ["Morning Star", "Morning_Star", "Morning Star South"],
     historicalSummary:
       "Morningstar Estate featured a mill on a 130-foot hill southeast of Concordia Creek.",
     topographicNotes:
@@ -2580,6 +2582,7 @@ const RAW_ESTATE_HISTORY: EstateHistoryRecord[] = [
     baseName: "Water Island",
     island: "stt",
     quarter: "Water Island Quarter",
+    aliases: ["Waterisland"],
     historicalSummary:
       "Water Island is identified in your quarter registry as part of the broader historic cadastral structure associated with St. Thomas.",
     topographicNotes:
@@ -2679,6 +2682,7 @@ const RAW_ESTATE_HISTORY: EstateHistoryRecord[] = [
     baseName: "Maho Bay",
     island: "stj",
     quarter: "Maho Quarter",
+    aliases: ["Mahobay"],
     historicalSummary:
       "Maho Bay was a St. John estate-place in the Maho Quarter associated with the north shore bay and nearby plantation terrain.",
     topographicNotes:
@@ -3558,6 +3562,39 @@ const RAW_ESTATE_HISTORY: EstateHistoryRecord[] = [
     sources: ["Quarter registry"],
   },
   {
+    slug: "southgate-stx",
+    baseName: "Southgate",
+    island: "stx",
+    quarter: "Eastend A Quarter",
+    historicalSummary:
+      "Southgate is a historic St. Croix estate in Eastend A Quarter.",
+    topographicNotes:
+      "Its setting belongs to the East End estate corridor of bays, low coastal plain, and interior plantation terrain.",
+    sources: ["Quarter registry"],
+  },
+  {
+    slug: "springs-stx",
+    baseName: "Springs",
+    island: "stx",
+    quarter: "Eastend A Quarter",
+    historicalSummary:
+      "Springs is a historic St. Croix estate in Eastend A Quarter.",
+    topographicNotes:
+      "Its geography belongs to the East End estate district associated with slopes, drainage basins, and plantation-era divisions.",
+    sources: ["Quarter registry"],
+  },
+  {
+    slug: "tipperary-stx",
+    baseName: "Tipperary",
+    island: "stx",
+    quarter: "Eastend A Quarter",
+    historicalSummary:
+      "Tipperary is a historic St. Croix estate in Eastend A Quarter.",
+    topographicNotes:
+      "Its setting belongs to the East End estate framework linked to nearby bays and inland ridges.",
+    sources: ["Quarter registry"],
+  },
+  {
     slug: "seven-hills-stx",
     baseName: "Seven Hills",
     island: "stx",
@@ -3601,6 +3638,28 @@ const RAW_ESTATE_HISTORY: EstateHistoryRecord[] = [
       "Hodge is a historic St. Croix estate in Eastend B Quarter.",
     topographicNotes:
       "Its geography belongs to the eastern hill-and-glen district of St. Croix.",
+    sources: ["Quarter registry"],
+  },
+  {
+    slug: "carden-stx",
+    baseName: "Carden",
+    island: "stx",
+    quarter: "Eastend B Quarter",
+    historicalSummary:
+      "Carden is a historic St. Croix estate in Eastend B Quarter.",
+    topographicNotes:
+      "Its geography belongs to the eastern estate belt of bays, ridges, and plantation-era tracts.",
+    sources: ["Quarter registry"],
+  },
+  {
+    slug: "carty-stx",
+    baseName: "Carty",
+    island: "stx",
+    quarter: "Eastend B Quarter",
+    historicalSummary:
+      "Carty is a historic St. Croix estate in Eastend B Quarter.",
+    topographicNotes:
+      "Its setting belongs to the eastern estate corridor associated with coastal access and interior estate slopes.",
     sources: ["Quarter registry"],
   },
   {
