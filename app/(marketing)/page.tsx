@@ -1,14 +1,17 @@
+import { MarketingHeroShell } from "@/components/ui/marketing-hero-shell";
+
 export default function MarketingHomePage() {
   return (
-    <main className="min-h-screen bg-slate-950 text-slate-100">
-      <div className="mx-auto max-w-5xl px-6 py-10">
-        <h1 className="text-4xl font-bold tracking-tight text-white">
-          Welcome
-        </h1>
-        <p className="mt-4 text-slate-300">
-          Marketing home page stub is active.
-        </p>
+    <MarketingHeroShell
+      eyebrow="STT Insider"
+      title="The professional command center for island life."
+      description="Discover neighborhoods, monitor civic updates, and plan movement across the U.S. Virgin Islands with one premium, unified experience."
+    >
+      <div className="flex flex-wrap gap-3">
+        <span className="app-chip">Live weather</span>
+        <span className="app-chip">Estate mapping</span>
+        <span className="app-chip">Transit-ready</span>
       </div>
-    </main>
+    </MarketingHeroShell>
   );
 }
