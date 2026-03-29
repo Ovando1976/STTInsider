@@ -1,12 +1,26 @@
+import { MarketingHeroShell } from "@/components/ui/marketing-hero-shell";
+
 export default function PricingPage() {
   return (
-    <main className="min-h-screen bg-slate-950 text-slate-100">
-      <div className="mx-auto max-w-5xl px-6 py-10">
-        <h1 className="text-4xl font-bold tracking-tight text-white">
-          Pricing
-        </h1>
-        <p className="mt-4 text-slate-300">Pricing page stub is active.</p>
+    <MarketingHeroShell
+      eyebrow="Pricing"
+      title="Simple plans, professional outcomes."
+      description="Start free, scale as your operations grow, and unlock advanced mapping, analytics, and real-time workflows without platform bloat."
+    >
+      <div className="grid gap-3 sm:grid-cols-3">
+        <div className="app-card p-4">
+          <div className="text-xs font-black uppercase tracking-[0.16em] text-slate-500">Starter</div>
+          <div className="mt-1 text-xl font-black text-slate-900">$0</div>
+        </div>
+        <div className="app-card p-4">
+          <div className="text-xs font-black uppercase tracking-[0.16em] text-slate-500">Pro</div>
+          <div className="mt-1 text-xl font-black text-slate-900">Custom</div>
+        </div>
+        <div className="app-card p-4">
+          <div className="text-xs font-black uppercase tracking-[0.16em] text-slate-500">Enterprise</div>
+          <div className="mt-1 text-xl font-black text-slate-900">Contact us</div>
+        </div>
       </div>
-    </main>
+    </MarketingHeroShell>
   );
 }
