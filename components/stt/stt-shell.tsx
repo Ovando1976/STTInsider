@@ -20,7 +20,7 @@ import { PassportPanel } from "./passport-panel";
 import { WelcomeDeck } from "./welcome-deck";
 import { CurrentPlanBar } from "./current-plan-bar";
 import { SttDiscoveryMap } from "./stt-discovery-map";
-import type { DiscoveryPlace } from "./stt-discovery-map";
+import type { DiscoveryPlace } from "@/types/stt-discovery";
 import {
   createCheckin,
   ensureUser,

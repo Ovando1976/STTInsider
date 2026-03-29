@@ -3,18 +3,7 @@
 import { useEffect, useMemo, useRef } from "react";
 import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
-
-export type IslandCode = "stt" | "stj" | "stx";
-
-export type DiscoveryPlace = {
-  id: string;
-  name: string;
-  island: IslandCode;
-  category: "beach" | "food" | "shopping" | "activity" | "stay";
-  lat: number;
-  lng: number;
-  description?: string;
-};
+import type { DiscoveryPlace } from "@/types/stt-discovery";
 
 type Props = {
   places: DiscoveryPlace[];
