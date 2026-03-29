@@ -10,8 +10,9 @@ export const STT_COMMUNITY_CONTEXT: CommunityContext = {
 export const STT_COMMUNITY_POSTS: CommunityPost[] = [
   {
     id: "pulse-town-1",
-    island: "St. Thomas",
-    zone: "town",
+    district: "stt_stj",
+    island: "stt",
+    quarter: "new_prince_george",
     type: "pulse",
     title: "Town getting busier after 10",
     body:
@@ -27,8 +28,9 @@ export const STT_COMMUNITY_POSTS: CommunityPost[] = [
   },
   {
     id: "ferry-east-end-1",
-    island: "St. Thomas",
-    zone: "east_end",
+    district: "stt_stj",
+    island: "stt",
+    quarter: "redhook",
     type: "ferry",
     title: "Red Hook moving smooth right now",
     body:
@@ -44,8 +46,9 @@ export const STT_COMMUNITY_POSTS: CommunityPost[] = [
   },
   {
     id: "northside-beach-1",
-    island: "St. Thomas",
-    zone: "northside",
+    district: "stt_stj",
+    island: "stt",
+    quarter: "great_northside",
     type: "beach",
     title: "Northside looks choppy today",
     body:
@@ -60,8 +63,9 @@ export const STT_COMMUNITY_POSTS: CommunityPost[] = [
   },
   {
     id: "havensight-night-1",
-    island: "St. Thomas",
-    zone: "havensight",
+    district: "stt_stj",
+    island: "stt",
+    quarter: "southside",
     type: "nightlife",
     title: "Good energy building around Havensight tonight",
     body:
@@ -76,8 +80,9 @@ export const STT_COMMUNITY_POSTS: CommunityPost[] = [
   },
   {
     id: "crown-bay-food-1",
-    island: "St. Thomas",
-    zone: "crown_bay",
+    district: "stt_stj",
+    island: "stt",
+    quarter: "westend",
     type: "food",
     title: "Good lunch window near Crown Bay",
     body:
@@ -92,8 +97,9 @@ export const STT_COMMUNITY_POSTS: CommunityPost[] = [
   },
   {
     id: "mid-island-tip-1",
-    island: "St. Thomas",
-    zone: "mid_island",
+    district: "stt_stj",
+    island: "stt",
+    quarter: "eastend",
     type: "tip",
     title: "Tutu corridor is your reset zone today",
     body:
@@ -108,8 +114,9 @@ export const STT_COMMUNITY_POSTS: CommunityPost[] = [
   },
   {
     id: "event-town-1",
-    island: "St. Thomas",
-    zone: "town",
+    district: "stt_stj",
+    island: "stt",
+    quarter: "new_prince_george",
     type: "event",
     title: "Carnival season is taking over Town",
     body:

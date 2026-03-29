@@ -35,6 +35,23 @@ function fromMapIslandCode(
   return "St. Thomas";
 }
 
+function matchesIslandFilter(
+  postIsland: CommunityPost["island"],
+  selectedIsland: IslandValue
+) {
+  if (selectedIsland === "All Islands") return true;
+  if (selectedIsland === "St. Thomas") return postIsland === "stt";
+  if (selectedIsland === "St. John") return postIsland === "stj";
+  if (selectedIsland === "St. Croix") return postIsland === "stx";
+  return false;
+}
+
+function formatPostIsland(island: CommunityPost["island"]) {
+  if (island === "stj") return "St. John";
+  if (island === "stx") return "St. Croix";
+  return "St. Thomas";
+}
+
 const ISLAND_OPTIONS: IslandValue[] = [
   "All Islands",
   "St. Thomas",
@@ -58,9 +75,7 @@ export function CommunityShell({ posts, estates }: Props) {
   const filteredPosts = useMemo(() => {
     let next = [...posts];
 
-    if (selectedIsland !== "All Islands") {
-      next = next.filter((post) => post.island === selectedIsland);
-    }
+    next = next.filter((post) => matchesIslandFilter(post.island, selectedIsland));
 
     if (selectedEstateGeoid !== "all") {
       next = next.filter((post) => post.estateGeoid === selectedEstateGeoid);
@@ -191,7 +206,7 @@ export function CommunityShell({ posts, estates }: Props) {
             >
               <div className="flex flex-wrap gap-2">
                 <span className="rounded-full bg-slate-100 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.22em] text-slate-700">
-                  {post.island}
+                  {formatPostIsland(post.island)}
                 </span>
 
                 {post.estateName ? (

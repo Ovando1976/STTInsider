@@ -20,6 +20,7 @@ import { PassportPanel } from "./passport-panel";
 import { WelcomeDeck } from "./welcome-deck";
 import { CurrentPlanBar } from "./current-plan-bar";
 import { SttDiscoveryMap } from "./stt-discovery-map";
+import type { DiscoveryPlace } from "./stt-discovery-map";
 import {
   createCheckin,
   ensureUser,
@@ -217,6 +218,34 @@ export function SttShell({ weather }: { weather: WeatherDay[] }) {
     distanceSort,
     userCoords,
   ]);
+
+  const mapPlaces = useMemo<DiscoveryPlace[]>(
+    () =>
+      filteredBusinesses.map((business) => ({
+        id: business.id,
+        name: business.name,
+        island:
+          business.island === "St. John"
+            ? "stj"
+            : business.island === "St. Croix"
+            ? "stx"
+            : "stt",
+        category:
+          business.category === "Beach"
+            ? "beach"
+            : business.category === "Food"
+            ? "food"
+            : business.category === "Shopping"
+            ? "shopping"
+            : business.category === "Stay"
+            ? "stay"
+            : "activity",
+        lat: business.lat,
+        lng: business.lng,
+        description: business.description,
+      })),
+    [filteredBusinesses]
+  );
 
   function handleTabChange(nextTab: AppTab) {
     setActiveTab(nextTab as SttAppTab);
@@ -462,12 +491,14 @@ export function SttShell({ weather }: { weather: WeatherDay[] }) {
             ) : tab === "map" ? (
               <div className="rounded-[28px] border border-slate-200 bg-white p-3 shadow-sm">
                 <SttDiscoveryMap
-                  businesses={filteredBusinesses}
-                  selectedBusinessId={selectedBusiness?.id ?? null}
-                  onSelectBusiness={(business) => {
-                    openBusinessFlow(business);
+                  places={mapPlaces}
+                  selectedPlaceId={selectedBusiness?.id ?? null}
+                  onSelectPlace={(placeId) => {
+                    const business = filteredBusinesses.find(
+                      (item) => item.id === placeId
+                    );
+                    if (business) openBusinessFlow(business);
                   }}
-                  userCoords={userCoords}
                 />
               </div>
             ) : (

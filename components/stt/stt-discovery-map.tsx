@@ -4,9 +4,9 @@ import { useEffect, useMemo, useRef } from "react";
 import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 
-type IslandCode = "stt" | "stj" | "stx";
+export type IslandCode = "stt" | "stj" | "stx";
 
-type DiscoveryPlace = {
+export type DiscoveryPlace = {
   id: string;
   name: string;
   island: IslandCode;
