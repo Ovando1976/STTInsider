@@ -20,6 +20,7 @@ import { PassportPanel } from "./passport-panel";
 import { WelcomeDeck } from "./welcome-deck";
 import { CurrentPlanBar } from "./current-plan-bar";
 import { SttDiscoveryMap } from "./stt-discovery-map";
+import type { DiscoveryPlace } from "@/types/stt-discovery";
 import {
   createCheckin,
   ensureUser,
@@ -110,6 +111,24 @@ function tabMeta(tab: AppTab) {
           "Explore places, ask Concierge, book rides, join the community, and save moments in one premium journey.",
       };
   }
+}
+
+function toDiscoveryIslandCode(
+  island: Business["island"]
+): DiscoveryPlace["island"] {
+  if (island === "St. John") return "stj";
+  if (island === "St. Croix") return "stx";
+  return "stt";
+}
+
+function toDiscoveryCategory(
+  category: Business["category"]
+): DiscoveryPlace["category"] {
+  if (category === "Beach") return "beach";
+  if (category === "Food") return "food";
+  if (category === "Shopping") return "shopping";
+  if (category === "Stay") return "stay";
+  return "activity";
 }
 
 export function SttShell({ weather }: { weather: WeatherDay[] }) {
@@ -217,6 +236,25 @@ export function SttShell({ weather }: { weather: WeatherDay[] }) {
     distanceSort,
     userCoords,
   ]);
+
+  const mapPlaces = useMemo<DiscoveryPlace[]>(
+    () =>
+      filteredBusinesses
+        .filter(
+          (business) =>
+            Number.isFinite(business.lat) && Number.isFinite(business.lng)
+        )
+        .map((business) => ({
+          id: business.id,
+          name: business.name,
+          island: toDiscoveryIslandCode(business.island),
+          category: toDiscoveryCategory(business.category),
+          lat: business.lat,
+          lng: business.lng,
+          description: business.description,
+        })),
+    [filteredBusinesses]
+  );
 
   function handleTabChange(nextTab: AppTab) {
     setActiveTab(nextTab as SttAppTab);
@@ -462,12 +500,14 @@ export function SttShell({ weather }: { weather: WeatherDay[] }) {
             ) : tab === "map" ? (
               <div className="rounded-[28px] border border-slate-200 bg-white p-3 shadow-sm">
                 <SttDiscoveryMap
-                  businesses={filteredBusinesses}
-                  selectedBusinessId={selectedBusiness?.id ?? null}
-                  onSelectBusiness={(business) => {
-                    openBusinessFlow(business);
+                  places={mapPlaces}
+                  selectedPlaceId={selectedBusiness?.id ?? null}
+                  onSelectPlace={(placeId) => {
+                    const business = filteredBusinesses.find(
+                      (item) => item.id === placeId
+                    );
+                    if (business) openBusinessFlow(business);
                   }}
-                  userCoords={userCoords}
                 />
               </div>
             ) : (

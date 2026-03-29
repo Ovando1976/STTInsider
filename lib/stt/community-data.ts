@@ -10,8 +10,9 @@ export const STT_COMMUNITY_CONTEXT: CommunityContext = {
 export const STT_COMMUNITY_POSTS: CommunityPost[] = [
   {
     id: "pulse-town-1",
-    island: "St. Thomas",
-    zone: "town",
+    district: "stt_stj",
+    island: "stt",
+    quarter: "new_prince_george",
     type: "pulse",
     title: "Town getting busier after 10",
     body:
@@ -19,6 +20,8 @@ export const STT_COMMUNITY_POSTS: CommunityPost[] = [
     authorName: "Town Watch",
     authorHandle: "@townwatch",
     createdAt: Date.now() - 1000 * 60 * 22,
+    estateGeoid: "7803017300",
+    estateName: "Estate Charlotte Amalie",
     placeName: "Charlotte Amalie",
     likes: 121,
     replies: 21,
@@ -27,8 +30,9 @@ export const STT_COMMUNITY_POSTS: CommunityPost[] = [
   },
   {
     id: "ferry-east-end-1",
-    island: "St. Thomas",
-    zone: "east_end",
+    district: "stt_stj",
+    island: "stt",
+    quarter: "redhook",
     type: "ferry",
     title: "Red Hook moving smooth right now",
     body:
@@ -36,6 +40,8 @@ export const STT_COMMUNITY_POSTS: CommunityPost[] = [
     authorName: "Island Pulse",
     authorHandle: "@islandpulse",
     createdAt: Date.now() - 1000 * 60 * 16,
+    estateGeoid: "7803058400",
+    estateName: "Estate Nazareth",
     placeName: "Red Hook",
     likes: 84,
     replies: 12,
@@ -44,8 +50,9 @@ export const STT_COMMUNITY_POSTS: CommunityPost[] = [
   },
   {
     id: "northside-beach-1",
-    island: "St. Thomas",
-    zone: "northside",
+    district: "stt_stj",
+    island: "stt",
+    quarter: "great_northside",
     type: "beach",
     title: "Northside looks choppy today",
     body:
@@ -53,6 +60,8 @@ export const STT_COMMUNITY_POSTS: CommunityPost[] = [
     authorName: "Beach Scout",
     authorHandle: "@beachscoutvi",
     createdAt: Date.now() - 1000 * 60 * 64,
+    estateGeoid: "7801060850",
+    estateName: "Estate Northside",
     placeName: "Northside",
     likes: 93,
     replies: 15,
@@ -60,8 +69,9 @@ export const STT_COMMUNITY_POSTS: CommunityPost[] = [
   },
   {
     id: "havensight-night-1",
-    island: "St. Thomas",
-    zone: "havensight",
+    district: "stt_stj",
+    island: "stt",
+    quarter: "southside",
     type: "nightlife",
     title: "Good energy building around Havensight tonight",
     body:
@@ -69,6 +79,8 @@ export const STT_COMMUNITY_POSTS: CommunityPost[] = [
     authorName: "VI Moves",
     authorHandle: "@vimoves",
     createdAt: Date.now() - 1000 * 60 * 90,
+    estateGeoid: "7803047235",
+    estateName: "Estate Havensight",
     placeName: "Havensight",
     likes: 74,
     replies: 9,
@@ -76,8 +88,9 @@ export const STT_COMMUNITY_POSTS: CommunityPost[] = [
   },
   {
     id: "crown-bay-food-1",
-    island: "St. Thomas",
-    zone: "crown_bay",
+    district: "stt_stj",
+    island: "stt",
+    quarter: "westend",
     type: "food",
     title: "Good lunch window near Crown Bay",
     body:
@@ -85,6 +98,8 @@ export const STT_COMMUNITY_POSTS: CommunityPost[] = [
     authorName: "Taste VI",
     authorHandle: "@tastevi",
     createdAt: Date.now() - 1000 * 60 * 41,
+    estateGeoid: "7803077150",
+    estateName: "Estate Subbase and Crown Bay",
     placeName: "Crown Bay",
     likes: 67,
     replies: 8,
@@ -92,8 +107,9 @@ export const STT_COMMUNITY_POSTS: CommunityPost[] = [
   },
   {
     id: "mid-island-tip-1",
-    island: "St. Thomas",
-    zone: "mid_island",
+    district: "stt_stj",
+    island: "stt",
+    quarter: "eastend",
     type: "tip",
     title: "Tutu corridor is your reset zone today",
     body:
@@ -101,6 +117,8 @@ export const STT_COMMUNITY_POSTS: CommunityPost[] = [
     authorName: "Local Lens",
     authorHandle: "@locallens",
     createdAt: Date.now() - 1000 * 60 * 120,
+    estateGeoid: "7803005520",
+    estateName: "Estate Annas Retreat",
     placeName: "Tutu",
     likes: 52,
     replies: 6,
@@ -108,8 +126,9 @@ export const STT_COMMUNITY_POSTS: CommunityPost[] = [
   },
   {
     id: "event-town-1",
-    island: "St. Thomas",
-    zone: "town",
+    district: "stt_stj",
+    island: "stt",
+    quarter: "new_prince_george",
     type: "event",
     title: "Carnival season is taking over Town",
     body:
@@ -117,6 +136,8 @@ export const STT_COMMUNITY_POSTS: CommunityPost[] = [
     authorName: "USVI Events",
     authorHandle: "@usvievents",
     createdAt: Date.now() - 1000 * 60 * 145,
+    estateGeoid: "7803017300",
+    estateName: "Estate Charlotte Amalie",
     placeName: "Charlotte Amalie",
     likes: 211,
     replies: 41,

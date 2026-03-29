@@ -31,6 +31,7 @@ export type QuarterCode =
   | "stx_westend";
 
 export type CommunityPostType =
+  | "pulse"
   | "ferry"
   | "beach"
   | "nightlife"
@@ -50,6 +51,7 @@ export type CommunityPost = {
   island: IslandCode;
   quarter: QuarterCode;
 
+  estateGeoid?: string | null;
   estateName?: string | null;
   placeName?: string | null;
 
@@ -57,6 +59,7 @@ export type CommunityPost = {
   authorHandle?: string | null;
 
   verified?: boolean;
+  tags?: string[];
   likes: number;
   replies: number;
   createdAt: number;
