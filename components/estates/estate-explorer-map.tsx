@@ -938,9 +938,20 @@ export function EstateExplorerMap({ selectedIsland, onChangeIsland }: Props) {
     );
   }
 
+  const islandLabel =
+    activeIsland === "all"
+      ? "Territory view"
+      : activeIsland === "stt"
+      ? "St. Thomas"
+      : activeIsland === "stj"
+      ? "St. John"
+      : "St. Croix";
+
   return (
-    <div className="grid gap-5 xl:grid-cols-[390px_minmax(0,1fr)]">
-      <aside className="rounded-[32px] border border-sky-100 bg-[radial-gradient(circle_at_top,#ffffff_0%,#f7fffd_52%,#eefaf7_100%)] p-5 shadow-[0_18px_60px_rgba(15,23,42,0.08)]">
+    <div className="grid gap-6 xl:grid-cols-[410px_minmax(0,1fr)]">
+      <aside className="relative overflow-hidden rounded-[34px] border border-sky-100/70 bg-[radial-gradient(circle_at_top,#ffffff_0%,#f2fbff_46%,#e8f8f3_100%)] p-5 shadow-[0_24px_80px_rgba(15,23,42,0.14)] backdrop-blur">
+        <div className="pointer-events-none absolute -right-20 -top-20 h-56 w-56 rounded-full bg-sky-300/25 blur-3xl" />
+        <div className="pointer-events-none absolute -bottom-20 -left-20 h-56 w-56 rounded-full bg-emerald-300/20 blur-3xl" />
         <div className="text-[11px] font-black uppercase tracking-[0.26em] text-sky-700">
           Estate explorer
         </div>
@@ -1028,21 +1039,35 @@ export function EstateExplorerMap({ selectedIsland, onChangeIsland }: Props) {
           </select>
         </div>
 
-        <div className="mt-5 rounded-[28px] border border-slate-200 bg-white/80 p-4 shadow-sm">
+        <div className="mt-5 rounded-[28px] border border-white/70 bg-white/85 p-4 shadow-[0_14px_40px_rgba(15,23,42,0.08)] backdrop-blur">
           <div className="text-[11px] font-black uppercase tracking-[0.2em] text-slate-500">
             Visible estates
           </div>
-          <div className="mt-2 text-3xl font-black tracking-tight text-slate-950">
-            {visibleEstates.length}
+          <div className="mt-3 grid grid-cols-2 gap-2">
+            <div className="rounded-2xl border border-sky-100 bg-gradient-to-br from-sky-50 to-white px-3 py-3">
+              <div className="text-[10px] font-bold uppercase tracking-[0.16em] text-slate-500">
+                Visible
+              </div>
+              <div className="mt-1 text-3xl font-black tracking-tight text-slate-950">
+                {visibleEstates.length}
+              </div>
+            </div>
+            <div className="rounded-2xl border border-emerald-100 bg-gradient-to-br from-emerald-50 to-white px-3 py-3">
+              <div className="text-[10px] font-bold uppercase tracking-[0.16em] text-slate-500">
+                Quarters
+              </div>
+              <div className="mt-1 text-3xl font-black tracking-tight text-slate-950">
+                {visibleQuarterCount}
+              </div>
+            </div>
           </div>
           <div className="mt-3 grid gap-1 text-xs text-slate-500">
-            <div>Active island: {activeIsland}</div>
+            <div>Active island: {islandLabel}</div>
             <div>Total loaded estates: {estates.features.length}</div>
-            <div>Visible quarters: {visibleQuarterCount}</div>
           </div>
         </div>
 
-        <div className="mt-5 rounded-[28px] border border-slate-200 bg-white/80 p-4 shadow-sm">
+        <div className="mt-5 rounded-[28px] border border-white/70 bg-white/85 p-4 shadow-[0_14px_40px_rgba(15,23,42,0.08)] backdrop-blur">
           <div className="text-[11px] font-black uppercase tracking-[0.2em] text-slate-500">
             Quarter legend
           </div>
@@ -1050,7 +1075,7 @@ export function EstateExplorerMap({ selectedIsland, onChangeIsland }: Props) {
             {legendEntries.map(([quarter, color]) => (
               <span
                 key={quarter}
-                className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 text-[11px] font-black uppercase tracking-[0.12em] text-slate-700"
+                className="inline-flex items-center gap-2 rounded-full border border-slate-200/80 bg-white px-3 py-1.5 text-[11px] font-black uppercase tracking-[0.12em] text-slate-700 shadow-sm"
               >
                 <span
                   className="h-2.5 w-2.5 rounded-full shadow-sm"
@@ -1069,7 +1094,7 @@ export function EstateExplorerMap({ selectedIsland, onChangeIsland }: Props) {
         ) : null}
 
         {selectedEstate ? (
-          <div className="mt-5 rounded-[28px] border border-slate-200 bg-white p-5 shadow-[0_10px_30px_rgba(15,23,42,0.08)]">
+          <div className="mt-5 rounded-[28px] border border-white/70 bg-white/90 p-5 shadow-[0_16px_45px_rgba(15,23,42,0.12)] backdrop-blur">
             <div className="text-[11px] font-black uppercase tracking-[0.18em] text-slate-500">
               Selected estate
             </div>
@@ -1124,7 +1149,7 @@ export function EstateExplorerMap({ selectedIsland, onChangeIsland }: Props) {
               {selectedEstateHref ? (
                 <Link
                   href={selectedEstateHref}
-                  className="rounded-full bg-slate-950 px-4 py-2 text-[11px] font-black uppercase tracking-[0.16em] text-white transition hover:bg-slate-800"
+                  className="rounded-full bg-[linear-gradient(135deg,#0f172a,#1d4ed8)] px-4 py-2 text-[11px] font-black uppercase tracking-[0.16em] text-white shadow-[0_8px_26px_rgba(29,78,216,0.35)] transition hover:brightness-110"
                 >
                   Open estate page
                 </Link>
@@ -1133,7 +1158,7 @@ export function EstateExplorerMap({ selectedIsland, onChangeIsland }: Props) {
               <button
                 type="button"
                 onClick={() => focusEstate(selectedEstate)}
-                className="rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-[11px] font-black uppercase tracking-[0.16em] text-slate-900 transition hover:bg-slate-100"
+                className="rounded-full border border-slate-200 bg-white px-4 py-2 text-[11px] font-black uppercase tracking-[0.16em] text-slate-900 transition hover:border-sky-200 hover:bg-sky-50"
               >
                 Focus on map
               </button>
@@ -1200,8 +1225,8 @@ export function EstateExplorerMap({ selectedIsland, onChangeIsland }: Props) {
         ) : null}
       </aside>
 
-      <section className="overflow-hidden rounded-[32px] border border-slate-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
-        <div className="flex items-center justify-between border-b border-slate-200 px-5 py-4">
+      <section className="overflow-hidden rounded-[34px] border border-slate-200/80 bg-white shadow-[0_24px_90px_rgba(15,23,42,0.16)]">
+        <div className="flex items-center justify-between border-b border-slate-200/80 bg-gradient-to-r from-slate-50 to-white px-5 py-4">
           <div>
             <div className="text-[11px] font-black uppercase tracking-[0.2em] text-slate-500">
               Polygon map
@@ -1211,14 +1236,8 @@ export function EstateExplorerMap({ selectedIsland, onChangeIsland }: Props) {
             </div>
           </div>
 
-          <div className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-[11px] font-black uppercase tracking-[0.14em] text-slate-700">
-            {activeIsland === "all"
-              ? "Territory view"
-              : activeIsland === "stt"
-              ? "St. Thomas"
-              : activeIsland === "stj"
-              ? "St. John"
-              : "St. Croix"}
+          <div className="rounded-full border border-sky-200 bg-sky-50 px-3 py-1 text-[11px] font-black uppercase tracking-[0.14em] text-sky-700 shadow-sm">
+            {islandLabel}
           </div>
         </div>
 
@@ -1227,11 +1246,11 @@ export function EstateExplorerMap({ selectedIsland, onChangeIsland }: Props) {
             className="pointer-events-none absolute inset-0 z-10"
             style={{
               background:
-                "linear-gradient(180deg, rgba(56,189,248,0.08) 0%, rgba(255,255,255,0.00) 24%, rgba(16,185,129,0.04) 100%)",
+                "linear-gradient(180deg, rgba(56,189,248,0.12) 0%, rgba(255,255,255,0.00) 24%, rgba(16,185,129,0.08) 100%)",
             }}
           />
 
-          <div className="pointer-events-none absolute left-4 top-4 z-20 rounded-2xl border border-white/70 bg-white/78 px-4 py-3 shadow-[0_10px_30px_rgba(15,23,42,0.08)] backdrop-blur">
+          <div className="pointer-events-none absolute left-4 top-4 z-20 rounded-2xl border border-white/70 bg-white/78 px-4 py-3 shadow-[0_14px_36px_rgba(15,23,42,0.14)] backdrop-blur">
             <div className="text-[10px] font-black uppercase tracking-[0.18em] text-slate-500">
               Live map mode
             </div>

@@ -209,8 +209,8 @@ export function EstateInsetMap({
   }
 
   return (
-    <section className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
-      <div className="flex items-center justify-between border-b border-slate-200 px-4 py-3">
+    <section className="overflow-hidden rounded-3xl border border-slate-200/80 bg-white shadow-[0_20px_55px_rgba(15,23,42,0.14)]">
+      <div className="flex items-center justify-between border-b border-slate-200/80 bg-gradient-to-r from-slate-50 to-white px-4 py-3">
         <div>
           <div className="text-[11px] font-bold uppercase tracking-[0.2em] text-sky-700">
             Estate inset
@@ -220,12 +220,19 @@ export function EstateInsetMap({
           </div>
         </div>
 
-        <div className="rounded-full bg-slate-100 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.14em] text-slate-600">
+        <div className="rounded-full border border-sky-200 bg-sky-50 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.14em] text-sky-700">
           Roads + boundary
         </div>
       </div>
 
       <div className="relative h-[360px] w-full">
+        <div
+          className="pointer-events-none absolute inset-0 z-10"
+          style={{
+            background:
+              "linear-gradient(180deg, rgba(56,189,248,0.12) 0%, rgba(255,255,255,0.00) 35%, rgba(16,185,129,0.08) 100%)",
+          }}
+        />
         <div ref={containerRef} className="h-full w-full" />
       </div>
     </section>
