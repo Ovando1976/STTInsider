@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, #075985 0%, #0ea5e9 50%, #38bdf8 100%);
+}
+
+.glass-nav {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.ride-card {
+  background: white;
+  border-radius: 32px;
+  padding: 32px;
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
+}
+
+.ride-header,
+.ride-request,
+.ride-driver,
+.ride-payment,
+.ride-status,
+.ride-summary,
+.ride-options,
+.ride-map,
+.ride-transfer-plan,
+.ride-alerts,
+.ride-island-notes,
+.ride-preferences {
+  margin-top: 24px;
+}
+
+.ride-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.ride-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ride-select,
+.ride-input {
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 14px 16px;
+  background: #f8fafc;
+  font-size: 14px;
+}
+
+.ride-option-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.ride-option {
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 16px;
+  background: white;
+  text-align: left;
+}
+
+.ride-option.active {
+  border-color: #0284c7;
+  background: #f0f9ff;
+}
+
+.ride-estimate {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.ride-estimate > div,
+.ride-summary,
+.driver-card,
+.ride-payment-grid,
+.ride-status,
+.ride-transfer-plan,
+.ride-alert-card,
+.ride-trust-card,
+.ride-feature {
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 16px;
+  background: #fff;
+}
+
+.ride-summary-pill,
+.ride-tip,
+.ride-cta,
+.ride-swap,
+.map-filter {
+  border-radius: 999px;
+  padding: 10px 14px;
+}
+
+.ride-cta {
+  border: none;
+  background: #0284c7;
+  color: white;
+  font-weight: 700;
+}
+
+.ride-progress {
+  height: 10px;
+  border-radius: 999px;
+  background: #e2e8f0;
+  overflow: hidden;
+}
+
+.ride-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #0ea5e9, #22c55e);
+}

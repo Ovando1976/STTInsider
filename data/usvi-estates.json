@@ -1,0 +1,6658 @@
+[
+  {
+    "geoid": "7801005540",
+    "name": "Estate A Piece of Land",
+    "basename": "A Piece of Land",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7552149,
+      "lng": -64.570846
+    },
+    "interiorPoint": {
+      "lat": 17.7552149,
+      "lng": -64.570846
+    }
+  },
+  {
+    "geoid": "7802000020",
+    "name": "Estate Abrahams Fancy and Maho Bay",
+    "basename": "Abrahams Fancy and Maho Bay",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3551412,
+      "lng": -64.7385476
+    },
+    "interiorPoint": {
+      "lat": 18.3551412,
+      "lng": -64.7385476
+    }
+  },
+  {
+    "geoid": "7803000030",
+    "name": "Estate Adelphi",
+    "basename": "Adelphi",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3499507,
+      "lng": -64.9821592
+    },
+    "interiorPoint": {
+      "lat": 18.3499507,
+      "lng": -64.9821592
+    }
+  },
+  {
+    "geoid": "7802000060",
+    "name": "Estate Adrian",
+    "basename": "Adrian",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.342647,
+      "lng": -64.7666879
+    },
+    "interiorPoint": {
+      "lat": 18.342647,
+      "lng": -64.7666879
+    }
+  },
+  {
+    "geoid": "7803000080",
+    "name": "Estate Agnes Fancy",
+    "basename": "Agnes Fancy",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3485622,
+      "lng": -64.9358818
+    },
+    "interiorPoint": {
+      "lat": 18.3485622,
+      "lng": -64.9358818
+    }
+  },
+  {
+    "geoid": "7801000800",
+    "name": "Estate All for the Better",
+    "basename": "All for the Better",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7468346,
+      "lng": -64.6555197
+    },
+    "interiorPoint": {
+      "lat": 17.7468346,
+      "lng": -64.6555197
+    }
+  },
+  {
+    "geoid": "7801000620",
+    "name": "Estate Allandale",
+    "basename": "Allandale",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7295775,
+      "lng": -64.8405211
+    },
+    "interiorPoint": {
+      "lat": 17.7295775,
+      "lng": -64.8405211
+    }
+  },
+  {
+    "geoid": "7801001400",
+    "name": "Estate Altona",
+    "basename": "Altona",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7497152,
+      "lng": -64.6877872
+    },
+    "interiorPoint": {
+      "lat": 17.7486878,
+      "lng": -64.6885213
+    }
+  },
+  {
+    "geoid": "7803001425",
+    "name": "Estate Altona and Welgunst",
+    "basename": "Altona and Welgunst",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3411702,
+      "lng": -64.9447927
+    },
+    "interiorPoint": {
+      "lat": 18.3411702,
+      "lng": -64.9447927
+    }
+  },
+  {
+    "geoid": "7801001450",
+    "name": "Estate Altona Fort Louise Augusta",
+    "basename": "Altona Fort Louise Augusta",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7525203,
+      "lng": -64.6938152
+    },
+    "interiorPoint": {
+      "lat": 17.7525203,
+      "lng": -64.6938152
+    }
+  },
+  {
+    "geoid": "7801002500",
+    "name": "Estate Anguilla",
+    "basename": "Anguilla",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7009575,
+      "lng": -64.7751731
+    },
+    "interiorPoint": {
+      "lat": 17.6995283,
+      "lng": -64.7750902
+    }
+  },
+  {
+    "geoid": "7802003520",
+    "name": "Estate Annaberg",
+    "basename": "Annaberg",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3657728,
+      "lng": -64.738124
+    },
+    "interiorPoint": {
+      "lat": 18.364767,
+      "lng": -64.738528
+    }
+  },
+  {
+    "geoid": "7801003540",
+    "name": "Estate Annaberg and Shannon Grove",
+    "basename": "Annaberg and Shannon Grove",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7052742,
+      "lng": -64.7714634
+    },
+    "interiorPoint": {
+      "lat": 17.6947569,
+      "lng": -64.7675492
+    }
+  },
+  {
+    "geoid": "7801003630",
+    "name": "Estate Annaly",
+    "basename": "Annaly",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7536968,
+      "lng": -64.8523262
+    },
+    "interiorPoint": {
+      "lat": 17.7536968,
+      "lng": -64.8523262
+    }
+  },
+  {
+    "geoid": "7803003670",
+    "name": "Estate Annas Fancy",
+    "basename": "Annas Fancy",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3427387,
+      "lng": -64.941181
+    },
+    "interiorPoint": {
+      "lat": 18.3427387,
+      "lng": -64.941181
+    }
+  },
+  {
+    "geoid": "7801003800",
+    "name": "Estate Annas Hope",
+    "basename": "Annas Hope",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7288841,
+      "lng": -64.7285072
+    },
+    "interiorPoint": {
+      "lat": 17.7288841,
+      "lng": -64.7285072
+    }
+  },
+  {
+    "geoid": "7803005520",
+    "name": "Estate Annas Retreat",
+    "basename": "Annas Retreat",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3426914,
+      "lng": -64.8865706
+    },
+    "interiorPoint": {
+      "lat": 18.3426914,
+      "lng": -64.8865706
+    }
+  },
+  {
+    "geoid": "7803005560",
+    "name": "Estate Bakkero",
+    "basename": "Bakkero",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3247066,
+      "lng": -64.91772
+    },
+    "interiorPoint": {
+      "lat": 18.3247066,
+      "lng": -64.91772
+    }
+  },
+  {
+    "geoid": "7801005580",
+    "name": "Estate Barren Spot East",
+    "basename": "Barren Spot East",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7069892,
+      "lng": -64.7399955
+    },
+    "interiorPoint": {
+      "lat": 17.7069892,
+      "lng": -64.7399955
+    }
+  },
+  {
+    "geoid": "7801005590",
+    "name": "Estate Barren Spot West",
+    "basename": "Barren Spot West",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7283245,
+      "lng": -64.765269
+    },
+    "interiorPoint": {
+      "lat": 17.7283245,
+      "lng": -64.765269
+    }
+  },
+  {
+    "geoid": "7801006175",
+    "name": "Estate Becks Grove",
+    "basename": "Becks Grove",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7273318,
+      "lng": -64.85199
+    },
+    "interiorPoint": {
+      "lat": 17.7273318,
+      "lng": -64.85199
+    }
+  },
+  {
+    "geoid": "7801006225",
+    "name": "Estate Beeston Hill",
+    "basename": "Beeston Hill",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7394669,
+      "lng": -64.7232798
+    },
+    "interiorPoint": {
+      "lat": 17.7394669,
+      "lng": -64.7232798
+    }
+  },
+  {
+    "geoid": "7802006265",
+    "name": "Estate Bellevue",
+    "basename": "Bellevue",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3298482,
+      "lng": -64.7698207
+    },
+    "interiorPoint": {
+      "lat": 18.3298482,
+      "lng": -64.7698207
+    }
+  },
+  {
+    "geoid": "7801006260",
+    "name": "Estate Bellevue",
+    "basename": "Bellevue",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7459631,
+      "lng": -64.7326885
+    },
+    "interiorPoint": {
+      "lat": 17.7459631,
+      "lng": -64.7326885
+    }
+  },
+  {
+    "geoid": "7803006270",
+    "name": "Estate Bellevue",
+    "basename": "Bellevue",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3270419,
+      "lng": -64.9210426
+    },
+    "interiorPoint": {
+      "lat": 18.3270419,
+      "lng": -64.9210426
+    }
+  },
+  {
+    "geoid": "7802006280",
+    "name": "Estate Ben Runnells Gut",
+    "basename": "Ben Runnells Gut",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3337105,
+      "lng": -64.7125012
+    },
+    "interiorPoint": {
+      "lat": 18.3337105,
+      "lng": -64.7125012
+    }
+  },
+  {
+    "geoid": "7802006500",
+    "name": "Estate Bethany",
+    "basename": "Bethany",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3284913,
+      "lng": -64.7835874
+    },
+    "interiorPoint": {
+      "lat": 18.3284913,
+      "lng": -64.7835874
+    }
+  },
+  {
+    "geoid": "7803006600",
+    "name": "Estate Bethesda",
+    "basename": "Bethesda",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3555266,
+      "lng": -65.0084408
+    },
+    "interiorPoint": {
+      "lat": 18.3555266,
+      "lng": -65.0084408
+    }
+  },
+  {
+    "geoid": "7801007500",
+    "name": "Estate Betsys Jewel",
+    "basename": "Betsys Jewel",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7627975,
+      "lng": -64.7944211
+    },
+    "interiorPoint": {
+      "lat": 17.7627975,
+      "lng": -64.7944211
+    }
+  },
+  {
+    "geoid": "7801007650",
+    "name": "Estate Bettys Hope",
+    "basename": "Bettys Hope",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.6954933,
+      "lng": -64.8169366
+    },
+    "interiorPoint": {
+      "lat": 17.6954933,
+      "lng": -64.8169366
+    }
+  },
+  {
+    "geoid": "7802007755",
+    "name": "Estate Beverhoudstberg",
+    "basename": "Beverhoudstberg",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3352718,
+      "lng": -64.7676807
+    },
+    "interiorPoint": {
+      "lat": 18.3352718,
+      "lng": -64.7676807
+    }
+  },
+  {
+    "geoid": "7803007775",
+    "name": "Estate Big Flat Cay",
+    "basename": "Big Flat Cay",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3165376,
+      "lng": -64.9898255
+    },
+    "interiorPoint": {
+      "lat": 18.3165376,
+      "lng": -64.9898255
+    }
+  },
+  {
+    "geoid": "7801007850",
+    "name": "Estate Blessing",
+    "basename": "Blessing",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7090008,
+      "lng": -64.7638231
+    },
+    "interiorPoint": {
+      "lat": 17.7090008,
+      "lng": -64.7638231
+    }
+  },
+  {
+    "geoid": "7801007910",
+    "name": "Estate Bodkin",
+    "basename": "Bodkin",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7502074,
+      "lng": -64.8358939
+    },
+    "interiorPoint": {
+      "lat": 17.7502074,
+      "lng": -64.8358939
+    }
+  },
+  {
+    "geoid": "7801007915",
+    "name": "Estate Body Slob",
+    "basename": "Body Slob",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7340457,
+      "lng": -64.7765485
+    },
+    "interiorPoint": {
+      "lat": 17.7340457,
+      "lng": -64.7765485
+    }
+  },
+  {
+    "geoid": "7801007940",
+    "name": "Estate Boetzberg",
+    "basename": "Boetzberg",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7456575,
+      "lng": -64.6790086
+    },
+    "interiorPoint": {
+      "lat": 17.7456575,
+      "lng": -64.6790086
+    }
+  },
+  {
+    "geoid": "7803007950",
+    "name": "Estate Bolongo",
+    "basename": "Bolongo",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3180167,
+      "lng": -64.8985895
+    },
+    "interiorPoint": {
+      "lat": 18.3180167,
+      "lng": -64.8985895
+    }
+  },
+  {
+    "geoid": "7803008060",
+    "name": "Estate Bonne Esperance",
+    "basename": "Bonne Esperance",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3542846,
+      "lng": -64.9894137
+    },
+    "interiorPoint": {
+      "lat": 18.3560495,
+      "lng": -64.9895187
+    }
+  },
+  {
+    "geoid": "7801008070",
+    "name": "Estate Bonne Esperance North",
+    "basename": "Bonne Esperance North",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7662233,
+      "lng": -64.7832958
+    },
+    "interiorPoint": {
+      "lat": 17.7662233,
+      "lng": -64.7832958
+    }
+  },
+  {
+    "geoid": "7801008085",
+    "name": "Estate Bonne Esperance South",
+    "basename": "Bonne Esperance South",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7434483,
+      "lng": -64.7693267
+    },
+    "interiorPoint": {
+      "lat": 17.7434483,
+      "lng": -64.7693267
+    }
+  },
+  {
+    "geoid": "7803008100",
+    "name": "Estate Bonne Resolution",
+    "basename": "Bonne Resolution",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3598316,
+      "lng": -64.9576121
+    },
+    "interiorPoint": {
+      "lat": 18.3598316,
+      "lng": -64.9576121
+    }
+  },
+  {
+    "geoid": "7803008400",
+    "name": "Estate Bordeaux",
+    "basename": "Bordeaux",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3568536,
+      "lng": -65.0168926
+    },
+    "interiorPoint": {
+      "lat": 18.3568536,
+      "lng": -65.0168926
+    }
+  },
+  {
+    "geoid": "7802008300",
+    "name": "Estate Bordeaux",
+    "basename": "Bordeaux",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3347094,
+      "lng": -64.7234465
+    },
+    "interiorPoint": {
+      "lat": 18.3347094,
+      "lng": -64.7234465
+    }
+  },
+  {
+    "geoid": "7803008450",
+    "name": "Estate Botany Bay",
+    "basename": "Botany Bay",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3532734,
+      "lng": -65.0311944
+    },
+    "interiorPoint": {
+      "lat": 18.3532734,
+      "lng": -65.0311944
+    }
+  },
+  {
+    "geoid": "7803008500",
+    "name": "Estate Bovoni",
+    "basename": "Bovoni",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3168097,
+      "lng": -64.8858312
+    },
+    "interiorPoint": {
+      "lat": 18.3115935,
+      "lng": -64.8832131
+    }
+  },
+  {
+    "geoid": "7803008550",
+    "name": "Estate Bovoni Cay",
+    "basename": "Bovoni Cay",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3136011,
+      "lng": -64.8724107
+    },
+    "interiorPoint": {
+      "lat": 18.3136011,
+      "lng": -64.8724107
+    }
+  },
+  {
+    "geoid": "7801008600",
+    "name": "Estate Brooks Hill",
+    "basename": "Brooks Hill",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7254659,
+      "lng": -64.8577368
+    },
+    "interiorPoint": {
+      "lat": 17.7254659,
+      "lng": -64.8577368
+    }
+  },
+  {
+    "geoid": "7802008700",
+    "name": "Estate Browns Bay",
+    "basename": "Browns Bay",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3604502,
+      "lng": -64.7074843
+    },
+    "interiorPoint": {
+      "lat": 18.3621661,
+      "lng": -64.7075555
+    }
+  },
+  {
+    "geoid": "7803009000",
+    "name": "Estate Buck Island",
+    "basename": "Buck Island",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.2765552,
+      "lng": -64.8920096
+    },
+    "interiorPoint": {
+      "lat": 18.276867,
+      "lng": -64.8922495
+    }
+  },
+  {
+    "geoid": "7802008900",
+    "name": "Estate Buck Island",
+    "basename": "Buck Island",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3162521,
+      "lng": -64.6885703
+    },
+    "interiorPoint": {
+      "lat": 18.3162521,
+      "lng": -64.6885703
+    }
+  },
+  {
+    "geoid": "7801009300",
+    "name": "Estate Bugby Hole",
+    "basename": "Bugby Hole",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7282843,
+      "lng": -64.7024101
+    },
+    "interiorPoint": {
+      "lat": 17.7282843,
+      "lng": -64.7024101
+    }
+  },
+  {
+    "geoid": "7801009400",
+    "name": "Estate Bulows Minde",
+    "basename": "Bulows Minde",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7391814,
+      "lng": -64.7277352
+    },
+    "interiorPoint": {
+      "lat": 17.7391814,
+      "lng": -64.7277352
+    }
+  },
+  {
+    "geoid": "7801009500",
+    "name": "Estate Burns Hill",
+    "basename": "Burns Hill",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7580133,
+      "lng": -64.8751424
+    },
+    "interiorPoint": {
+      "lat": 17.7580133,
+      "lng": -64.8751424
+    }
+  },
+  {
+    "geoid": "7801009600",
+    "name": "Estate Butlers Bay",
+    "basename": "Butlers Bay",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.75311,
+      "lng": -64.8796536
+    },
+    "interiorPoint": {
+      "lat": 17.75311,
+      "lng": -64.8796536
+    }
+  },
+  {
+    "geoid": "7802010750",
+    "name": "Estate Calabash Boom",
+    "basename": "Calabash Boom",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3296382,
+      "lng": -64.7081578
+    },
+    "interiorPoint": {
+      "lat": 18.3296382,
+      "lng": -64.7081578
+    }
+  },
+  {
+    "geoid": "7801010770",
+    "name": "Estate Caldwell",
+    "basename": "Caldwell",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7217231,
+      "lng": -64.7512257
+    },
+    "interiorPoint": {
+      "lat": 17.7217231,
+      "lng": -64.7512257
+    }
+  },
+  {
+    "geoid": "7801010800",
+    "name": "Estate Caledonia",
+    "basename": "Caledonia",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7616273,
+      "lng": -64.8696815
+    },
+    "interiorPoint": {
+      "lat": 17.7616273,
+      "lng": -64.8696815
+    }
+  },
+  {
+    "geoid": "7801011525",
+    "name": "Estate Canaan",
+    "basename": "Canaan",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.761062,
+      "lng": -64.7999394
+    },
+    "interiorPoint": {
+      "lat": 17.761062,
+      "lng": -64.7999394
+    }
+  },
+  {
+    "geoid": "7803011650",
+    "name": "Estate Canaan and Sherpenjewel",
+    "basename": "Canaan and Sherpenjewel",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3565503,
+      "lng": -64.9219224
+    },
+    "interiorPoint": {
+      "lat": 18.3565503,
+      "lng": -64.9219224
+    }
+  },
+  {
+    "geoid": "7801011750",
+    "name": "Estate Cane",
+    "basename": "Cane",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7025805,
+      "lng": -64.8435863
+    },
+    "interiorPoint": {
+      "lat": 17.7025805,
+      "lng": -64.8435863
+    }
+  },
+  {
+    "geoid": "7801011900",
+    "name": "Estate Cane Garden",
+    "basename": "Cane Garden",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7068286,
+      "lng": -64.7279115
+    },
+    "interiorPoint": {
+      "lat": 17.7041828,
+      "lng": -64.722713
+    }
+  },
+  {
+    "geoid": "7801011950",
+    "name": "Estate Cane South",
+    "basename": "Cane South",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.6838759,
+      "lng": -64.8331383
+    },
+    "interiorPoint": {
+      "lat": 17.6838759,
+      "lng": -64.8331383
+    }
+  },
+  {
+    "geoid": "7801012050",
+    "name": "Estate Cane Valley",
+    "basename": "Cane Valley",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7190394,
+      "lng": -64.8490165
+    },
+    "interiorPoint": {
+      "lat": 17.7190394,
+      "lng": -64.8490165
+    }
+  },
+  {
+    "geoid": "7802011870",
+    "name": "Estate Caneel Bay",
+    "basename": "Caneel Bay",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3405466,
+      "lng": -64.7859
+    },
+    "interiorPoint": {
+      "lat": 18.3405466,
+      "lng": -64.7859
+    }
+  },
+  {
+    "geoid": "7803012300",
+    "name": "Estate Careening Hole",
+    "basename": "Careening Hole",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3349617,
+      "lng": -64.9417719
+    },
+    "interiorPoint": {
+      "lat": 18.3349617,
+      "lng": -64.9417719
+    }
+  },
+  {
+    "geoid": "7803012400",
+    "name": "Estate Caret Bay",
+    "basename": "Caret Bay",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3646799,
+      "lng": -64.9757976
+    },
+    "interiorPoint": {
+      "lat": 18.3646799,
+      "lng": -64.9757976
+    }
+  },
+  {
+    "geoid": "7801012500",
+    "name": "Estate Carina",
+    "basename": "Carina",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7366886,
+      "lng": -64.6788014
+    },
+    "interiorPoint": {
+      "lat": 17.7366886,
+      "lng": -64.6788014
+    }
+  },
+  {
+    "geoid": "7801012750",
+    "name": "Estate Carlton North",
+    "basename": "Carlton North",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7049677,
+      "lng": -64.850691
+    },
+    "interiorPoint": {
+      "lat": 17.7049677,
+      "lng": -64.850691
+    }
+  },
+  {
+    "geoid": "7801012800",
+    "name": "Estate Carlton South",
+    "basename": "Carlton South",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.6903516,
+      "lng": -64.8397116
+    },
+    "interiorPoint": {
+      "lat": 17.6903516,
+      "lng": -64.8397116
+    }
+  },
+  {
+    "geoid": "7802013650",
+    "name": "Estate Carolina",
+    "basename": "Carolina",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3465175,
+      "lng": -64.7256567
+    },
+    "interiorPoint": {
+      "lat": 18.3465175,
+      "lng": -64.7256567
+    }
+  },
+  {
+    "geoid": "7803013675",
+    "name": "Estate Cas Cay",
+    "basename": "Cas Cay",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.307291,
+      "lng": -64.8658311
+    },
+    "interiorPoint": {
+      "lat": 18.3067025,
+      "lng": -64.8639905
+    }
+  },
+  {
+    "geoid": "7801013700",
+    "name": "Estate Cassava Garden",
+    "basename": "Cassava Garden",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7156177,
+      "lng": -64.7428738
+    },
+    "interiorPoint": {
+      "lat": 17.7156177,
+      "lng": -64.7428738
+    }
+  },
+  {
+    "geoid": "7801014600",
+    "name": "Estate Castle Coakley",
+    "basename": "Castle Coakley",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7235128,
+      "lng": -64.7455799
+    },
+    "interiorPoint": {
+      "lat": 17.7235128,
+      "lng": -64.7455799
+    }
+  },
+  {
+    "geoid": "7801014700",
+    "name": "Estate Castle Nugent",
+    "basename": "Castle Nugent",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7198288,
+      "lng": -64.6796691
+    },
+    "interiorPoint": {
+      "lat": 17.7198288,
+      "lng": -64.6796691
+    }
+  },
+  {
+    "geoid": "7803014820",
+    "name": "Estate Catherineberg",
+    "basename": "Catherineberg",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3463074,
+      "lng": -64.9317609
+    },
+    "interiorPoint": {
+      "lat": 18.3463074,
+      "lng": -64.9317609
+    }
+  },
+  {
+    "geoid": "7803014830",
+    "name": "Estate Catherineberg on Denmark Hill",
+    "basename": "Catherineberg on Denmark Hill",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3446065,
+      "lng": -64.9333679
+    },
+    "interiorPoint": {
+      "lat": 18.3446065,
+      "lng": -64.9333679
+    }
+  },
+  {
+    "geoid": "7801014840",
+    "name": "Estate Catherines Hope",
+    "basename": "Catherines Hope",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7480567,
+      "lng": -64.6143854
+    },
+    "interiorPoint": {
+      "lat": 17.7480567,
+      "lng": -64.6143854
+    }
+  },
+  {
+    "geoid": "7801014870",
+    "name": "Estate Catherines Rest",
+    "basename": "Catherines Rest",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7250453,
+      "lng": -64.7110551
+    },
+    "interiorPoint": {
+      "lat": 17.7264674,
+      "lng": -64.7098477
+    }
+  },
+  {
+    "geoid": "7802015500",
+    "name": "Estate Caval Cay",
+    "basename": "Caval Cay",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.36968,
+      "lng": -64.7942168
+    },
+    "interiorPoint": {
+      "lat": 18.36968,
+      "lng": -64.7942168
+    }
+  },
+  {
+    "geoid": "7803017300",
+    "name": "Estate Charlotte Amalie",
+    "basename": "Charlotte Amalie",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3333231,
+      "lng": -64.8896571
+    },
+    "interiorPoint": {
+      "lat": 18.3321712,
+      "lng": -64.8890114
+    }
+  },
+  {
+    "geoid": "7802019150",
+    "name": "Estate Chocolate Hole",
+    "basename": "Chocolate Hole",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.319338,
+      "lng": -64.7833663
+    },
+    "interiorPoint": {
+      "lat": 18.3176407,
+      "lng": -64.7840821
+    }
+  },
+  {
+    "geoid": "7801020000",
+    "name": "Estate Christiansted",
+    "basename": "Christiansted",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7442324,
+      "lng": -64.7040208
+    },
+    "interiorPoint": {
+      "lat": 17.7442324,
+      "lng": -64.7040208
+    }
+  },
+  {
+    "geoid": "7802021900",
+    "name": "Estate Cinnamon Cay",
+    "basename": "Cinnamon Cay",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3563762,
+      "lng": -64.7563265
+    },
+    "interiorPoint": {
+      "lat": 18.3563762,
+      "lng": -64.7563265
+    }
+  },
+  {
+    "geoid": "7801022325",
+    "name": "Estate Clairmont North",
+    "basename": "Clairmont North",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7739814,
+      "lng": -64.7777782
+    },
+    "interiorPoint": {
+      "lat": 17.7739814,
+      "lng": -64.7777782
+    }
+  },
+  {
+    "geoid": "7801022330",
+    "name": "Estate Clairmont South",
+    "basename": "Clairmont South",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7288505,
+      "lng": -64.8465304
+    },
+    "interiorPoint": {
+      "lat": 17.7288505,
+      "lng": -64.8465304
+    }
+  },
+  {
+    "geoid": "7801022400",
+    "name": "Estate Clifton Hill",
+    "basename": "Clifton Hill",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7235788,
+      "lng": -64.7753006
+    },
+    "interiorPoint": {
+      "lat": 17.7235788,
+      "lng": -64.7753006
+    }
+  },
+  {
+    "geoid": "7801023200",
+    "name": "Estate Coakley Bay",
+    "basename": "Coakley Bay",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.754791,
+      "lng": -64.6426587
+    },
+    "interiorPoint": {
+      "lat": 17.7531244,
+      "lng": -64.6421117
+    }
+  },
+  {
+    "geoid": "7803023400",
+    "name": "Estate Coculus Rock",
+    "basename": "Coculus Rock",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3136833,
+      "lng": -64.8647365
+    },
+    "interiorPoint": {
+      "lat": 18.3136833,
+      "lng": -64.8647365
+    }
+  },
+  {
+    "geoid": "7803023435",
+    "name": "Estate Coki Point",
+    "basename": "Coki Point",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3494262,
+      "lng": -64.8674224
+    },
+    "interiorPoint": {
+      "lat": 18.3486503,
+      "lng": -64.8686558
+    }
+  },
+  {
+    "geoid": "7801023500",
+    "name": "Estate Colquohoun",
+    "basename": "Colquohoun",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7437061,
+      "lng": -64.7977488
+    },
+    "interiorPoint": {
+      "lat": 17.7437061,
+      "lng": -64.7977488
+    }
+  },
+  {
+    "geoid": "7801024410",
+    "name": "Estate Concordia",
+    "basename": "Concordia",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7642246,
+      "lng": -64.7681458
+    },
+    "interiorPoint": {
+      "lat": 17.7642246,
+      "lng": -64.7681458
+    }
+  },
+  {
+    "geoid": "7802024420",
+    "name": "Estate Concordia A",
+    "basename": "Concordia A",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.308908,
+      "lng": -64.7038763
+    },
+    "interiorPoint": {
+      "lat": 18.3059865,
+      "lng": -64.7034918
+    }
+  },
+  {
+    "geoid": "7802024440",
+    "name": "Estate Concordia B",
+    "basename": "Concordia B",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3192355,
+      "lng": -64.7097771
+    },
+    "interiorPoint": {
+      "lat": 18.3192355,
+      "lng": -64.7097771
+    }
+  },
+  {
+    "geoid": "7801024470",
+    "name": "Estate Concordia South",
+    "basename": "Concordia South",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.6871928,
+      "lng": -64.8764298
+    },
+    "interiorPoint": {
+      "lat": 17.6871928,
+      "lng": -64.8764298
+    }
+  },
+  {
+    "geoid": "7801024500",
+    "name": "Estate Concordia West",
+    "basename": "Concordia West",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7045348,
+      "lng": -64.8662301
+    },
+    "interiorPoint": {
+      "lat": 17.7045348,
+      "lng": -64.8662301
+    }
+  },
+  {
+    "geoid": "7802024530",
+    "name": "Estate Congo Cay",
+    "basename": "Congo Cay",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3678189,
+      "lng": -64.8030219
+    },
+    "interiorPoint": {
+      "lat": 18.3678189,
+      "lng": -64.8030219
+    }
+  },
+  {
+    "geoid": "7801024600",
+    "name": "Estate Constitution Hill",
+    "basename": "Constitution Hill",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7365209,
+      "lng": -64.7330213
+    },
+    "interiorPoint": {
+      "lat": 17.7365209,
+      "lng": -64.7330213
+    }
+  },
+  {
+    "geoid": "7802025350",
+    "name": "Estate Contant",
+    "basename": "Contant",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3242902,
+      "lng": -64.7923358
+    },
+    "interiorPoint": {
+      "lat": 18.3242902,
+      "lng": -64.7923358
+    }
+  },
+  {
+    "geoid": "7803026310",
+    "name": "Estate Contant 7A",
+    "basename": "Contant 7A",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3438067,
+      "lng": -64.9589639
+    },
+    "interiorPoint": {
+      "lat": 18.3438067,
+      "lng": -64.9589639
+    }
+  },
+  {
+    "geoid": "7803026330",
+    "name": "Estate Contant 7b",
+    "basename": "Contant 7b",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3501048,
+      "lng": -64.9585256
+    },
+    "interiorPoint": {
+      "lat": 18.3501048,
+      "lng": -64.9585256
+    }
+  },
+  {
+    "geoid": "7803026320",
+    "name": "Estate Contant 7B",
+    "basename": "Contant 7B",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3385769,
+      "lng": -64.9499912
+    },
+    "interiorPoint": {
+      "lat": 18.3385769,
+      "lng": -64.9499912
+    }
+  },
+  {
+    "geoid": "7803026340",
+    "name": "Estate Contant 7BA",
+    "basename": "Contant 7BA",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.342311,
+      "lng": -64.9529384
+    },
+    "interiorPoint": {
+      "lat": 18.342311,
+      "lng": -64.9529384
+    }
+  },
+  {
+    "geoid": "7803026350",
+    "name": "Estate Contant 7Bb",
+    "basename": "Contant 7Bb",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3397615,
+      "lng": -64.9504816
+    },
+    "interiorPoint": {
+      "lat": 18.3397615,
+      "lng": -64.9504816
+    }
+  },
+  {
+    "geoid": "7801026450",
+    "name": "Estate Contentment",
+    "basename": "Contentment",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.737508,
+      "lng": -64.710201
+    },
+    "interiorPoint": {
+      "lat": 17.737508,
+      "lng": -64.710201
+    }
+  },
+  {
+    "geoid": "7801026600",
+    "name": "Estate Coopers",
+    "basename": "Coopers",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.6952025,
+      "lng": -64.8095992
+    },
+    "interiorPoint": {
+      "lat": 17.6952025,
+      "lng": -64.8095992
+    }
+  },
+  {
+    "geoid": "7801027250",
+    "name": "Estate Corn Hill",
+    "basename": "Corn Hill",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.714443,
+      "lng": -64.7093776
+    },
+    "interiorPoint": {
+      "lat": 17.7143826,
+      "lng": -64.7093879
+    }
+  },
+  {
+    "geoid": "7801027300",
+    "name": "Estate Cottage",
+    "basename": "Cottage",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7204507,
+      "lng": -64.7554961
+    },
+    "interiorPoint": {
+      "lat": 17.7204507,
+      "lng": -64.7554961
+    }
+  },
+  {
+    "geoid": "7801027525",
+    "name": "Estate Cotton Grove",
+    "basename": "Cotton Grove",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7354699,
+      "lng": -64.6395585
+    },
+    "interiorPoint": {
+      "lat": 17.7354699,
+      "lng": -64.6395585
+    }
+  },
+  {
+    "geoid": "7801027600",
+    "name": "Estate Cotton Valley",
+    "basename": "Cotton Valley",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7518321,
+      "lng": -64.6244296
+    },
+    "interiorPoint": {
+      "lat": 17.7518321,
+      "lng": -64.6244296
+    }
+  },
+  {
+    "geoid": "7803027850",
+    "name": "Estate Crown and Hawk",
+    "basename": "Crown and Hawk",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3523557,
+      "lng": -64.974408
+    },
+    "interiorPoint": {
+      "lat": 18.3523557,
+      "lng": -64.974408
+    }
+  },
+  {
+    "geoid": "7802028950",
+    "name": "Estate Cruz Bay Town",
+    "basename": "Cruz Bay Town",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3304415,
+      "lng": -64.7960936
+    },
+    "interiorPoint": {
+      "lat": 18.3304415,
+      "lng": -64.7960936
+    }
+  },
+  {
+    "geoid": "7803029100",
+    "name": "Estate Demarara",
+    "basename": "Demarara",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3388583,
+      "lng": -64.9416134
+    },
+    "interiorPoint": {
+      "lat": 18.3388583,
+      "lng": -64.9416134
+    }
+  },
+  {
+    "geoid": "7802029300",
+    "name": "Estate Dennis Bay and Hawksnest",
+    "basename": "Dennis Bay and Hawksnest",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3494852,
+      "lng": -64.7743451
+    },
+    "interiorPoint": {
+      "lat": 18.3494852,
+      "lng": -64.7743451
+    }
+  },
+  {
+    "geoid": "7801029825",
+    "name": "Estate Diamond Central",
+    "basename": "Diamond Central",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7067619,
+      "lng": -64.7125271
+    },
+    "interiorPoint": {
+      "lat": 17.7057287,
+      "lng": -64.7120975
+    }
+  },
+  {
+    "geoid": "7801029850",
+    "name": "Estate Diamond East",
+    "basename": "Diamond East",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7304687,
+      "lng": -64.7525688
+    },
+    "interiorPoint": {
+      "lat": 17.7304687,
+      "lng": -64.7525688
+    }
+  },
+  {
+    "geoid": "7801030300",
+    "name": "Estate Diamond West",
+    "basename": "Diamond West",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7050191,
+      "lng": -64.8277718
+    },
+    "interiorPoint": {
+      "lat": 17.706945,
+      "lng": -64.8256278
+    }
+  },
+  {
+    "geoid": "7803030400",
+    "name": "Estate Dog Island",
+    "basename": "Dog Island",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.2957043,
+      "lng": -64.816136
+    },
+    "interiorPoint": {
+      "lat": 18.2957043,
+      "lng": -64.816136
+    }
+  },
+  {
+    "geoid": "7803030550",
+    "name": "Estate Donoe",
+    "basename": "Donoe",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.337345,
+      "lng": -64.9018427
+    },
+    "interiorPoint": {
+      "lat": 18.337345,
+      "lng": -64.9018427
+    }
+  },
+  {
+    "geoid": "7803030650",
+    "name": "Estate Dorothea",
+    "basename": "Dorothea",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3606558,
+      "lng": -64.9636857
+    },
+    "interiorPoint": {
+      "lat": 18.3606558,
+      "lng": -64.9636857
+    }
+  },
+  {
+    "geoid": "7803031500",
+    "name": "Estate Dutchman Cap",
+    "basename": "Dutchman Cap",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3799583,
+      "lng": -65.0617776
+    },
+    "interiorPoint": {
+      "lat": 18.3799583,
+      "lng": -65.0617776
+    }
+  },
+  {
+    "geoid": "7803034700",
+    "name": "Estate Eastern Water Island",
+    "basename": "Eastern Water Island",
+    "state": "78",
+    "county": "030",
+    "island": "Water Island",
+    "centroid": {
+      "lat": 18.3239995,
+      "lng": -64.9445647
+    },
+    "interiorPoint": {
+      "lat": 18.3247703,
+      "lng": -64.945234
+    }
+  },
+  {
+    "geoid": "7802034775",
+    "name": "Estate Eden",
+    "basename": "Eden",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3488922,
+      "lng": -64.708625
+    },
+    "interiorPoint": {
+      "lat": 18.3488922,
+      "lng": -64.708625
+    }
+  },
+  {
+    "geoid": "7803034800",
+    "name": "Estate Elizabeth",
+    "basename": "Elizabeth",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3519608,
+      "lng": -64.9350487
+    },
+    "interiorPoint": {
+      "lat": 18.3519608,
+      "lng": -64.9350487
+    }
+  },
+  {
+    "geoid": "7801034850",
+    "name": "Estate Elizas Retreat",
+    "basename": "Elizas Retreat",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7375684,
+      "lng": -64.6868806
+    },
+    "interiorPoint": {
+      "lat": 17.7375684,
+      "lng": -64.6868806
+    }
+  },
+  {
+    "geoid": "7802035100",
+    "name": "Estate Emmaus",
+    "basename": "Emmaus",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3513018,
+      "lng": -64.71141
+    },
+    "interiorPoint": {
+      "lat": 18.3513018,
+      "lng": -64.71141
+    }
+  },
+  {
+    "geoid": "7801035150",
+    "name": "Estate Enfield Green",
+    "basename": "Enfield Green",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.6929686,
+      "lng": -64.8286334
+    },
+    "interiorPoint": {
+      "lat": 17.6929686,
+      "lng": -64.8286334
+    }
+  },
+  {
+    "geoid": "7802035250",
+    "name": "Estate Enighed",
+    "basename": "Enighed",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3292471,
+      "lng": -64.7909238
+    },
+    "interiorPoint": {
+      "lat": 18.3283575,
+      "lng": -64.7905975
+    }
+  },
+  {
+    "geoid": "7801035450",
+    "name": "Estate Envy",
+    "basename": "Envy",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.697009,
+      "lng": -64.8036973
+    },
+    "interiorPoint": {
+      "lat": 17.697009,
+      "lng": -64.8036973
+    }
+  },
+  {
+    "geoid": "7801035650",
+    "name": "Estate Fareham",
+    "basename": "Fareham",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7182612,
+      "lng": -64.6714322
+    },
+    "interiorPoint": {
+      "lat": 17.7182612,
+      "lng": -64.6714322
+    }
+  },
+  {
+    "geoid": "7802035750",
+    "name": "Estate Fish Bay",
+    "basename": "Fish Bay",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3228753,
+      "lng": -64.7612609
+    },
+    "interiorPoint": {
+      "lat": 18.3228753,
+      "lng": -64.7612609
+    }
+  },
+  {
+    "geoid": "7802035760",
+    "name": "Estate Flannigan Island",
+    "basename": "Flannigan Island",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3266203,
+      "lng": -64.6502998
+    },
+    "interiorPoint": {
+      "lat": 18.3266203,
+      "lng": -64.6502998
+    }
+  },
+  {
+    "geoid": "7802035780",
+    "name": "Estate Fortsberg",
+    "basename": "Fortsberg",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3441076,
+      "lng": -64.7057589
+    },
+    "interiorPoint": {
+      "lat": 18.3441076,
+      "lng": -64.7057589
+    }
+  },
+  {
+    "geoid": "7803035890",
+    "name": "Estate Fortuna",
+    "basename": "Fortuna",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3484574,
+      "lng": -65.013931
+    },
+    "interiorPoint": {
+      "lat": 18.3484574,
+      "lng": -65.013931
+    }
+  },
+  {
+    "geoid": "7801036050",
+    "name": "Estate Fountain",
+    "basename": "Fountain",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7524866,
+      "lng": -64.8269296
+    },
+    "interiorPoint": {
+      "lat": 17.7523999,
+      "lng": -64.8272246
+    }
+  },
+  {
+    "geoid": "7801037700",
+    "name": "Estate Frederikshaab",
+    "basename": "Frederikshaab",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7153135,
+      "lng": -64.8605484
+    },
+    "interiorPoint": {
+      "lat": 17.7153135,
+      "lng": -64.8605484
+    }
+  },
+  {
+    "geoid": "7801038000",
+    "name": "Estate Frederiksted",
+    "basename": "Frederiksted",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7125062,
+      "lng": -64.8821217
+    },
+    "interiorPoint": {
+      "lat": 17.7129077,
+      "lng": -64.8822745
+    }
+  },
+  {
+    "geoid": "7802038500",
+    "name": "Estate Freemans Ground",
+    "basename": "Freemans Ground",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3320223,
+      "lng": -64.7106853
+    },
+    "interiorPoint": {
+      "lat": 18.3320223,
+      "lng": -64.7106853
+    }
+  },
+  {
+    "geoid": "7803040300",
+    "name": "Estate Frenchman Bay",
+    "basename": "Frenchman Bay",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3203897,
+      "lng": -64.9078457
+    },
+    "interiorPoint": {
+      "lat": 18.3187828,
+      "lng": -64.909602
+    }
+  },
+  {
+    "geoid": "7801041600",
+    "name": "Estate Friedensthal",
+    "basename": "Friedensthal",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7410728,
+      "lng": -64.7094166
+    },
+    "interiorPoint": {
+      "lat": 17.7410728,
+      "lng": -64.7094166
+    }
+  },
+  {
+    "geoid": "7802041700",
+    "name": "Estate Friise",
+    "basename": "Friise",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3217204,
+      "lng": -64.700541
+    },
+    "interiorPoint": {
+      "lat": 18.3217204,
+      "lng": -64.700541
+    }
+  },
+  {
+    "geoid": "7803042450",
+    "name": "Estate Frydendal",
+    "basename": "Frydendal",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3482916,
+      "lng": -64.8741138
+    },
+    "interiorPoint": {
+      "lat": 18.3482916,
+      "lng": -64.8741138
+    }
+  },
+  {
+    "geoid": "7803042500",
+    "name": "Estate Frydenhoj",
+    "basename": "Frydenhoj",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3250529,
+      "lng": -64.865705
+    },
+    "interiorPoint": {
+      "lat": 18.3236864,
+      "lng": -64.8676956
+    }
+  },
+  {
+    "geoid": "7802043000",
+    "name": "Estate Gifft and Regenback",
+    "basename": "Gifft and Regenback",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3261273,
+      "lng": -64.7730959
+    },
+    "interiorPoint": {
+      "lat": 18.3261273,
+      "lng": -64.7730959
+    }
+  },
+  {
+    "geoid": "7802043400",
+    "name": "Estate Glucksberg",
+    "basename": "Glucksberg",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3323012,
+      "lng": -64.7752487
+    },
+    "interiorPoint": {
+      "lat": 18.3323012,
+      "lng": -64.7752487
+    }
+  },
+  {
+    "geoid": "7801043500",
+    "name": "Estate Glynn",
+    "basename": "Glynn",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7508043,
+      "lng": -64.775068
+    },
+    "interiorPoint": {
+      "lat": 17.7508043,
+      "lng": -64.775068
+    }
+  },
+  {
+    "geoid": "7801044250",
+    "name": "Estate Golden Grove",
+    "basename": "Golden Grove",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.712488,
+      "lng": -64.7977975
+    },
+    "interiorPoint": {
+      "lat": 17.712488,
+      "lng": -64.7977975
+    }
+  },
+  {
+    "geoid": "7801044300",
+    "name": "Estate Golden Rock",
+    "basename": "Golden Rock",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7510034,
+      "lng": -64.7212422
+    },
+    "interiorPoint": {
+      "lat": 17.7510034,
+      "lng": -64.7212422
+    }
+  },
+  {
+    "geoid": "7801045050",
+    "name": "Estate Granard",
+    "basename": "Granard",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7131142,
+      "lng": -64.7103183
+    },
+    "interiorPoint": {
+      "lat": 17.7179379,
+      "lng": -64.7040991
+    }
+  },
+  {
+    "geoid": "7801045160",
+    "name": "Estate Grange Hill",
+    "basename": "Grange Hill",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7350404,
+      "lng": -64.72472
+    },
+    "interiorPoint": {
+      "lat": 17.7350404,
+      "lng": -64.72472
+    }
+  },
+  {
+    "geoid": "7801045175",
+    "name": "Estate Grange North",
+    "basename": "Grange North",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7308202,
+      "lng": -64.7210247
+    },
+    "interiorPoint": {
+      "lat": 17.7308202,
+      "lng": -64.7210247
+    }
+  },
+  {
+    "geoid": "7801045225",
+    "name": "Estate Grange South",
+    "basename": "Grange South",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7203258,
+      "lng": -64.6980494
+    },
+    "interiorPoint": {
+      "lat": 17.7203258,
+      "lng": -64.6980494
+    }
+  },
+  {
+    "geoid": "7802045300",
+    "name": "Estate Great Cinnamon Bay",
+    "basename": "Great Cinnamon Bay",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3528457,
+      "lng": -64.7532482
+    },
+    "interiorPoint": {
+      "lat": 18.3528457,
+      "lng": -64.7532482
+    }
+  },
+  {
+    "geoid": "7801045525",
+    "name": "Estate Great Pond",
+    "basename": "Great Pond",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7272518,
+      "lng": -64.6471976
+    },
+    "interiorPoint": {
+      "lat": 17.7287401,
+      "lng": -64.6498339
+    }
+  },
+  {
+    "geoid": "7803045550",
+    "name": "Estate Great St. James Island",
+    "basename": "Great St. James Island",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3104749,
+      "lng": -64.8290765
+    },
+    "interiorPoint": {
+      "lat": 18.3104749,
+      "lng": -64.8290765
+    }
+  },
+  {
+    "geoid": "7803045800",
+    "name": "Estate Green Cay",
+    "basename": "Green Cay",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3098166,
+      "lng": -64.9081018
+    },
+    "interiorPoint": {
+      "lat": 18.3098166,
+      "lng": -64.9081018
+    }
+  },
+  {
+    "geoid": "7801045575",
+    "name": "Estate Green Cay",
+    "basename": "Green Cay",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.756631,
+      "lng": -64.6544068
+    },
+    "interiorPoint": {
+      "lat": 17.7531886,
+      "lng": -64.6523876
+    }
+  },
+  {
+    "geoid": "7801046100",
+    "name": "Estate Grove Place",
+    "basename": "Grove Place",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7299489,
+      "lng": -64.8232761
+    },
+    "interiorPoint": {
+      "lat": 17.7299489,
+      "lng": -64.8232761
+    }
+  },
+  {
+    "geoid": "7802046125",
+    "name": "Estate Grunwald",
+    "basename": "Grunwald",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3343585,
+      "lng": -64.7783852
+    },
+    "interiorPoint": {
+      "lat": 18.3343585,
+      "lng": -64.7783852
+    }
+  },
+  {
+    "geoid": "7801046150",
+    "name": "Estate Gumbs Land",
+    "basename": "Gumbs Land",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7416255,
+      "lng": -64.6321334
+    },
+    "interiorPoint": {
+      "lat": 17.7416255,
+      "lng": -64.6321334
+    }
+  },
+  {
+    "geoid": "7801046175",
+    "name": "Estate Hafensight",
+    "basename": "Hafensight",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7420248,
+      "lng": -64.7275162
+    },
+    "interiorPoint": {
+      "lat": 17.7420248,
+      "lng": -64.7275162
+    }
+  },
+  {
+    "geoid": "7802046200",
+    "name": "Estate Hammer Farm and Cathrineberg",
+    "basename": "Hammer Farm and Cathrineberg",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3454416,
+      "lng": -64.7590216
+    },
+    "interiorPoint": {
+      "lat": 18.3454416,
+      "lng": -64.7590216
+    }
+  },
+  {
+    "geoid": "7801046320",
+    "name": "Estate Hams Bay",
+    "basename": "Hams Bay",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.76435,
+      "lng": -64.8776043
+    },
+    "interiorPoint": {
+      "lat": 17.76435,
+      "lng": -64.8776043
+    }
+  },
+  {
+    "geoid": "7801046330",
+    "name": "Estate Hams Bluff",
+    "basename": "Hams Bluff",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7677706,
+      "lng": -64.871885
+    },
+    "interiorPoint": {
+      "lat": 17.7677706,
+      "lng": -64.871885
+    }
+  },
+  {
+    "geoid": "7801046350",
+    "name": "Estate Hannahs Rest",
+    "basename": "Hannahs Rest",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.6917125,
+      "lng": -64.8724855
+    },
+    "interiorPoint": {
+      "lat": 17.6917125,
+      "lng": -64.8724855
+    }
+  },
+  {
+    "geoid": "7803046365",
+    "name": "Estate Hans Lollik Island",
+    "basename": "Hans Lollik Island",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3972474,
+      "lng": -64.9079824
+    },
+    "interiorPoint": {
+      "lat": 18.3972474,
+      "lng": -64.9079824
+    }
+  },
+  {
+    "geoid": "7802046360",
+    "name": "Estate Hansen Bay",
+    "basename": "Hansen Bay",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3401099,
+      "lng": -64.6700424
+    },
+    "interiorPoint": {
+      "lat": 18.3401862,
+      "lng": -64.6700386
+    }
+  },
+  {
+    "geoid": "7801046380",
+    "name": "Estate Hard Labor",
+    "basename": "Hard Labor",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7426805,
+      "lng": -64.831632
+    },
+    "interiorPoint": {
+      "lat": 17.7426805,
+      "lng": -64.831632
+    }
+  },
+  {
+    "geoid": "7802046390",
+    "name": "Estate Hard Labor",
+    "basename": "Hard Labor",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3240536,
+      "lng": -64.7026634
+    },
+    "interiorPoint": {
+      "lat": 18.3240536,
+      "lng": -64.7026634
+    }
+  },
+  {
+    "geoid": "7801047000",
+    "name": "Estate Hartman",
+    "basename": "Hartman",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7269077,
+      "lng": -64.6604117
+    },
+    "interiorPoint": {
+      "lat": 17.724922,
+      "lng": -64.662124
+    }
+  },
+  {
+    "geoid": "7803047100",
+    "name": "Estate Hassel Island",
+    "basename": "Hassel Island",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3294116,
+      "lng": -64.9347047
+    },
+    "interiorPoint": {
+      "lat": 18.3293485,
+      "lng": -64.934742
+    }
+  },
+  {
+    "geoid": "7802047230",
+    "name": "Estate Haulover",
+    "basename": "Haulover",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3485396,
+      "lng": -64.6852191
+    },
+    "interiorPoint": {
+      "lat": 18.3485396,
+      "lng": -64.6852191
+    }
+  },
+  {
+    "geoid": "7803047235",
+    "name": "Estate Havensight",
+    "basename": "Havensight",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3295991,
+      "lng": -64.9211232
+    },
+    "interiorPoint": {
+      "lat": 18.3295991,
+      "lng": -64.9211232
+    }
+  },
+  {
+    "geoid": "7803047270",
+    "name": "Estate Heerleins Buy",
+    "basename": "Heerleins Buy",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.361016,
+      "lng": -64.9194139
+    },
+    "interiorPoint": {
+      "lat": 18.361016,
+      "lng": -64.9194139
+    }
+  },
+  {
+    "geoid": "7802047280",
+    "name": "Estate Henley Cay",
+    "basename": "Henley Cay",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3532072,
+      "lng": -64.7929204
+    },
+    "interiorPoint": {
+      "lat": 18.3532072,
+      "lng": -64.7929204
+    }
+  },
+  {
+    "geoid": "7802047700",
+    "name": "Estate Hermitage",
+    "basename": "Hermitage",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3559214,
+      "lng": -64.6997387
+    },
+    "interiorPoint": {
+      "lat": 18.3559214,
+      "lng": -64.6997387
+    }
+  },
+  {
+    "geoid": "7801047600",
+    "name": "Estate Hermitage",
+    "basename": "Hermitage",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7504703,
+      "lng": -64.8049888
+    },
+    "interiorPoint": {
+      "lat": 17.7504703,
+      "lng": -64.8049888
+    }
+  },
+  {
+    "geoid": "7801047750",
+    "name": "Estate Hermon Hill",
+    "basename": "Hermon Hill",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7341277,
+      "lng": -64.7123573
+    },
+    "interiorPoint": {
+      "lat": 17.7341277,
+      "lng": -64.7123573
+    }
+  },
+  {
+    "geoid": "7803047950",
+    "name": "Estate Hoffman",
+    "basename": "Hoffman",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3322855,
+      "lng": -64.8971354
+    },
+    "interiorPoint": {
+      "lat": 18.3322855,
+      "lng": -64.8971354
+    }
+  },
+  {
+    "geoid": "7801048030",
+    "name": "Estate Hogensberg",
+    "basename": "Hogensberg",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7116593,
+      "lng": -64.8434156
+    },
+    "interiorPoint": {
+      "lat": 17.7116593,
+      "lng": -64.8434156
+    }
+  },
+  {
+    "geoid": "7801048045",
+    "name": "Estate Holgers Hope",
+    "basename": "Holgers Hope",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7400235,
+      "lng": -64.6927614
+    },
+    "interiorPoint": {
+      "lat": 17.7400235,
+      "lng": -64.6927614
+    }
+  },
+  {
+    "geoid": "7803048060",
+    "name": "Estate Honduras",
+    "basename": "Honduras",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3363746,
+      "lng": -64.9428144
+    },
+    "interiorPoint": {
+      "lat": 18.3363746,
+      "lng": -64.9428144
+    }
+  },
+  {
+    "geoid": "7803048120",
+    "name": "Estate Hope",
+    "basename": "Hope",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3616639,
+      "lng": -65.0024427
+    },
+    "interiorPoint": {
+      "lat": 18.3616639,
+      "lng": -65.0024427
+    }
+  },
+  {
+    "geoid": "7802048110",
+    "name": "Estate Hope",
+    "basename": "Hope",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3392809,
+      "lng": -64.7388817
+    },
+    "interiorPoint": {
+      "lat": 18.3392809,
+      "lng": -64.7388817
+    }
+  },
+  {
+    "geoid": "7801048130",
+    "name": "Estate Hope and Carton Hill",
+    "basename": "Hope and Carton Hill",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7453406,
+      "lng": -64.6227652
+    },
+    "interiorPoint": {
+      "lat": 17.7453406,
+      "lng": -64.6227652
+    }
+  },
+  {
+    "geoid": "7801048140",
+    "name": "Estate Hope East",
+    "basename": "Hope East",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7084826,
+      "lng": -64.7575402
+    },
+    "interiorPoint": {
+      "lat": 17.7084826,
+      "lng": -64.7575402
+    }
+  },
+  {
+    "geoid": "7801048150",
+    "name": "Estate Hope West",
+    "basename": "Hope West",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7223944,
+      "lng": -64.8377064
+    },
+    "interiorPoint": {
+      "lat": 17.7223944,
+      "lng": -64.8377064
+    }
+  },
+  {
+    "geoid": "7803048160",
+    "name": "Estate Hospital Ground",
+    "basename": "Hospital Ground",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3473799,
+      "lng": -64.9256234
+    },
+    "interiorPoint": {
+      "lat": 18.3473799,
+      "lng": -64.9256234
+    }
+  },
+  {
+    "geoid": "7803048180",
+    "name": "Estate Hull",
+    "basename": "Hull",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3664461,
+      "lng": -64.9522943
+    },
+    "interiorPoint": {
+      "lat": 18.3664461,
+      "lng": -64.9522943
+    }
+  },
+  {
+    "geoid": "7801048190",
+    "name": "Estate Humbug",
+    "basename": "Humbug",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7136502,
+      "lng": -64.7263531
+    },
+    "interiorPoint": {
+      "lat": 17.7136502,
+      "lng": -64.7263531
+    }
+  },
+  {
+    "geoid": "7803048500",
+    "name": "Estate Inner Brass Island",
+    "basename": "Inner Brass Island",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3821709,
+      "lng": -64.9705103
+    },
+    "interiorPoint": {
+      "lat": 18.3821709,
+      "lng": -64.9705103
+    }
+  },
+  {
+    "geoid": "7801048600",
+    "name": "Estate Isaacs Bay",
+    "basename": "Isaacs Bay",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7504547,
+      "lng": -64.5770447
+    },
+    "interiorPoint": {
+      "lat": 17.7504547,
+      "lng": -64.5770447
+    }
+  },
+  {
+    "geoid": "7801049000",
+    "name": "Estate Jacks Bay",
+    "basename": "Jacks Bay",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7493653,
+      "lng": -64.5841099
+    },
+    "interiorPoint": {
+      "lat": 17.7493653,
+      "lng": -64.5841099
+    }
+  },
+  {
+    "geoid": "7801049700",
+    "name": "Estate Jerusalem and Figtree Hill",
+    "basename": "Jerusalem and Figtree Hill",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7073158,
+      "lng": -64.7476994
+    },
+    "interiorPoint": {
+      "lat": 17.7073158,
+      "lng": -64.7476994
+    }
+  },
+  {
+    "geoid": "7803049750",
+    "name": "Estate John Brewers",
+    "basename": "John Brewers",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3454114,
+      "lng": -64.9762367
+    },
+    "interiorPoint": {
+      "lat": 18.3454114,
+      "lng": -64.9762367
+    }
+  },
+  {
+    "geoid": "7802049875",
+    "name": "Estate Johns Folly",
+    "basename": "Johns Folly",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3191462,
+      "lng": -64.7042003
+    },
+    "interiorPoint": {
+      "lat": 18.3191462,
+      "lng": -64.7042003
+    }
+  },
+  {
+    "geoid": "7801049930",
+    "name": "Estate Jolly Hill",
+    "basename": "Jolly Hill",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7334666,
+      "lng": -64.8605332
+    },
+    "interiorPoint": {
+      "lat": 17.7334666,
+      "lng": -64.8605332
+    }
+  },
+  {
+    "geoid": "7801049960",
+    "name": "Estate Judiths Fancy",
+    "basename": "Judiths Fancy",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7743224,
+      "lng": -64.7464895
+    },
+    "interiorPoint": {
+      "lat": 17.7743224,
+      "lng": -64.7464895
+    }
+  },
+  {
+    "geoid": "7803050100",
+    "name": "Estate Kalkum Cay",
+    "basename": "Kalkum Cay",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3504862,
+      "lng": -65.0577339
+    },
+    "interiorPoint": {
+      "lat": 18.3504862,
+      "lng": -65.0577339
+    }
+  },
+  {
+    "geoid": "7803050575",
+    "name": "Estate Kings Quarter",
+    "basename": "Kings Quarter",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3422328,
+      "lng": -64.9280716
+    },
+    "interiorPoint": {
+      "lat": 18.3422328,
+      "lng": -64.9280716
+    }
+  },
+  {
+    "geoid": "7801050550",
+    "name": "Estate Kingshill",
+    "basename": "Kingshill",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7226539,
+      "lng": -64.783067
+    },
+    "interiorPoint": {
+      "lat": 17.7226539,
+      "lng": -64.783067
+    }
+  },
+  {
+    "geoid": "7803050800",
+    "name": "Estate Kronprinsens Quarter",
+    "basename": "Kronprinsens Quarter",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3415682,
+      "lng": -64.9373569
+    },
+    "interiorPoint": {
+      "lat": 18.3415682,
+      "lng": -64.9373569
+    }
+  },
+  {
+    "geoid": "7802054725",
+    "name": "Estate L'Esperance",
+    "basename": "L'Esperance",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3381843,
+      "lng": -64.7587824
+    },
+    "interiorPoint": {
+      "lat": 18.3381843,
+      "lng": -64.7587824
+    }
+  },
+  {
+    "geoid": "7801051710",
+    "name": "Estate La Grande Princesse",
+    "basename": "La Grande Princesse",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7567567,
+      "lng": -64.7356676
+    },
+    "interiorPoint": {
+      "lat": 17.7567567,
+      "lng": -64.7356676
+    }
+  },
+  {
+    "geoid": "7801053400",
+    "name": "Estate La Grange",
+    "basename": "La Grange",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.718474,
+      "lng": -64.8737236
+    },
+    "interiorPoint": {
+      "lat": 17.718474,
+      "lng": -64.8737236
+    }
+  },
+  {
+    "geoid": "7801053970",
+    "name": "Estate La Presvallee",
+    "basename": "La Presvallee",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7289735,
+      "lng": -64.6825387
+    },
+    "interiorPoint": {
+      "lat": 17.7289735,
+      "lng": -64.6825387
+    }
+  },
+  {
+    "geoid": "7801054000",
+    "name": "Estate La Reine",
+    "basename": "La Reine",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7339269,
+      "lng": -64.7709421
+    },
+    "interiorPoint": {
+      "lat": 17.7339269,
+      "lng": -64.7709421
+    }
+  },
+  {
+    "geoid": "7801054200",
+    "name": "Estate La Vallee",
+    "basename": "La Vallee",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7719321,
+      "lng": -64.7996086
+    },
+    "interiorPoint": {
+      "lat": 17.7719321,
+      "lng": -64.7996086
+    }
+  },
+  {
+    "geoid": "7802053810",
+    "name": "Estate Lameshur Complex",
+    "basename": "Lameshur Complex",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3235255,
+      "lng": -64.7219717
+    },
+    "interiorPoint": {
+      "lat": 18.3251438,
+      "lng": -64.7183057
+    }
+  },
+  {
+    "geoid": "7803053950",
+    "name": "Estate Langmath",
+    "basename": "Langmath",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3331455,
+      "lng": -64.8741897
+    },
+    "interiorPoint": {
+      "lat": 18.3331455,
+      "lng": -64.8741897
+    }
+  },
+  {
+    "geoid": "7801054250",
+    "name": "Estate LBJ Gardens",
+    "basename": "LBJ Gardens",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7491809,
+      "lng": -64.7155049
+    },
+    "interiorPoint": {
+      "lat": 17.7491809,
+      "lng": -64.7155049
+    }
+  },
+  {
+    "geoid": "7801054300",
+    "name": "Estate Lebanon Hill",
+    "basename": "Lebanon Hill",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7570484,
+      "lng": -64.7838266
+    },
+    "interiorPoint": {
+      "lat": 17.7564046,
+      "lng": -64.7858973
+    }
+  },
+  {
+    "geoid": "7802054550",
+    "name": "Estate Leinster Bay",
+    "basename": "Leinster Bay",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3608805,
+      "lng": -64.7178711
+    },
+    "interiorPoint": {
+      "lat": 18.3608805,
+      "lng": -64.7178711
+    }
+  },
+  {
+    "geoid": "7803054650",
+    "name": "Estate Lerkenlund",
+    "basename": "Lerkenlund",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3588262,
+      "lng": -64.9399658
+    },
+    "interiorPoint": {
+      "lat": 18.3588262,
+      "lng": -64.9399658
+    }
+  },
+  {
+    "geoid": "7803054825",
+    "name": "Estate Lilliendal and Marienhoj",
+    "basename": "Lilliendal and Marienhoj",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3537143,
+      "lng": -64.9523404
+    },
+    "interiorPoint": {
+      "lat": 18.3537143,
+      "lng": -64.9523404
+    }
+  },
+  {
+    "geoid": "7803054875",
+    "name": "Estate Lindbergh Bay",
+    "basename": "Lindbergh Bay",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3422141,
+      "lng": -64.969401
+    },
+    "interiorPoint": {
+      "lat": 18.3423338,
+      "lng": -64.9703254
+    }
+  },
+  {
+    "geoid": "7803054885",
+    "name": "Estate Little Flat Cay",
+    "basename": "Little Flat Cay",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3177461,
+      "lng": -64.9887917
+    },
+    "interiorPoint": {
+      "lat": 18.3177461,
+      "lng": -64.9887917
+    }
+  },
+  {
+    "geoid": "7801054920",
+    "name": "Estate Little Fountain",
+    "basename": "Little Fountain",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7542172,
+      "lng": -64.7929495
+    },
+    "interiorPoint": {
+      "lat": 17.7542172,
+      "lng": -64.7929495
+    }
+  },
+  {
+    "geoid": "7803054925",
+    "name": "Estate Little Hans Lollik Island",
+    "basename": "Little Hans Lollik Island",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.4094244,
+      "lng": -64.906409
+    },
+    "interiorPoint": {
+      "lat": 18.4094244,
+      "lng": -64.906409
+    }
+  },
+  {
+    "geoid": "7801054930",
+    "name": "Estate Little La Grange",
+    "basename": "Little La Grange",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7275165,
+      "lng": -64.8647724
+    },
+    "interiorPoint": {
+      "lat": 17.7275165,
+      "lng": -64.8647724
+    }
+  },
+  {
+    "geoid": "7801054940",
+    "name": "Estate Little Mount Pleasant",
+    "basename": "Little Mount Pleasant",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7617494,
+      "lng": -64.787786
+    },
+    "interiorPoint": {
+      "lat": 17.7617494,
+      "lng": -64.787786
+    }
+  },
+  {
+    "geoid": "7802054950",
+    "name": "Estate Little Plantation",
+    "basename": "Little Plantation",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3380553,
+      "lng": -64.7162688
+    },
+    "interiorPoint": {
+      "lat": 18.3380553,
+      "lng": -64.7162688
+    }
+  },
+  {
+    "geoid": "7801054970",
+    "name": "Estate Little Princess North",
+    "basename": "Little Princess North",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7575224,
+      "lng": -64.7253938
+    },
+    "interiorPoint": {
+      "lat": 17.7575224,
+      "lng": -64.7253938
+    }
+  },
+  {
+    "geoid": "7801054975",
+    "name": "Estate Little Princess South",
+    "basename": "Little Princess South",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7479087,
+      "lng": -64.7270353
+    },
+    "interiorPoint": {
+      "lat": 17.7479087,
+      "lng": -64.7270353
+    }
+  },
+  {
+    "geoid": "7801054980",
+    "name": "Estate Little Profit",
+    "basename": "Little Profit",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7334526,
+      "lng": -64.6328376
+    },
+    "interiorPoint": {
+      "lat": 17.7334526,
+      "lng": -64.6328376
+    }
+  },
+  {
+    "geoid": "7803054990",
+    "name": "Estate Little St. James Island",
+    "basename": "Little St. James Island",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.2998426,
+      "lng": -64.8256293
+    },
+    "interiorPoint": {
+      "lat": 18.2996867,
+      "lng": -64.8263902
+    }
+  },
+  {
+    "geoid": "7802054996",
+    "name": "Estate Little Thatch Key",
+    "basename": "Little Thatch Key",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3587226,
+      "lng": -64.8330556
+    },
+    "interiorPoint": {
+      "lat": 18.3587226,
+      "lng": -64.8330556
+    }
+  },
+  {
+    "geoid": "7803054997",
+    "name": "Estate Liver Pool",
+    "basename": "Liver Pool",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3298355,
+      "lng": -64.9238732
+    },
+    "interiorPoint": {
+      "lat": 18.3298355,
+      "lng": -64.9238732
+    }
+  },
+  {
+    "geoid": "7803054998",
+    "name": "Estate Long Bay",
+    "basename": "Long Bay",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3371234,
+      "lng": -64.9197566
+    },
+    "interiorPoint": {
+      "lat": 18.3371234,
+      "lng": -64.9197566
+    }
+  },
+  {
+    "geoid": "7801055200",
+    "name": "Estate Long Point and Cotton Garden",
+    "basename": "Long Point and Cotton Garden",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7565591,
+      "lng": -64.5813211
+    },
+    "interiorPoint": {
+      "lat": 17.7565591,
+      "lng": -64.5813211
+    }
+  },
+  {
+    "geoid": "7801055100",
+    "name": "Estate Longford",
+    "basename": "Longford",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.71352,
+      "lng": -64.6926776
+    },
+    "interiorPoint": {
+      "lat": 17.71352,
+      "lng": -64.6926776
+    }
+  },
+  {
+    "geoid": "7803055300",
+    "name": "Estate Louisenhoj",
+    "basename": "Louisenhoj",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3516642,
+      "lng": -64.921186
+    },
+    "interiorPoint": {
+      "lat": 18.3516642,
+      "lng": -64.921186
+    }
+  },
+  {
+    "geoid": "7802055600",
+    "name": "Estate Lovango Cay",
+    "basename": "Lovango Cay",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3621938,
+      "lng": -64.8051672
+    },
+    "interiorPoint": {
+      "lat": 18.3621938,
+      "lng": -64.8051672
+    }
+  },
+  {
+    "geoid": "7803055800",
+    "name": "Estate Lovenlund",
+    "basename": "Lovenlund",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3609374,
+      "lng": -64.9076977
+    },
+    "interiorPoint": {
+      "lat": 18.3609374,
+      "lng": -64.9076977
+    }
+  },
+  {
+    "geoid": "7803055850",
+    "name": "Estate Lower John Dunko",
+    "basename": "Lower John Dunko",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.342812,
+      "lng": -64.9496449
+    },
+    "interiorPoint": {
+      "lat": 18.342812,
+      "lng": -64.9496449
+    }
+  },
+  {
+    "geoid": "7801055930",
+    "name": "Estate Lower Love",
+    "basename": "Lower Love",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7221657,
+      "lng": -64.8092727
+    },
+    "interiorPoint": {
+      "lat": 17.72223,
+      "lng": -64.8101413
+    }
+  },
+  {
+    "geoid": "7801055960",
+    "name": "Estate Lowry Hill",
+    "basename": "Lowry Hill",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7384357,
+      "lng": -64.6730879
+    },
+    "interiorPoint": {
+      "lat": 17.7384357,
+      "lng": -64.6730879
+    }
+  },
+  {
+    "geoid": "7803056100",
+    "name": "Estate Lyttons Fancy",
+    "basename": "Lyttons Fancy",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3491986,
+      "lng": -64.9307456
+    },
+    "interiorPoint": {
+      "lat": 18.3491986,
+      "lng": -64.9307456
+    }
+  },
+  {
+    "geoid": "7801056200",
+    "name": "Estate Madam Carty",
+    "basename": "Madam Carty",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7393076,
+      "lng": -64.6169214
+    },
+    "interiorPoint": {
+      "lat": 17.7393076,
+      "lng": -64.6169214
+    }
+  },
+  {
+    "geoid": "7803056750",
+    "name": "Estate Mandahl",
+    "basename": "Mandahl",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3555128,
+      "lng": -64.8954382
+    },
+    "interiorPoint": {
+      "lat": 18.3577671,
+      "lng": -64.8948112
+    }
+  },
+  {
+    "geoid": "7802056740",
+    "name": "Estate Mandahl",
+    "basename": "Mandahl",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3117186,
+      "lng": -64.712656
+    },
+    "interiorPoint": {
+      "lat": 18.3120866,
+      "lng": -64.7119
+    }
+  },
+  {
+    "geoid": "7801056860",
+    "name": "Estate Mannings Bay",
+    "basename": "Mannings Bay",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.700115,
+      "lng": -64.7940596
+    },
+    "interiorPoint": {
+      "lat": 17.700115,
+      "lng": -64.7940596
+    }
+  },
+  {
+    "geoid": "7803056910",
+    "name": "Estate Mariendal",
+    "basename": "Mariendal",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3283152,
+      "lng": -64.8744122
+    },
+    "interiorPoint": {
+      "lat": 18.3283152,
+      "lng": -64.8744122
+    }
+  },
+  {
+    "geoid": "7801056950",
+    "name": "Estate Marienhoj",
+    "basename": "Marienhoj",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7400951,
+      "lng": -64.6674771
+    },
+    "interiorPoint": {
+      "lat": 17.7400951,
+      "lng": -64.6674771
+    }
+  },
+  {
+    "geoid": "7801057050",
+    "name": "Estate Mars Hill and Stoney Ground",
+    "basename": "Mars Hill and Stoney Ground",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7021763,
+      "lng": -64.8735745
+    },
+    "interiorPoint": {
+      "lat": 17.7021763,
+      "lng": -64.8735745
+    }
+  },
+  {
+    "geoid": "7801057100",
+    "name": "Estate Marys Fancy",
+    "basename": "Marys Fancy",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.746122,
+      "lng": -64.7608426
+    },
+    "interiorPoint": {
+      "lat": 17.746122,
+      "lng": -64.7608426
+    }
+  },
+  {
+    "geoid": "7802057200",
+    "name": "Estate Miland",
+    "basename": "Miland",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3549375,
+      "lng": -64.7460482
+    },
+    "interiorPoint": {
+      "lat": 18.3549375,
+      "lng": -64.7460482
+    }
+  },
+  {
+    "geoid": "7802057240",
+    "name": "Estate Mingo Cay",
+    "basename": "Mingo Cay",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3596918,
+      "lng": -64.8198595
+    },
+    "interiorPoint": {
+      "lat": 18.3596918,
+      "lng": -64.8198595
+    }
+  },
+  {
+    "geoid": "7801057250",
+    "name": "Estate Mint",
+    "basename": "Mint",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7147938,
+      "lng": -64.8330712
+    },
+    "interiorPoint": {
+      "lat": 17.7147938,
+      "lng": -64.8330712
+    }
+  },
+  {
+    "geoid": "7803057320",
+    "name": "Estate Misgunst",
+    "basename": "Misgunst",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3562187,
+      "lng": -64.933298
+    },
+    "interiorPoint": {
+      "lat": 18.3562187,
+      "lng": -64.933298
+    }
+  },
+  {
+    "geoid": "7802057330",
+    "name": "Estate Molledahl and Little Reef Bay",
+    "basename": "Molledahl and Little Reef Bay",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3279622,
+      "lng": -64.7515894
+    },
+    "interiorPoint": {
+      "lat": 18.3279622,
+      "lng": -64.7515894
+    }
+  },
+  {
+    "geoid": "7801057400",
+    "name": "Estate Mon Bijou",
+    "basename": "Mon Bijou",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7471991,
+      "lng": -64.7864497
+    },
+    "interiorPoint": {
+      "lat": 17.7462824,
+      "lng": -64.7892043
+    }
+  },
+  {
+    "geoid": "7801057425",
+    "name": "Estate Mon Bijou and Blue Mountain",
+    "basename": "Mon Bijou and Blue Mountain",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7530453,
+      "lng": -64.7969824
+    },
+    "interiorPoint": {
+      "lat": 17.7530453,
+      "lng": -64.7969824
+    }
+  },
+  {
+    "geoid": "7801057530",
+    "name": "Estate Montpellier East",
+    "basename": "Montpellier East",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7644241,
+      "lng": -64.7564645
+    },
+    "interiorPoint": {
+      "lat": 17.7644241,
+      "lng": -64.7564645
+    }
+  },
+  {
+    "geoid": "7801057560",
+    "name": "Estate Montpellier West 1",
+    "basename": "Montpellier West 1",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7378639,
+      "lng": -64.8434396
+    },
+    "interiorPoint": {
+      "lat": 17.7378639,
+      "lng": -64.8434396
+    }
+  },
+  {
+    "geoid": "7801057580",
+    "name": "Estate Montpellier West 2",
+    "basename": "Montpellier West 2",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7340128,
+      "lng": -64.8301122
+    },
+    "interiorPoint": {
+      "lat": 17.7340128,
+      "lng": -64.8301122
+    }
+  },
+  {
+    "geoid": "7801057650",
+    "name": "Estate Morning Star North",
+    "basename": "Morning Star North",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7713149,
+      "lng": -64.7617514
+    },
+    "interiorPoint": {
+      "lat": 17.7713149,
+      "lng": -64.7617514
+    }
+  },
+  {
+    "geoid": "7801057660",
+    "name": "Estate Morning Star South",
+    "basename": "Morning Star South",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.75876,
+      "lng": -64.7615058
+    },
+    "interiorPoint": {
+      "lat": 17.75876,
+      "lng": -64.7615058
+    }
+  },
+  {
+    "geoid": "7801057680",
+    "name": "Estate Mount Eagle",
+    "basename": "Mount Eagle",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7593007,
+      "lng": -64.8057098
+    },
+    "interiorPoint": {
+      "lat": 17.7593007,
+      "lng": -64.8057098
+    }
+  },
+  {
+    "geoid": "7801057690",
+    "name": "Estate Mount Fancy",
+    "basename": "Mount Fancy",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7253658,
+      "lng": -64.6364953
+    },
+    "interiorPoint": {
+      "lat": 17.7253713,
+      "lng": -64.636623
+    }
+  },
+  {
+    "geoid": "7802057770",
+    "name": "Estate Mount Pleasant and Retreat",
+    "basename": "Mount Pleasant and Retreat",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3572921,
+      "lng": -64.6924968
+    },
+    "interiorPoint": {
+      "lat": 18.3572921,
+      "lng": -64.6924968
+    }
+  },
+  {
+    "geoid": "7801057795",
+    "name": "Estate Mount Pleasant East",
+    "basename": "Mount Pleasant East",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7484133,
+      "lng": -64.6702652
+    },
+    "interiorPoint": {
+      "lat": 17.7484133,
+      "lng": -64.6702652
+    }
+  },
+  {
+    "geoid": "7801057805",
+    "name": "Estate Mount Pleasant North",
+    "basename": "Mount Pleasant North",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7656217,
+      "lng": -64.7894705
+    },
+    "interiorPoint": {
+      "lat": 17.7656217,
+      "lng": -64.7894705
+    }
+  },
+  {
+    "geoid": "7801057810",
+    "name": "Estate Mount Pleasant South",
+    "basename": "Mount Pleasant South",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7105833,
+      "lng": -64.8179027
+    },
+    "interiorPoint": {
+      "lat": 17.7105833,
+      "lng": -64.8179027
+    }
+  },
+  {
+    "geoid": "7801057840",
+    "name": "Estate Mount Retreat",
+    "basename": "Mount Retreat",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7342396,
+      "lng": -64.630024
+    },
+    "interiorPoint": {
+      "lat": 17.7342396,
+      "lng": -64.630024
+    }
+  },
+  {
+    "geoid": "7801057860",
+    "name": "Estate Mount Stewart",
+    "basename": "Mount Stewart",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7478407,
+      "lng": -64.8434226
+    },
+    "interiorPoint": {
+      "lat": 17.7478407,
+      "lng": -64.8434226
+    }
+  },
+  {
+    "geoid": "7801057880",
+    "name": "Estate Mount Victory",
+    "basename": "Mount Victory",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7497449,
+      "lng": -64.8679146
+    },
+    "interiorPoint": {
+      "lat": 17.7497449,
+      "lng": -64.8679146
+    }
+  },
+  {
+    "geoid": "7801057950",
+    "name": "Estate Mount Welcome",
+    "basename": "Mount Welcome",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7380457,
+      "lng": -64.6922699
+    },
+    "interiorPoint": {
+      "lat": 17.7328728,
+      "lng": -64.692023
+    }
+  },
+  {
+    "geoid": "7801057670",
+    "name": "Estate Mountain",
+    "basename": "Mountain",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7140266,
+      "lng": -64.8359394
+    },
+    "interiorPoint": {
+      "lat": 17.7140266,
+      "lng": -64.8359394
+    }
+  },
+  {
+    "geoid": "7803058150",
+    "name": "Estate Nadir",
+    "basename": "Nadir",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3201575,
+      "lng": -64.8761295
+    },
+    "interiorPoint": {
+      "lat": 18.3209961,
+      "lng": -64.8760341
+    }
+  },
+  {
+    "geoid": "7803058400",
+    "name": "Estate Nazareth",
+    "basename": "Nazareth",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.321669,
+      "lng": -64.8502046
+    },
+    "interiorPoint": {
+      "lat": 18.3209586,
+      "lng": -64.8506639
+    }
+  },
+  {
+    "geoid": "7801058500",
+    "name": "Estate Negro Bay",
+    "basename": "Negro Bay",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.69782,
+      "lng": -64.7995824
+    },
+    "interiorPoint": {
+      "lat": 17.69782,
+      "lng": -64.7995824
+    }
+  },
+  {
+    "geoid": "7803058750",
+    "name": "Estate Neltjeberg",
+    "basename": "Neltjeberg",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3665056,
+      "lng": -64.968718
+    },
+    "interiorPoint": {
+      "lat": 18.3665056,
+      "lng": -64.968718
+    }
+  },
+  {
+    "geoid": "7803058825",
+    "name": "Estate New Hernhut",
+    "basename": "New Hernhut",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3308208,
+      "lng": -64.9011833
+    },
+    "interiorPoint": {
+      "lat": 18.3308208,
+      "lng": -64.9011833
+    }
+  },
+  {
+    "geoid": "7801059000",
+    "name": "Estate Nicholas",
+    "basename": "Nicholas",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7538692,
+      "lng": -64.8737496
+    },
+    "interiorPoint": {
+      "lat": 17.7538692,
+      "lng": -64.8737496
+    }
+  },
+  {
+    "geoid": "7803059200",
+    "name": "Estate Nisky",
+    "basename": "Nisky",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3321142,
+      "lng": -64.9592127
+    },
+    "interiorPoint": {
+      "lat": 18.3321142,
+      "lng": -64.9592127
+    }
+  },
+  {
+    "geoid": "7801059550",
+    "name": "Estate North Grapetree Bay",
+    "basename": "North Grapetree Bay",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.753989,
+      "lng": -64.5922204
+    },
+    "interiorPoint": {
+      "lat": 17.753989,
+      "lng": -64.5922204
+    }
+  },
+  {
+    "geoid": "7801059600",
+    "name": "Estate North Hall",
+    "basename": "North Hall",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7495435,
+      "lng": -64.8722566
+    },
+    "interiorPoint": {
+      "lat": 17.7495435,
+      "lng": -64.8722566
+    }
+  },
+  {
+    "geoid": "7801061450",
+    "name": "Estate North Slob",
+    "basename": "North Slob",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7526456,
+      "lng": -64.6024241
+    },
+    "interiorPoint": {
+      "lat": 17.7526456,
+      "lng": -64.6024241
+    }
+  },
+  {
+    "geoid": "7801061700",
+    "name": "Estate North Star",
+    "basename": "North Star",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7638963,
+      "lng": -64.8184483
+    },
+    "interiorPoint": {
+      "lat": 17.7638963,
+      "lng": -64.8184483
+    }
+  },
+  {
+    "geoid": "7801060850",
+    "name": "Estate Northside",
+    "basename": "Northside",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7589176,
+      "lng": -64.8837815
+    },
+    "interiorPoint": {
+      "lat": 17.7589176,
+      "lng": -64.8837815
+    }
+  },
+  {
+    "geoid": "7803062520",
+    "name": "Estate Nullyberg",
+    "basename": "Nullyberg",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3265976,
+      "lng": -64.8973027
+    },
+    "interiorPoint": {
+      "lat": 18.3265976,
+      "lng": -64.8973027
+    }
+  },
+  {
+    "geoid": "7801062580",
+    "name": "Estate Old Hospital Grounds",
+    "basename": "Old Hospital Grounds",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7427437,
+      "lng": -64.6978737
+    },
+    "interiorPoint": {
+      "lat": 17.7427437,
+      "lng": -64.6978737
+    }
+  },
+  {
+    "geoid": "7801062730",
+    "name": "Estate Orange Grove East",
+    "basename": "Orange Grove East",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7434395,
+      "lng": -64.7185082
+    },
+    "interiorPoint": {
+      "lat": 17.7434395,
+      "lng": -64.7185082
+    }
+  },
+  {
+    "geoid": "7801062760",
+    "name": "Estate Orange Grove West",
+    "basename": "Orange Grove West",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7362256,
+      "lng": -64.8522308
+    },
+    "interiorPoint": {
+      "lat": 17.7362256,
+      "lng": -64.8522308
+    }
+  },
+  {
+    "geoid": "7803062800",
+    "name": "Estate Outer Brass Island",
+    "basename": "Outer Brass Island",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3955812,
+      "lng": -64.9719116
+    },
+    "interiorPoint": {
+      "lat": 18.3955812,
+      "lng": -64.9719116
+    }
+  },
+  {
+    "geoid": "7801063050",
+    "name": "Estate Oxford",
+    "basename": "Oxford",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7422456,
+      "lng": -64.8604909
+    },
+    "interiorPoint": {
+      "lat": 17.7422456,
+      "lng": -64.8604909
+    }
+  },
+  {
+    "geoid": "7801063175",
+    "name": "Estate Paradise",
+    "basename": "Paradise",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7043805,
+      "lng": -64.8158637
+    },
+    "interiorPoint": {
+      "lat": 17.7043805,
+      "lng": -64.8158637
+    }
+  },
+  {
+    "geoid": "7801063300",
+    "name": "Estate Parasol",
+    "basename": "Parasol",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.755923,
+      "lng": -64.8168233
+    },
+    "interiorPoint": {
+      "lat": 17.755923,
+      "lng": -64.8168233
+    }
+  },
+  {
+    "geoid": "7802063600",
+    "name": "Estate Pastory",
+    "basename": "Pastory",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3335169,
+      "lng": -64.7847124
+    },
+    "interiorPoint": {
+      "lat": 18.3335169,
+      "lng": -64.7847124
+    }
+  },
+  {
+    "geoid": "7803063700",
+    "name": "Estate Patricia Cay",
+    "basename": "Patricia Cay",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.306459,
+      "lng": -64.8725563
+    },
+    "interiorPoint": {
+      "lat": 18.306459,
+      "lng": -64.8725563
+    }
+  },
+  {
+    "geoid": "7801063900",
+    "name": "Estate Pearl",
+    "basename": "Pearl",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7148233,
+      "lng": -64.7370675
+    },
+    "interiorPoint": {
+      "lat": 17.7148233,
+      "lng": -64.7370675
+    }
+  },
+  {
+    "geoid": "7803063950",
+    "name": "Estate Pearl",
+    "basename": "Pearl",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3585229,
+      "lng": -64.9790693
+    },
+    "interiorPoint": {
+      "lat": 18.3585229,
+      "lng": -64.9790693
+    }
+  },
+  {
+    "geoid": "7803064005",
+    "name": "Estate Pelican Cay",
+    "basename": "Pelican Cay",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.4145269,
+      "lng": -64.9087261
+    },
+    "interiorPoint": {
+      "lat": 18.4145269,
+      "lng": -64.9087261
+    }
+  },
+  {
+    "geoid": "7803064010",
+    "name": "Estate Perseverance",
+    "basename": "Perseverance",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3542232,
+      "lng": -64.9983805
+    },
+    "interiorPoint": {
+      "lat": 18.3543097,
+      "lng": -64.9984792
+    }
+  },
+  {
+    "geoid": "7802064030",
+    "name": "Estate Peter Bay",
+    "basename": "Peter Bay",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3516296,
+      "lng": -64.7637546
+    },
+    "interiorPoint": {
+      "lat": 18.3516296,
+      "lng": -64.7637546
+    }
+  },
+  {
+    "geoid": "7803064050",
+    "name": "Estate Peterborg",
+    "basename": "Peterborg",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.370553,
+      "lng": -64.9244637
+    },
+    "interiorPoint": {
+      "lat": 18.370553,
+      "lng": -64.9244637
+    }
+  },
+  {
+    "geoid": "7801064070",
+    "name": "Estate Peters Farm",
+    "basename": "Peters Farm",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7385823,
+      "lng": -64.7048529
+    },
+    "interiorPoint": {
+      "lat": 17.7385823,
+      "lng": -64.7048529
+    }
+  },
+  {
+    "geoid": "7801064150",
+    "name": "Estate Peters Rest",
+    "basename": "Peters Rest",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7261854,
+      "lng": -64.7370473
+    },
+    "interiorPoint": {
+      "lat": 17.7261854,
+      "lng": -64.7370473
+    }
+  },
+  {
+    "geoid": "7801064300",
+    "name": "Estate Petronella",
+    "basename": "Petronella",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7262959,
+      "lng": -64.6692602
+    },
+    "interiorPoint": {
+      "lat": 17.7262959,
+      "lng": -64.6692602
+    }
+  },
+  {
+    "geoid": "7801064515",
+    "name": "Estate Pleasant Vale",
+    "basename": "Pleasant Vale",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7505934,
+      "lng": -64.8618984
+    },
+    "interiorPoint": {
+      "lat": 17.7505934,
+      "lng": -64.8618984
+    }
+  },
+  {
+    "geoid": "7801064530",
+    "name": "Estate Pleasant Valley",
+    "basename": "Pleasant Valley",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7454345,
+      "lng": -64.6380697
+    },
+    "interiorPoint": {
+      "lat": 17.7454345,
+      "lng": -64.6380697
+    }
+  },
+  {
+    "geoid": "7801064630",
+    "name": "Estate Plessen North",
+    "basename": "Plessen North",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7348299,
+      "lng": -64.8275266
+    },
+    "interiorPoint": {
+      "lat": 17.7348299,
+      "lng": -64.8275266
+    }
+  },
+  {
+    "geoid": "7801064660",
+    "name": "Estate Plessen South",
+    "basename": "Plessen South",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7186683,
+      "lng": -64.8206269
+    },
+    "interiorPoint": {
+      "lat": 17.7186683,
+      "lng": -64.8206269
+    }
+  },
+  {
+    "geoid": "7801064820",
+    "name": "Estate Profit",
+    "basename": "Profit",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7168163,
+      "lng": -64.7810567
+    },
+    "interiorPoint": {
+      "lat": 17.7168163,
+      "lng": -64.7810567
+    }
+  },
+  {
+    "geoid": "7801064870",
+    "name": "Estate Prospect Hill",
+    "basename": "Prospect Hill",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7283571,
+      "lng": -64.6761045
+    },
+    "interiorPoint": {
+      "lat": 17.7283571,
+      "lng": -64.6761045
+    }
+  },
+  {
+    "geoid": "7801064885",
+    "name": "Estate Prospect Hill West",
+    "basename": "Prospect Hill West",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7500247,
+      "lng": -64.8882073
+    },
+    "interiorPoint": {
+      "lat": 17.7500247,
+      "lng": -64.8882073
+    }
+  },
+  {
+    "geoid": "7801064915",
+    "name": "Estate Prosperity",
+    "basename": "Prosperity",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7280951,
+      "lng": -64.8779313
+    },
+    "interiorPoint": {
+      "lat": 17.7280951,
+      "lng": -64.8779313
+    }
+  },
+  {
+    "geoid": "7801064930",
+    "name": "Estate Prosperity East",
+    "basename": "Prosperity East",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7614246,
+      "lng": -64.826835
+    },
+    "interiorPoint": {
+      "lat": 17.7614246,
+      "lng": -64.826835
+    }
+  },
+  {
+    "geoid": "7801064980",
+    "name": "Estate Protestant Cay",
+    "basename": "Protestant Cay",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7497352,
+      "lng": -64.7027591
+    },
+    "interiorPoint": {
+      "lat": 17.7497352,
+      "lng": -64.7027591
+    }
+  },
+  {
+    "geoid": "7801064990",
+    "name": "Estate Public Port",
+    "basename": "Public Port",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.6955922,
+      "lng": -64.7622726
+    },
+    "interiorPoint": {
+      "lat": 17.6955922,
+      "lng": -64.7622726
+    }
+  },
+  {
+    "geoid": "7801065020",
+    "name": "Estate Punch",
+    "basename": "Punch",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7396782,
+      "lng": -64.8688647
+    },
+    "interiorPoint": {
+      "lat": 17.7396782,
+      "lng": -64.8688647
+    }
+  },
+  {
+    "geoid": "7803065070",
+    "name": "Estate Queens Quarter",
+    "basename": "Queens Quarter",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3434649,
+      "lng": -64.9330028
+    },
+    "interiorPoint": {
+      "lat": 18.3434649,
+      "lng": -64.9330028
+    }
+  },
+  {
+    "geoid": "7802065085",
+    "name": "Estate Ram Goat Cay",
+    "basename": "Ram Goat Cay",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3551555,
+      "lng": -64.7893485
+    },
+    "interiorPoint": {
+      "lat": 18.3551555,
+      "lng": -64.7893485
+    }
+  },
+  {
+    "geoid": "7803065125",
+    "name": "Estate Raphune",
+    "basename": "Raphune",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.335832,
+      "lng": -64.9075457
+    },
+    "interiorPoint": {
+      "lat": 18.335832,
+      "lng": -64.9075457
+    }
+  },
+  {
+    "geoid": "7802065135",
+    "name": "Estate Rata Cay",
+    "basename": "Rata Cay",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3559298,
+      "lng": -64.7967834
+    },
+    "interiorPoint": {
+      "lat": 18.3559298,
+      "lng": -64.7967834
+    }
+  },
+  {
+    "geoid": "7801065225",
+    "name": "Estate Rattan and Belvedere",
+    "basename": "Rattan and Belvedere",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7500753,
+      "lng": -64.7499936
+    },
+    "interiorPoint": {
+      "lat": 17.7500753,
+      "lng": -64.7499936
+    }
+  },
+  {
+    "geoid": "7801065450",
+    "name": "Estate Recovery and Welcome",
+    "basename": "Recovery and Welcome",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7358896,
+      "lng": -64.6932691
+    },
+    "interiorPoint": {
+      "lat": 17.7358896,
+      "lng": -64.6932691
+    }
+  },
+  {
+    "geoid": "7801065525",
+    "name": "Estate Recovery Hill",
+    "basename": "Recovery Hill",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7372065,
+      "lng": -64.6979086
+    },
+    "interiorPoint": {
+      "lat": 17.7372065,
+      "lng": -64.6979086
+    }
+  },
+  {
+    "geoid": "7802065610",
+    "name": "Estate Reef Bay",
+    "basename": "Reef Bay",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3262658,
+      "lng": -64.7384275
+    },
+    "interiorPoint": {
+      "lat": 18.3221194,
+      "lng": -64.7389047
+    }
+  },
+  {
+    "geoid": "7802065650",
+    "name": "Estate Rendezvous and Ditlef",
+    "basename": "Rendezvous and Ditlef",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3200147,
+      "lng": -64.7710724
+    },
+    "interiorPoint": {
+      "lat": 18.3220695,
+      "lng": -64.7682215
+    }
+  },
+  {
+    "geoid": "7801065750",
+    "name": "Estate Retreat",
+    "basename": "Retreat",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7095424,
+      "lng": -64.7250911
+    },
+    "interiorPoint": {
+      "lat": 17.7095424,
+      "lng": -64.7250911
+    }
+  },
+  {
+    "geoid": "7801065775",
+    "name": "Estate Retreat and Peters Minde",
+    "basename": "Retreat and Peters Minde",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.700748,
+      "lng": -64.7177267
+    },
+    "interiorPoint": {
+      "lat": 17.700748,
+      "lng": -64.7177267
+    }
+  },
+  {
+    "geoid": "7801065830",
+    "name": "Estate Richmond",
+    "basename": "Richmond",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7444093,
+      "lng": -64.7117111
+    },
+    "interiorPoint": {
+      "lat": 17.7444093,
+      "lng": -64.7117111
+    }
+  },
+  {
+    "geoid": "7801065860",
+    "name": "Estate River",
+    "basename": "River",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7425766,
+      "lng": -64.817479
+    },
+    "interiorPoint": {
+      "lat": 17.7403919,
+      "lng": -64.8212789
+    }
+  },
+  {
+    "geoid": "7801066030",
+    "name": "Estate Roberts Hill",
+    "basename": "Roberts Hill",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7515965,
+      "lng": -64.6776753
+    },
+    "interiorPoint": {
+      "lat": 17.7521108,
+      "lng": -64.67918
+    }
+  },
+  {
+    "geoid": "7801066060",
+    "name": "Estate Rose Hill",
+    "basename": "Rose Hill",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7514937,
+      "lng": -64.8589993
+    },
+    "interiorPoint": {
+      "lat": 17.7514937,
+      "lng": -64.8589993
+    }
+  },
+  {
+    "geoid": "7803066200",
+    "name": "Estate Ross",
+    "basename": "Ross",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3454004,
+      "lng": -64.9211778
+    },
+    "interiorPoint": {
+      "lat": 18.3454004,
+      "lng": -64.9211778
+    }
+  },
+  {
+    "geoid": "7803066300",
+    "name": "Estate Rotto Cay",
+    "basename": "Rotto Cay",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3154179,
+      "lng": -64.8677339
+    },
+    "interiorPoint": {
+      "lat": 18.3154179,
+      "lng": -64.8677339
+    }
+  },
+  {
+    "geoid": "7801066750",
+    "name": "Estate Ruby",
+    "basename": "Ruby",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7386922,
+      "lng": -64.7552829
+    },
+    "interiorPoint": {
+      "lat": 17.7386922,
+      "lng": -64.7552829
+    }
+  },
+  {
+    "geoid": "7802066765",
+    "name": "Estate Rustenberg and Adventure",
+    "basename": "Rustenberg and Adventure",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3425817,
+      "lng": -64.7493528
+    },
+    "interiorPoint": {
+      "lat": 18.3425817,
+      "lng": -64.7493528
+    }
+  },
+  {
+    "geoid": "7803066900",
+    "name": "Estate Saba Island",
+    "basename": "Saba Island",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3052344,
+      "lng": -65.000542
+    },
+    "interiorPoint": {
+      "lat": 18.3052344,
+      "lng": -65.000542
+    }
+  },
+  {
+    "geoid": "7801068530",
+    "name": "Estate Sallys Fancy",
+    "basename": "Sallys Fancy",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7340229,
+      "lng": -64.6655823
+    },
+    "interiorPoint": {
+      "lat": 17.7340229,
+      "lng": -64.6655823
+    }
+  },
+  {
+    "geoid": "7803068545",
+    "name": "Estate Salt Cay",
+    "basename": "Salt Cay",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3618352,
+      "lng": -65.0525318
+    },
+    "interiorPoint": {
+      "lat": 18.3618352,
+      "lng": -65.0525318
+    }
+  },
+  {
+    "geoid": "7801068560",
+    "name": "Estate Salt River",
+    "basename": "Salt River",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7758265,
+      "lng": -64.764661
+    },
+    "interiorPoint": {
+      "lat": 17.7758265,
+      "lng": -64.764661
+    }
+  },
+  {
+    "geoid": "7802068650",
+    "name": "Estate San Soucci and Guinea Gut",
+    "basename": "San Soucci and Guinea Gut",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.327675,
+      "lng": -64.7791524
+    },
+    "interiorPoint": {
+      "lat": 18.327675,
+      "lng": -64.7791524
+    }
+  },
+  {
+    "geoid": "7803068800",
+    "name": "Estate Santa Maria",
+    "basename": "Santa Maria",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3597225,
+      "lng": -64.9894151
+    },
+    "interiorPoint": {
+      "lat": 18.3597225,
+      "lng": -64.9894151
+    }
+  },
+  {
+    "geoid": "7802068858",
+    "name": "Estate Saunders Gut",
+    "basename": "Saunders Gut",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3354285,
+      "lng": -64.7151134
+    },
+    "interiorPoint": {
+      "lat": 18.3354285,
+      "lng": -64.7151134
+    }
+  },
+  {
+    "geoid": "7801069200",
+    "name": "Estate Seven Hills",
+    "basename": "Seven Hills",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.746215,
+      "lng": -64.6477532
+    },
+    "interiorPoint": {
+      "lat": 17.746215,
+      "lng": -64.6477532
+    }
+  },
+  {
+    "geoid": "7801069600",
+    "name": "Estate Shoys",
+    "basename": "Shoys",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7557872,
+      "lng": -64.678152
+    },
+    "interiorPoint": {
+      "lat": 17.7557872,
+      "lng": -64.678152
+    }
+  },
+  {
+    "geoid": "7802070230",
+    "name": "Estate Sieben",
+    "basename": "Sieben",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3308416,
+      "lng": -64.759992
+    },
+    "interiorPoint": {
+      "lat": 18.3308416,
+      "lng": -64.759992
+    }
+  },
+  {
+    "geoid": "7801070260",
+    "name": "Estate Sight",
+    "basename": "Sight",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7398361,
+      "lng": -64.661232
+    },
+    "interiorPoint": {
+      "lat": 17.7398361,
+      "lng": -64.661232
+    }
+  },
+  {
+    "geoid": "7801071300",
+    "name": "Estate Sion Farm",
+    "basename": "Sion Farm",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7331396,
+      "lng": -64.744029
+    },
+    "interiorPoint": {
+      "lat": 17.7331396,
+      "lng": -64.744029
+    }
+  },
+  {
+    "geoid": "7801071600",
+    "name": "Estate Sion Hill",
+    "basename": "Sion Hill",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7413822,
+      "lng": -64.7467151
+    },
+    "interiorPoint": {
+      "lat": 17.7413822,
+      "lng": -64.7467151
+    }
+  },
+  {
+    "geoid": "7803072500",
+    "name": "Estate Smith Bay",
+    "basename": "Smith Bay",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3369762,
+      "lng": -64.8616909
+    },
+    "interiorPoint": {
+      "lat": 18.3358649,
+      "lng": -64.8624951
+    }
+  },
+  {
+    "geoid": "7803073550",
+    "name": "Estate Solberg",
+    "basename": "Solberg",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3495763,
+      "lng": -64.9447919
+    },
+    "interiorPoint": {
+      "lat": 18.3495763,
+      "lng": -64.9447919
+    }
+  },
+  {
+    "geoid": "7801073655",
+    "name": "Estate Solitude East",
+    "basename": "Solitude East",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.753511,
+      "lng": -64.6337321
+    },
+    "interiorPoint": {
+      "lat": 17.753511,
+      "lng": -64.6337321
+    }
+  },
+  {
+    "geoid": "7801073658",
+    "name": "Estate Solitude North",
+    "basename": "Solitude North",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7575268,
+      "lng": -64.8114621
+    },
+    "interiorPoint": {
+      "lat": 17.7575268,
+      "lng": -64.8114621
+    }
+  },
+  {
+    "geoid": "7803073825",
+    "name": "Estate Sorgenfri Eastern Portion",
+    "basename": "Sorgenfri Eastern Portion",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3677688,
+      "lng": -64.9834422
+    },
+    "interiorPoint": {
+      "lat": 18.3677688,
+      "lng": -64.9834422
+    }
+  },
+  {
+    "geoid": "7803073850",
+    "name": "Estate Sorgenfri Western Portion",
+    "basename": "Sorgenfri Western Portion",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3652651,
+      "lng": -64.9872227
+    },
+    "interiorPoint": {
+      "lat": 18.3652651,
+      "lng": -64.9872227
+    }
+  },
+  {
+    "geoid": "7801074400",
+    "name": "Estate South Grapetree Bay",
+    "basename": "South Grapetree Bay",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7487418,
+      "lng": -64.5911554
+    },
+    "interiorPoint": {
+      "lat": 17.7487418,
+      "lng": -64.5911554
+    }
+  },
+  {
+    "geoid": "7801075100",
+    "name": "Estate South Slob",
+    "basename": "South Slob",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7478787,
+      "lng": -64.6003815
+    },
+    "interiorPoint": {
+      "lat": 17.7478787,
+      "lng": -64.6003815
+    }
+  },
+  {
+    "geoid": "7801074000",
+    "name": "Estate Southgate",
+    "basename": "Southgate",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7530815,
+      "lng": -64.6632212
+    },
+    "interiorPoint": {
+      "lat": 17.7555887,
+      "lng": -64.6664443
+    }
+  },
+  {
+    "geoid": "7801075925",
+    "name": "Estate Spanish Town",
+    "basename": "Spanish Town",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7159699,
+      "lng": -64.7724706
+    },
+    "interiorPoint": {
+      "lat": 17.7159699,
+      "lng": -64.7724706
+    }
+  },
+  {
+    "geoid": "7801075950",
+    "name": "Estate Spratt Hall",
+    "basename": "Spratt Hall",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7426699,
+      "lng": -64.8833481
+    },
+    "interiorPoint": {
+      "lat": 17.7426699,
+      "lng": -64.8833481
+    }
+  },
+  {
+    "geoid": "7801076200",
+    "name": "Estate Spring Garden",
+    "basename": "Spring Garden",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7606368,
+      "lng": -64.8615043
+    },
+    "interiorPoint": {
+      "lat": 17.7606368,
+      "lng": -64.8615043
+    }
+  },
+  {
+    "geoid": "7801076300",
+    "name": "Estate Spring Gut",
+    "basename": "Spring Gut",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7283038,
+      "lng": -64.6951539
+    },
+    "interiorPoint": {
+      "lat": 17.7283038,
+      "lng": -64.6951539
+    }
+  },
+  {
+    "geoid": "7801076100",
+    "name": "Estate Springfield",
+    "basename": "Springfield",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7326844,
+      "lng": -64.8345417
+    },
+    "interiorPoint": {
+      "lat": 17.7326844,
+      "lng": -64.8345417
+    }
+  },
+  {
+    "geoid": "7801067000",
+    "name": "Estate St. Georges",
+    "basename": "St. Georges",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7203837,
+      "lng": -64.8305597
+    },
+    "interiorPoint": {
+      "lat": 17.7203837,
+      "lng": -64.8305597
+    }
+  },
+  {
+    "geoid": "7801067100",
+    "name": "Estate St. Georges Hill",
+    "basename": "St. Georges Hill",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7171324,
+      "lng": -64.854801
+    },
+    "interiorPoint": {
+      "lat": 17.7171324,
+      "lng": -64.854801
+    }
+  },
+  {
+    "geoid": "7801067630",
+    "name": "Estate St. Johns",
+    "basename": "St. Johns",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7629178,
+      "lng": -64.7472886
+    },
+    "interiorPoint": {
+      "lat": 17.7629178,
+      "lng": -64.7472886
+    }
+  },
+  {
+    "geoid": "7803067660",
+    "name": "Estate St. Joseph and Rosendal",
+    "basename": "St. Joseph and Rosendal",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3534561,
+      "lng": -64.9143185
+    },
+    "interiorPoint": {
+      "lat": 18.3534561,
+      "lng": -64.9143185
+    }
+  },
+  {
+    "geoid": "7803067800",
+    "name": "Estate St. Peter",
+    "basename": "St. Peter",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3636476,
+      "lng": -64.9463891
+    },
+    "interiorPoint": {
+      "lat": 18.3636476,
+      "lng": -64.9463891
+    }
+  },
+  {
+    "geoid": "7801068000",
+    "name": "Estate St. Peters",
+    "basename": "St. Peters",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7433609,
+      "lng": -64.6866129
+    },
+    "interiorPoint": {
+      "lat": 17.7433609,
+      "lng": -64.6866129
+    }
+  },
+  {
+    "geoid": "7802068200",
+    "name": "Estate St. Quaco and Zimmerman",
+    "basename": "St. Quaco and Zimmerman",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3269881,
+      "lng": -64.7039806
+    },
+    "interiorPoint": {
+      "lat": 18.3269881,
+      "lng": -64.7039806
+    }
+  },
+  {
+    "geoid": "7803076400",
+    "name": "Estate Staabi",
+    "basename": "Staabi",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3493259,
+      "lng": -64.9392381
+    },
+    "interiorPoint": {
+      "lat": 18.3493259,
+      "lng": -64.9392381
+    }
+  },
+  {
+    "geoid": "7802076430",
+    "name": "Estate Steven Cay",
+    "basename": "Steven Cay",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3301382,
+      "lng": -64.807335
+    },
+    "interiorPoint": {
+      "lat": 18.3301382,
+      "lng": -64.807335
+    }
+  },
+  {
+    "geoid": "7801076500",
+    "name": "Estate Stoney Ground East",
+    "basename": "Stoney Ground East",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.693963,
+      "lng": -64.8784711
+    },
+    "interiorPoint": {
+      "lat": 17.693963,
+      "lng": -64.8784711
+    }
+  },
+  {
+    "geoid": "7801076555",
+    "name": "Estate Stoney Ground West",
+    "basename": "Stoney Ground West",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.6849715,
+      "lng": -64.8956112
+    },
+    "interiorPoint": {
+      "lat": 17.6836702,
+      "lng": -64.8980948
+    }
+  },
+  {
+    "geoid": "7801077100",
+    "name": "Estate Strawberry Hill",
+    "basename": "Strawberry Hill",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7314007,
+      "lng": -64.7587628
+    },
+    "interiorPoint": {
+      "lat": 17.7314007,
+      "lng": -64.7587628
+    }
+  },
+  {
+    "geoid": "7803077150",
+    "name": "Estate Subbase and Crown Bay",
+    "basename": "Subbase and Crown Bay",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3350614,
+      "lng": -64.9499025
+    },
+    "interiorPoint": {
+      "lat": 18.3361245,
+      "lng": -64.9466553
+    }
+  },
+  {
+    "geoid": "7803077300",
+    "name": "Estate Sugar Estate",
+    "basename": "Sugar Estate",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3390675,
+      "lng": -64.9178129
+    },
+    "interiorPoint": {
+      "lat": 18.3390675,
+      "lng": -64.9178129
+    }
+  },
+  {
+    "geoid": "7802077650",
+    "name": "Estate Susannaberg",
+    "basename": "Susannaberg",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3425394,
+      "lng": -64.7730812
+    },
+    "interiorPoint": {
+      "lat": 18.3425394,
+      "lng": -64.7730812
+    }
+  },
+  {
+    "geoid": "7801077700",
+    "name": "Estate Sweet Bottom",
+    "basename": "Sweet Bottom",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7582415,
+      "lng": -64.8366967
+    },
+    "interiorPoint": {
+      "lat": 17.7582415,
+      "lng": -64.8366967
+    }
+  },
+  {
+    "geoid": "7803077715",
+    "name": "Estate Taarneberg",
+    "basename": "Taarneberg",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3400297,
+      "lng": -64.9236732
+    },
+    "interiorPoint": {
+      "lat": 18.3400297,
+      "lng": -64.9236732
+    }
+  },
+  {
+    "geoid": "7803077730",
+    "name": "Estate Tabor and Harmony",
+    "basename": "Tabor and Harmony",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3512413,
+      "lng": -64.8829877
+    },
+    "interiorPoint": {
+      "lat": 18.3512413,
+      "lng": -64.8829877
+    }
+  },
+  {
+    "geoid": "7801077760",
+    "name": "Estate Teague Bay",
+    "basename": "Teague Bay",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.752613,
+      "lng": -64.6101885
+    },
+    "interiorPoint": {
+      "lat": 17.752613,
+      "lng": -64.6101885
+    }
+  },
+  {
+    "geoid": "7803077995",
+    "name": "Estate Thatch Cay",
+    "basename": "Thatch Cay",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3591353,
+      "lng": -64.859261
+    },
+    "interiorPoint": {
+      "lat": 18.3591353,
+      "lng": -64.859261
+    }
+  },
+  {
+    "geoid": "7801078000",
+    "name": "Estate The Springs",
+    "basename": "The Springs",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7206998,
+      "lng": -64.6858727
+    },
+    "interiorPoint": {
+      "lat": 17.7206998,
+      "lng": -64.6858727
+    }
+  },
+  {
+    "geoid": "7801078050",
+    "name": "Estate The Whim East",
+    "basename": "The Whim East",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.6952894,
+      "lng": -64.8570044
+    },
+    "interiorPoint": {
+      "lat": 17.6952894,
+      "lng": -64.8570044
+    }
+  },
+  {
+    "geoid": "7801078075",
+    "name": "Estate The Whim West",
+    "basename": "The Whim West",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.6838948,
+      "lng": -64.8907027
+    },
+    "interiorPoint": {
+      "lat": 17.6855748,
+      "lng": -64.8914357
+    }
+  },
+  {
+    "geoid": "7803078150",
+    "name": "Estate Thomas",
+    "basename": "Thomas",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3383011,
+      "lng": -64.9149032
+    },
+    "interiorPoint": {
+      "lat": 18.3383011,
+      "lng": -64.9149032
+    }
+  },
+  {
+    "geoid": "7801078100",
+    "name": "Estate Thomas",
+    "basename": "Thomas",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.744003,
+      "lng": -64.738248
+    },
+    "interiorPoint": {
+      "lat": 17.744003,
+      "lng": -64.738248
+    }
+  },
+  {
+    "geoid": "7801078200",
+    "name": "Estate Tipperary",
+    "basename": "Tipperary",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7441024,
+      "lng": -64.6548828
+    },
+    "interiorPoint": {
+      "lat": 17.7441024,
+      "lng": -64.6548828
+    }
+  },
+  {
+    "geoid": "7802078225",
+    "name": "Estate Trunk Bay",
+    "basename": "Trunk Bay",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3507175,
+      "lng": -64.7670183
+    },
+    "interiorPoint": {
+      "lat": 18.3507175,
+      "lng": -64.7670183
+    }
+  },
+  {
+    "geoid": "7802078230",
+    "name": "Estate Trunk Cay",
+    "basename": "Trunk Cay",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3549747,
+      "lng": -64.768569
+    },
+    "interiorPoint": {
+      "lat": 18.3549747,
+      "lng": -64.768569
+    }
+  },
+  {
+    "geoid": "7801078250",
+    "name": "Estate Turner Hole",
+    "basename": "Turner Hole",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.740619,
+      "lng": -64.6100746
+    },
+    "interiorPoint": {
+      "lat": 17.740619,
+      "lng": -64.6100746
+    }
+  },
+  {
+    "geoid": "7802078275",
+    "name": "Estate Turner Point",
+    "basename": "Turner Point",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3422463,
+      "lng": -64.6911629
+    },
+    "interiorPoint": {
+      "lat": 18.3422463,
+      "lng": -64.6911629
+    }
+  },
+  {
+    "geoid": "7803078600",
+    "name": "Estate Turtle Dove Cay",
+    "basename": "Turtle Dove Cay",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3085599,
+      "lng": -65.0004779
+    },
+    "interiorPoint": {
+      "lat": 18.3085599,
+      "lng": -65.0004779
+    }
+  },
+  {
+    "geoid": "7801079500",
+    "name": "Estate Two Brothers",
+    "basename": "Two Brothers",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.6997187,
+      "lng": -64.8832529
+    },
+    "interiorPoint": {
+      "lat": 17.7013547,
+      "lng": -64.8823946
+    }
+  },
+  {
+    "geoid": "7801079700",
+    "name": "Estate Two Friends",
+    "basename": "Two Friends",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.740803,
+      "lng": -64.8375859
+    },
+    "interiorPoint": {
+      "lat": 17.740803,
+      "lng": -64.8375859
+    }
+  },
+  {
+    "geoid": "7801079900",
+    "name": "Estate Union and Mount Washington",
+    "basename": "Union and Mount Washington",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7369651,
+      "lng": -64.6514466
+    },
+    "interiorPoint": {
+      "lat": 17.7369651,
+      "lng": -64.6514466
+    }
+  },
+  {
+    "geoid": "7803080260",
+    "name": "Estate Upper John Dunko",
+    "basename": "Upper John Dunko",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3469567,
+      "lng": -64.9515373
+    },
+    "interiorPoint": {
+      "lat": 18.3469567,
+      "lng": -64.9515373
+    }
+  },
+  {
+    "geoid": "7801080400",
+    "name": "Estate Upper Love",
+    "basename": "Upper Love",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7303604,
+      "lng": -64.8120342
+    },
+    "interiorPoint": {
+      "lat": 17.7303604,
+      "lng": -64.8120342
+    }
+  },
+  {
+    "geoid": "7802080475",
+    "name": "Estate Ushers Quay",
+    "basename": "Ushers Quay",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3462393,
+      "lng": -64.7095182
+    },
+    "interiorPoint": {
+      "lat": 18.3462393,
+      "lng": -64.7095182
+    }
+  },
+  {
+    "geoid": "7801080850",
+    "name": "Estate VI Corporation Land",
+    "basename": "VI Corporation Land",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7233058,
+      "lng": -64.7932306
+    },
+    "interiorPoint": {
+      "lat": 17.7241754,
+      "lng": -64.7982239
+    }
+  },
+  {
+    "geoid": "7801081900",
+    "name": "Estate Waldberggaard",
+    "basename": "Waldberggaard",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7205514,
+      "lng": -64.8432667
+    },
+    "interiorPoint": {
+      "lat": 17.7205514,
+      "lng": -64.8432667
+    }
+  },
+  {
+    "geoid": "7801081925",
+    "name": "Estate Washington Hill",
+    "basename": "Washington Hill",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7476146,
+      "lng": -64.8813229
+    },
+    "interiorPoint": {
+      "lat": 17.7476146,
+      "lng": -64.8813229
+    }
+  },
+  {
+    "geoid": "7803081975",
+    "name": "Estate Water Island",
+    "basename": "Water Island",
+    "state": "78",
+    "county": "030",
+    "island": "Water Island",
+    "centroid": {
+      "lat": 18.3159622,
+      "lng": -64.9542598
+    },
+    "interiorPoint": {
+      "lat": 18.3154878,
+      "lng": -64.9556934
+    }
+  },
+  {
+    "geoid": "7803082700",
+    "name": "Estate West Cay",
+    "basename": "West Cay",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3587452,
+      "lng": -65.0456233
+    },
+    "interiorPoint": {
+      "lat": 18.3587452,
+      "lng": -65.0456233
+    }
+  },
+  {
+    "geoid": "7801084100",
+    "name": "Estate Wheel of Fortune",
+    "basename": "Wheel of Fortune",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.708034,
+      "lng": -64.8722461
+    },
+    "interiorPoint": {
+      "lat": 17.708034,
+      "lng": -64.8722461
+    }
+  },
+  {
+    "geoid": "7802084850",
+    "name": "Estate Whistling Cay",
+    "basename": "Whistling Cay",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3701126,
+      "lng": -64.7571144
+    },
+    "interiorPoint": {
+      "lat": 18.3701126,
+      "lng": -64.7571144
+    }
+  },
+  {
+    "geoid": "7801084900",
+    "name": "Estate White Lady",
+    "basename": "White Lady",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.6915953,
+      "lng": -64.8839779
+    },
+    "interiorPoint": {
+      "lat": 17.6915953,
+      "lng": -64.8839779
+    }
+  },
+  {
+    "geoid": "7801085075",
+    "name": "Estate Whites Bay East",
+    "basename": "Whites Bay East",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.6869836,
+      "lng": -64.8738647
+    },
+    "interiorPoint": {
+      "lat": 17.6869836,
+      "lng": -64.8738647
+    }
+  },
+  {
+    "geoid": "7801085150",
+    "name": "Estate Whites Bay North",
+    "basename": "Whites Bay North",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.6934335,
+      "lng": -64.8845103
+    },
+    "interiorPoint": {
+      "lat": 17.6934335,
+      "lng": -64.8845103
+    }
+  },
+  {
+    "geoid": "7801085250",
+    "name": "Estate Whites Bay South",
+    "basename": "Whites Bay South",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.6896048,
+      "lng": -64.8832128
+    },
+    "interiorPoint": {
+      "lat": 17.6896048,
+      "lng": -64.8832128
+    }
+  },
+  {
+    "geoid": "7801085550",
+    "name": "Estate William",
+    "basename": "William",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7361896,
+      "lng": -64.8805578
+    },
+    "interiorPoint": {
+      "lat": 17.7361896,
+      "lng": -64.8805578
+    }
+  },
+  {
+    "geoid": "7801085630",
+    "name": "Estate Williams Delight",
+    "basename": "Williams Delight",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.6978424,
+      "lng": -64.8360912
+    },
+    "interiorPoint": {
+      "lat": 17.6978424,
+      "lng": -64.8360912
+    }
+  },
+  {
+    "geoid": "7801085660",
+    "name": "Estate Wills Bay",
+    "basename": "Wills Bay",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7582142,
+      "lng": -64.8437782
+    },
+    "interiorPoint": {
+      "lat": 17.7582142,
+      "lng": -64.8437782
+    }
+  },
+  {
+    "geoid": "7801085820",
+    "name": "Estate Windsor",
+    "basename": "Windsor",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7604353,
+      "lng": -64.7729061
+    },
+    "interiorPoint": {
+      "lat": 17.7604353,
+      "lng": -64.7729061
+    }
+  },
+  {
+    "geoid": "7803085850",
+    "name": "Estate Wintberg",
+    "basename": "Wintberg",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3494079,
+      "lng": -64.9051062
+    },
+    "interiorPoint": {
+      "lat": 18.3494079,
+      "lng": -64.9051062
+    }
+  },
+  {
+    "geoid": "7801085870",
+    "name": "Estate Wood Cottage",
+    "basename": "Wood Cottage",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7356789,
+      "lng": -64.6251119
+    },
+    "interiorPoint": {
+      "lat": 17.7356789,
+      "lng": -64.6251119
+    }
+  },
+  {
+    "geoid": "7801085900",
+    "name": "Estate Work and Rest",
+    "basename": "Work and Rest",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.7213104,
+      "lng": -64.7238747
+    },
+    "interiorPoint": {
+      "lat": 17.7213104,
+      "lng": -64.7238747
+    }
+  },
+  {
+    "geoid": "7801085965",
+    "name": "Estate Yellow Cliff North",
+    "basename": "Yellow Cliff North",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.747489,
+      "lng": -64.6188001
+    },
+    "interiorPoint": {
+      "lat": 17.747489,
+      "lng": -64.6188001
+    }
+  },
+  {
+    "geoid": "7801085975",
+    "name": "Estate Yellow Cliff South",
+    "basename": "Yellow Cliff South",
+    "state": "78",
+    "county": "010",
+    "island": "St. Croix",
+    "centroid": {
+      "lat": 17.737391,
+      "lng": -64.620389
+    },
+    "interiorPoint": {
+      "lat": 17.737391,
+      "lng": -64.620389
+    }
+  },
+  {
+    "geoid": "7802086100",
+    "name": "Estate Zootenval",
+    "basename": "Zootenval",
+    "state": "78",
+    "county": "020",
+    "island": "St. John",
+    "centroid": {
+      "lat": 18.3526748,
+      "lng": -64.7058198
+    },
+    "interiorPoint": {
+      "lat": 18.3526748,
+      "lng": -64.7058198
+    }
+  },
+  {
+    "geoid": "7803086200",
+    "name": "Estate Zufriedenheit",
+    "basename": "Zufriedenheit",
+    "state": "78",
+    "county": "030",
+    "island": "St. Thomas",
+    "centroid": {
+      "lat": 18.3571025,
+      "lng": -64.9268345
+    },
+    "interiorPoint": {
+      "lat": 18.3571025,
+      "lng": -64.9268345
+    }
+  }
+]

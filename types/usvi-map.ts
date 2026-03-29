@@ -1,0 +1,1 @@
+export type IslandCode = "stt" | "stj" | "stx";
