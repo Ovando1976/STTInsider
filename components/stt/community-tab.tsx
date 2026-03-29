@@ -43,7 +43,7 @@ function matchesIslandFilter(
   if (selectedIsland === "St. Thomas") return postIsland === "stt";
   if (selectedIsland === "St. John") return postIsland === "stj";
   if (selectedIsland === "St. Croix") return postIsland === "stx";
-  return false;
+  return postIsland === "stt";
 }
 
 function formatPostIsland(island: CommunityPost["island"]) {
@@ -75,7 +75,9 @@ export function CommunityShell({ posts, estates }: Props) {
   const filteredPosts = useMemo(() => {
     let next = [...posts];
 
-    next = next.filter((post) => matchesIslandFilter(post.island, selectedIsland));
+    next = next.filter((post) =>
+      matchesIslandFilter(post.island, selectedIsland)
+    );
 
     if (selectedEstateGeoid !== "all") {
       next = next.filter((post) => post.estateGeoid === selectedEstateGeoid);

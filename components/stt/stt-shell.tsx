@@ -113,6 +113,24 @@ function tabMeta(tab: AppTab) {
   }
 }
 
+function toDiscoveryIslandCode(
+  island: Business["island"]
+): DiscoveryPlace["island"] {
+  if (island === "St. John") return "stj";
+  if (island === "St. Croix") return "stx";
+  return "stt";
+}
+
+function toDiscoveryCategory(
+  category: Business["category"]
+): DiscoveryPlace["category"] {
+  if (category === "Beach") return "beach";
+  if (category === "Food") return "food";
+  if (category === "Shopping") return "shopping";
+  if (category === "Stay") return "stay";
+  return "activity";
+}
+
 export function SttShell({ weather }: { weather: WeatherDay[] }) {
   const [query, setQuery] = useState("");
   const [currentCategory, setCurrentCategory] = useState<
@@ -221,29 +239,20 @@ export function SttShell({ weather }: { weather: WeatherDay[] }) {
 
   const mapPlaces = useMemo<DiscoveryPlace[]>(
     () =>
-      filteredBusinesses.map((business) => ({
-        id: business.id,
-        name: business.name,
-        island:
-          business.island === "St. John"
-            ? "stj"
-            : business.island === "St. Croix"
-            ? "stx"
-            : "stt",
-        category:
-          business.category === "Beach"
-            ? "beach"
-            : business.category === "Food"
-            ? "food"
-            : business.category === "Shopping"
-            ? "shopping"
-            : business.category === "Stay"
-            ? "stay"
-            : "activity",
-        lat: business.lat,
-        lng: business.lng,
-        description: business.description,
-      })),
+      filteredBusinesses
+        .filter(
+          (business) =>
+            Number.isFinite(business.lat) && Number.isFinite(business.lng)
+        )
+        .map((business) => ({
+          id: business.id,
+          name: business.name,
+          island: toDiscoveryIslandCode(business.island),
+          category: toDiscoveryCategory(business.category),
+          lat: business.lat,
+          lng: business.lng,
+          description: business.description,
+        })),
     [filteredBusinesses]
   );
 
