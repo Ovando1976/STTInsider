@@ -748,24 +748,37 @@ export function EstateExplorerMap({ selectedIsland, onChangeIsland }: Props) {
     const map = mapRef.current;
     if (!map || !map.getLayer(MAP_FILL_LAYER_ID)) return;
 
-    const filter = buildLayerFilter(visibleEstateIds);
+    const visibleFilter = buildLayerFilter(visibleEstateIds);
+    const selectedId = selectedEstate?.properties.id ?? "__none__";
 
-    map.setFilter(MAP_FILL_LAYER_ID, filter);
-    map.setFilter(MAP_LINE_LAYER_ID, filter);
+    map.setFilter(MAP_FILL_LAYER_ID, visibleFilter);
+    map.setFilter(MAP_LINE_LAYER_ID, visibleFilter);
+
+    if (map.getLayer(MAP_FILL_EXTRUSION_LAYER_ID)) {
+      map.setFilter(MAP_FILL_EXTRUSION_LAYER_ID, visibleFilter);
+    }
 
     if (map.getLayer(MAP_SELECTED_FILL_LAYER_ID)) {
       map.setFilter(MAP_SELECTED_FILL_LAYER_ID, [
         "all",
-        filter,
-        ["==", ["get", "id"], selectedEstate?.properties.id ?? "__none__"],
+        visibleFilter,
+        ["==", ["get", "id"], selectedId],
       ]);
     }
 
     if (map.getLayer(MAP_SELECTED_LINE_LAYER_ID)) {
       map.setFilter(MAP_SELECTED_LINE_LAYER_ID, [
         "all",
-        filter,
-        ["==", ["get", "id"], selectedEstate?.properties.id ?? "__none__"],
+        visibleFilter,
+        ["==", ["get", "id"], selectedId],
+      ]);
+    }
+
+    if (map.getLayer(MAP_SELECTED_EXTRUSION_LAYER_ID)) {
+      map.setFilter(MAP_SELECTED_EXTRUSION_LAYER_ID, [
+        "all",
+        visibleFilter,
+        ["==", ["get", "id"], selectedId],
       ]);
     }
   }, [visibleEstateIds, selectedEstate]);
@@ -1062,7 +1075,6 @@ export function EstateExplorerMap({ selectedIsland, onChangeIsland }: Props) {
         "visibility",
         is3d ? "visible" : "none"
       );
-      map.setFilter(MAP_FILL_EXTRUSION_LAYER_ID, buildLayerFilter(visibleEstateIds));
     }
 
     if (map.getLayer(MAP_SELECTED_FILL_LAYER_ID)) {
@@ -1079,11 +1091,6 @@ export function EstateExplorerMap({ selectedIsland, onChangeIsland }: Props) {
         "visibility",
         is3d ? "visible" : "none"
       );
-      map.setFilter(MAP_SELECTED_EXTRUSION_LAYER_ID, [
-        "all",
-        buildLayerFilter(visibleEstateIds),
-        ["==", ["get", "id"], selectedEstate?.properties.id ?? "__none__"],
-      ]);
     }
 
     if (is3d) {
@@ -1107,37 +1114,6 @@ export function EstateExplorerMap({ selectedIsland, onChangeIsland }: Props) {
   useEffect(() => {
     fitVisibleEstates();
   }, [fitVisibleEstates]);
-
-  useEffect(() => {
-    const map = mapRef.current;
-    if (!map || !mapReady) return;
-
-    const selectedId = selectedEstate?.properties.id ?? "__none__";
-    const visibleFilter = buildLayerFilter(visibleEstateIds);
-
-    if (map.getLayer(MAP_SELECTED_FILL_LAYER_ID)) {
-      map.setFilter(MAP_SELECTED_FILL_LAYER_ID, [
-        "all",
-        visibleFilter,
-        ["==", ["get", "id"], selectedId],
-      ]);
-    }
-
-    if (map.getLayer(MAP_SELECTED_LINE_LAYER_ID)) {
-      map.setFilter(MAP_SELECTED_LINE_LAYER_ID, [
-        "all",
-        visibleFilter,
-        ["==", ["get", "id"], selectedId],
-      ]);
-    }
-    if (map.getLayer(MAP_SELECTED_EXTRUSION_LAYER_ID)) {
-      map.setFilter(MAP_SELECTED_EXTRUSION_LAYER_ID, [
-        "all",
-        visibleFilter,
-        ["==", ["get", "id"], selectedId],
-      ]);
-    }
-  }, [selectedEstate, mapReady, visibleEstateIds]);
 
   useEffect(() => {
     if (selectedEstate?.properties?.id) {
