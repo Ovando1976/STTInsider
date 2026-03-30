@@ -63,6 +63,10 @@ const MAP_LINE_LAYER_ID = "estate-lines";
 const MAP_SELECTED_LINE_LAYER_ID = "estate-selected-line";
 const MAP_SELECTED_FILL_LAYER_ID = "estate-selected-fill";
 const MAP_TERRAIN_SOURCE_ID = "mapbox-dem";
+const MAP_INTERACTIVE_LAYER_IDS = [
+  MAP_FILL_LAYER_ID,
+  MAP_FILL_EXTRUSION_LAYER_ID,
+] as const;
 
 const ISLAND_VIEWS: Record<
   IslandCode,
@@ -926,53 +930,59 @@ export function EstateExplorerMap({ selectedIsland, onChangeIsland }: Props) {
         },
       });
 
+      const clearHoverState = () => {
+        map.getCanvas().style.cursor = "";
+
+        const hoveredId = hoveredEstateIdRef.current;
+        if (hoveredId) {
+          map.setFeatureState(
+            { source: MAP_SOURCE_ID, id: hoveredId },
+            { hover: false }
+          );
+        }
+
+        hoveredEstateIdRef.current = null;
+      };
+
       if (!isTouchDevice()) {
-        map.on("mousemove", MAP_FILL_LAYER_ID, (event: MapLayerMouseEvent) => {
+        for (const layerId of MAP_INTERACTIVE_LAYER_IDS) {
+          map.on("mousemove", layerId, (event: MapLayerMouseEvent) => {
+            const feature = event.features?.[0] as unknown as
+              | EstateFeature
+              | undefined;
+            if (!feature?.properties?.id) return;
+
+            map.getCanvas().style.cursor = "pointer";
+
+            const previousId = hoveredEstateIdRef.current;
+            if (previousId && previousId !== feature.properties.id) {
+              map.setFeatureState(
+                { source: MAP_SOURCE_ID, id: previousId },
+                { hover: false }
+              );
+            }
+
+            hoveredEstateIdRef.current = feature.properties.id;
+
+            map.setFeatureState(
+              { source: MAP_SOURCE_ID, id: feature.properties.id },
+              { hover: true }
+            );
+          });
+
+          map.on("mouseleave", layerId, clearHoverState);
+        }
+      }
+
+      for (const layerId of MAP_INTERACTIVE_LAYER_IDS) {
+        map.on("click", layerId, (event: MapLayerMouseEvent) => {
           const feature = event.features?.[0] as unknown as
             | EstateFeature
             | undefined;
           if (!feature?.properties?.id) return;
-
-          map.getCanvas().style.cursor = "pointer";
-
-          const previousId = hoveredEstateIdRef.current;
-          if (previousId && previousId !== feature.properties.id) {
-            map.setFeatureState(
-              { source: MAP_SOURCE_ID, id: previousId },
-              { hover: false }
-            );
-          }
-
-          hoveredEstateIdRef.current = feature.properties.id;
-
-          map.setFeatureState(
-            { source: MAP_SOURCE_ID, id: feature.properties.id },
-            { hover: true }
-          );
-        });
-
-        map.on("mouseleave", MAP_FILL_LAYER_ID, () => {
-          map.getCanvas().style.cursor = "";
-
-          const hoveredId = hoveredEstateIdRef.current;
-          if (hoveredId) {
-            map.setFeatureState(
-              { source: MAP_SOURCE_ID, id: hoveredId },
-              { hover: false }
-            );
-          }
-
-          hoveredEstateIdRef.current = null;
+          focusEstate(feature);
         });
       }
-
-      map.on("click", MAP_FILL_LAYER_ID, (event: MapLayerMouseEvent) => {
-        const feature = event.features?.[0] as unknown as
-          | EstateFeature
-          | undefined;
-        if (!feature?.properties?.id) return;
-        focusEstate(feature);
-      });
 
       mapRef.current = map;
       setMapReady(true);
