@@ -99,6 +99,7 @@ const QUARTER_COLORS: Record<string, string> = {
   "Maho Quarter": "#84CC16",
   "Reef Bay Quarter": "#F97316",
   "Coral Bay Quarter": "#EF4444",
+  Unknown: "#64748B",
 };
 
 const ESTATE_QUARTER_OVERRIDES_BY_GEOID: Record<string, string> = {
@@ -334,7 +335,7 @@ function buildQuarterColorExpression(): mapboxgl.Expression {
     expression.push(quarter, color);
   }
 
-  expression.push("#CBD5E1");
+  expression.push(QUARTER_COLORS.Unknown);
   return expression as mapboxgl.Expression;
 }
 
@@ -408,12 +409,78 @@ export function EstateExplorerMap({ selectedIsland, onChangeIsland }: Props) {
   const [pickerValue, setPickerValue] = useState("");
   const [loadError, setLoadError] = useState<string | null>(null);
   const [mapReady, setMapReady] = useState(false);
+  const [rawEstateCollection, setRawEstateCollection] = useState<
+    GeoJSON.FeatureCollection | null
+  >(() => estatesGeoJson as GeoJSON.FeatureCollection);
 
   const mapToken = process.env.NEXT_PUBLIC_MAPBOX_TOKEN;
 
+  useEffect(() => {
+    let mounted = true;
+
+    async function loadLiveEstates() {
+      try {
+        const res = await fetch("/api/estates", { cache: "no-store" });
+        if (!res.ok) return;
+
+        const payload = (await res.json()) as GeoJSON.FeatureCollection;
+        if (!mounted) return;
+
+        if (Array.isArray(payload.features) && payload.features.length > 0) {
+          const fallback = estatesGeoJson as GeoJSON.FeatureCollection;
+          const fallbackFeatures = Array.isArray(fallback.features)
+            ? fallback.features
+            : [];
+
+          const liveFeatures = payload.features;
+
+          const featureKey = (feature: GeoJSON.Feature, index: number) => {
+            const props =
+              typeof feature.properties === "object" && feature.properties !== null
+                ? (feature.properties as Record<string, unknown>)
+                : {};
+
+            const geoid = String(props.geoid ?? "").trim();
+            const id = String(props.id ?? "").trim();
+            const island = String(props.island ?? "").trim().toLowerCase();
+            const baseName = String(
+              props.baseName ?? props.basename ?? props.name ?? ""
+            )
+              .trim()
+              .toLowerCase();
+
+            return geoid || id || `${island}:${baseName}` || `feature-${index}`;
+          };
+
+          const liveKeys = new Set(
+            liveFeatures.map((feature, index) => featureKey(feature, index))
+          );
+
+          const missingFallbackFeatures = fallbackFeatures.filter(
+            (feature, index) => !liveKeys.has(featureKey(feature, index))
+          );
+
+          setRawEstateCollection({
+            type: "FeatureCollection",
+            features: [...liveFeatures, ...missingFallbackFeatures],
+          });
+        }
+      } catch {
+        // Fallback to bundled data when API is unavailable.
+      }
+    }
+
+    loadLiveEstates();
+
+    return () => {
+      mounted = false;
+    };
+  }, []);
+
   const estates = useMemo<EstateCollection>(() => {
     try {
-      const raw = estatesGeoJson as GeoJSON.FeatureCollection;
+      const raw =
+        rawEstateCollection ?? (estatesGeoJson as GeoJSON.FeatureCollection);
       const rawFeatures = raw.features ?? [];
 
       const rejectedFeatures = rawFeatures.filter(
@@ -517,7 +584,27 @@ export function EstateExplorerMap({ selectedIsland, onChangeIsland }: Props) {
           };
         });
 
-      const unresolvedQuarterEstates = normalizedFeatures.filter(
+      const idUsage = new Map<string, number>();
+      const uniqueIdFeatures = normalizedFeatures.map((feature) => {
+        const baseId = feature.properties.id || feature.properties.geoid;
+        const seen = idUsage.get(baseId) ?? 0;
+        idUsage.set(baseId, seen + 1);
+
+        if (seen === 0) return feature;
+
+        const uniqueId = `${baseId}__${seen + 1}`;
+
+        return {
+          ...feature,
+          id: uniqueId,
+          properties: {
+            ...feature.properties,
+            id: uniqueId,
+          },
+        };
+      });
+
+      const unresolvedQuarterEstates = uniqueIdFeatures.filter(
         (feature) => !feature.properties.quarter
       );
 
@@ -536,7 +623,7 @@ export function EstateExplorerMap({ selectedIsland, onChangeIsland }: Props) {
       }
 
       const idCounts = new Map<string, number>();
-      for (const feature of normalizedFeatures) {
+      for (const feature of uniqueIdFeatures) {
         const nextId = feature.properties.id;
         idCounts.set(nextId, (idCounts.get(nextId) ?? 0) + 1);
       }
@@ -551,7 +638,7 @@ export function EstateExplorerMap({ selectedIsland, onChangeIsland }: Props) {
 
       return {
         type: "FeatureCollection",
-        features: normalizedFeatures,
+        features: uniqueIdFeatures,
       };
     } catch (error) {
       console.error("Failed to normalize estate GeoJSON:", error);
@@ -560,7 +647,7 @@ export function EstateExplorerMap({ selectedIsland, onChangeIsland }: Props) {
         features: [],
       };
     }
-  }, []);
+  }, [rawEstateCollection]);
 
   const visibleEstates = useMemo(() => {
     const normalizedQuery = query.trim().toLowerCase();
@@ -606,9 +693,18 @@ export function EstateExplorerMap({ selectedIsland, onChangeIsland }: Props) {
         .filter(Boolean) as string[]
     );
 
-    return Object.entries(QUARTER_COLORS).filter(([quarter]) =>
+    const entries = Object.entries(QUARTER_COLORS).filter(([quarter]) =>
       visibleQuarters.has(quarter)
     );
+    const hasUnknownQuarter = visibleEstates.some(
+      (feature) => !feature.properties.quarter
+    );
+
+    if (hasUnknownQuarter) {
+      entries.push(["Unknown", QUARTER_COLORS.Unknown]);
+    }
+
+    return entries;
   }, [visibleEstates]);
 
   const selectedHistory = selectedEstate
@@ -751,8 +847,8 @@ export function EstateExplorerMap({ selectedIsland, onChangeIsland }: Props) {
           "fill-opacity": [
             "case",
             ["boolean", ["feature-state", "hover"], false],
-            0.42,
-            0.26,
+            0.48,
+            0.36,
           ],
         },
       });

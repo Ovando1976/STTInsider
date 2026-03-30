@@ -1,5 +1,7 @@
 import { adminDb } from "@/lib/firebase/openvi-admin";
 
+export const dynamic = "force-dynamic";
+
 export default async function BookingsPage() {
   const snapshot = await adminDb
     .collection("bookings")

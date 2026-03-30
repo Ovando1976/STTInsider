@@ -1,14 +1,17 @@
 import "server-only";
 
-import { App, cert, getApps, initializeApp } from "firebase-admin/app";
+import {
+  App,
+  applicationDefault,
+  cert,
+  getApps,
+  initializeApp,
+} from "firebase-admin/app";
 import { getFirestore } from "firebase-admin/firestore";
 
 function getPrivateKey() {
   const key = process.env.FIREBASE_PRIVATE_KEY;
-  if (!key) {
-    throw new Error("Missing FIREBASE_PRIVATE_KEY");
-  }
-  return key.replace(/\\n/g, "\n");
+  return key ? key.replace(/\\n/g, "\n") : undefined;
 }
 
 function createAdminApp(): App {
@@ -16,18 +19,18 @@ function createAdminApp(): App {
   const clientEmail = process.env.FIREBASE_CLIENT_EMAIL;
   const privateKey = getPrivateKey();
 
-  if (!projectId || !clientEmail) {
-    throw new Error(
-      "Missing Firebase admin env vars: FIREBASE_PROJECT_ID or FIREBASE_CLIENT_EMAIL"
-    );
+  if (projectId && clientEmail && privateKey) {
+    return initializeApp({
+      credential: cert({
+        projectId,
+        clientEmail,
+        privateKey,
+      }),
+    });
   }
 
   return initializeApp({
-    credential: cert({
-      projectId,
-      clientEmail,
-      privateKey,
-    }),
+    credential: applicationDefault(),
   });
 }
 
