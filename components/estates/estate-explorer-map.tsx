@@ -1138,6 +1138,19 @@ export function EstateExplorerMap({ selectedIsland, onChangeIsland }: Props) {
   }, [activeIsland]);
 
   useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key !== "Escape") return;
+      setSelectedEstate(null);
+      setPickerValue("");
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
+
+  useEffect(() => {
     if (!estates.features.length) {
       setLoadError("No estate features were loaded from the GeoJSON file.");
       return;
@@ -1274,6 +1287,18 @@ export function EstateExplorerMap({ selectedIsland, onChangeIsland }: Props) {
               </option>
             ))}
           </select>
+          {selectedEstate ? (
+            <button
+              type="button"
+              onClick={() => {
+                setSelectedEstate(null);
+                setPickerValue("");
+              }}
+              className="mt-2 text-xs font-semibold text-sky-700 hover:text-sky-900"
+            >
+              Clear selected estate
+            </button>
+          ) : null}
         </div>
 
         <div className="mt-5 rounded-[28px] border border-white/70 bg-white/85 p-4 shadow-[0_14px_40px_rgba(15,23,42,0.08)] backdrop-blur">
