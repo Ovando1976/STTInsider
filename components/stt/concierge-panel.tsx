@@ -15,6 +15,11 @@ type ChatMessage = {
   text: string;
 };
 
+type ConciergeApiResponse = {
+  answer: string;
+  sources?: string[];
+};
+
 type TripDuration = "2 hours" | "4 hours" | "full day";
 type TripVibe = "adventure" | "luxury" | "family" | "local-casual";
 
@@ -184,6 +189,7 @@ export function ConciergePanel({
 
   const [messages, setMessages] = useState<ChatMessage[]>(initialMessages);
   const [draft, setDraft] = useState("");
+  const [isResponding, setIsResponding] = useState(false);
 
   useEffect(() => {
     setMessages(initialMessages);
@@ -195,7 +201,7 @@ export function ConciergePanel({
     return `${prefix}-${messageCounter.current}`;
   };
 
-  const handleSubmit = (rawPrompt: string) => {
+  const handleSubmit = async (rawPrompt: string) => {
     const prompt = rawPrompt.trim();
     if (!prompt) {
       return;
@@ -207,19 +213,59 @@ export function ConciergePanel({
       text: prompt,
     };
 
-    const aiMessage: ChatMessage = {
-      id: nextId("ai"),
-      role: "ai",
-      text: buildAssistantReply(prompt, selectedPlace, profile),
-    };
-
-    setMessages((previous) => [...previous, userMessage, aiMessage]);
+    setMessages((previous) => [...previous, userMessage]);
     setDraft("");
+
+    setIsResponding(true);
+
+    try {
+      const response = await fetch("/api/concierge", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          prompt,
+          selectedPlace,
+          profile,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Concierge API unavailable");
+      }
+
+      const payload = (await response.json()) as ConciergeApiResponse;
+      const sourceFooter =
+        payload.sources && payload.sources.length > 0
+          ? `\n\nSources:\n- ${payload.sources.join("\n- ")}`
+          : "";
+
+      setMessages((previous) => [
+        ...previous,
+        {
+          id: nextId("ai"),
+          role: "ai",
+          text: `${payload.answer}${sourceFooter}`,
+        },
+      ]);
+    } catch {
+      setMessages((previous) => [
+        ...previous,
+        {
+          id: nextId("ai"),
+          role: "ai",
+          text: buildAssistantReply(prompt, selectedPlace, profile),
+        },
+      ]);
+    } finally {
+      setIsResponding(false);
+    }
   };
 
   const handleNotebookFunction = (tool: ConciergeFunction) => {
     const placeLabel = selectedPlace?.title ?? "St. Thomas";
-    handleSubmit(tool.buildPrompt(placeLabel, profile));
+    void handleSubmit(tool.buildPrompt(placeLabel, profile));
   };
 
   return (
@@ -249,7 +295,9 @@ export function ConciergePanel({
             <button
               key={prompt}
               className="rounded-full border border-slate-200 bg-white px-4 py-2 text-xs font-semibold text-slate-700 transition hover:border-sky-300 hover:text-sky-700"
-              onClick={() => handleSubmit(prompt)}
+              onClick={() => {
+                void handleSubmit(prompt);
+              }}
               type="button"
             >
               {prompt}
@@ -331,7 +379,7 @@ export function ConciergePanel({
         className="flex gap-3 border-t bg-white p-5"
         onSubmit={(event) => {
           event.preventDefault();
-          handleSubmit(draft);
+          void handleSubmit(draft);
         }}
       >
         <input
@@ -344,9 +392,9 @@ export function ConciergePanel({
         <button
           className="rounded-2xl bg-sky-600 px-5 py-4 text-white shadow-xl disabled:cursor-not-allowed disabled:bg-sky-300"
           type="submit"
-          disabled={!draft.trim()}
+          disabled={!draft.trim() || isResponding}
         >
-          Send
+          {isResponding ? "Thinking..." : "Send"}
         </button>
       </form>
     </div>
