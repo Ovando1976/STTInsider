@@ -68,6 +68,9 @@ const MAP_INTERACTIVE_LAYER_IDS = [
   MAP_FILL_LAYER_ID,
   MAP_FILL_EXTRUSION_LAYER_ID,
 ] as const;
+const DEBUG_ESTATE_MAP =
+  process.env.NODE_ENV === "development" &&
+  process.env.NEXT_PUBLIC_DEBUG_ESTATE_MAP === "true";
 
 const ISLAND_VIEWS: Record<
   IslandCode,
@@ -495,7 +498,7 @@ export function EstateExplorerMap({ selectedIsland, onChangeIsland }: Props) {
         (feature) => !isEstateFeatureCandidate(feature)
       );
 
-      if (rejectedFeatures.length > 0) {
+      if (DEBUG_ESTATE_MAP && rejectedFeatures.length > 0) {
         console.log(
           "Rejected estate features:",
           rejectedFeatures.map((feature, index) => ({
@@ -625,7 +628,7 @@ export function EstateExplorerMap({ selectedIsland, onChangeIsland }: Props) {
         (feature) => !feature.properties.quarter
       );
 
-      if (unresolvedQuarterEstates.length > 0) {
+      if (DEBUG_ESTATE_MAP && unresolvedQuarterEstates.length > 0) {
         console.log(
           "Unresolved quarter estates:",
           unresolvedQuarterEstates.map((feature) => ({
@@ -649,7 +652,7 @@ export function EstateExplorerMap({ selectedIsland, onChangeIsland }: Props) {
         .filter(([, count]) => count > 1)
         .map(([id, count]) => ({ id, count }));
 
-      if (duplicateIds.length > 0) {
+      if (DEBUG_ESTATE_MAP && duplicateIds.length > 0) {
         console.log("Duplicate estate ids:", duplicateIds);
       }
 
