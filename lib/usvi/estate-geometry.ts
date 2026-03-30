@@ -23,7 +23,7 @@ export function normalizeEstateGeometry(
       geometry,
     },
     { mutate: false }
-  );
+  ) as GeoJSON.Feature<EstateRenderableGeometry>;
 
-  return rewound.geometry as EstateRenderableGeometry;
+  return rewound.geometry;
 }
