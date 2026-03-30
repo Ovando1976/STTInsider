@@ -408,12 +408,72 @@ export function EstateExplorerMap({ selectedIsland, onChangeIsland }: Props) {
   const [pickerValue, setPickerValue] = useState("");
   const [loadError, setLoadError] = useState<string | null>(null);
   const [mapReady, setMapReady] = useState(false);
+  const [rawEstateCollection, setRawEstateCollection] = useState<
+    GeoJSON.FeatureCollection | null
+  >(() => estatesGeoJson as GeoJSON.FeatureCollection);
 
   const mapToken = process.env.NEXT_PUBLIC_MAPBOX_TOKEN;
 
+  useEffect(() => {
+    let mounted = true;
+
+    async function loadLiveEstates() {
+      try {
+        const res = await fetch("/api/estates", { cache: "no-store" });
+        if (!res.ok) return;
+
+        const payload = (await res.json()) as GeoJSON.FeatureCollection;
+        if (!mounted) return;
+
+        if (Array.isArray(payload.features) && payload.features.length > 0) {
+          const fallback = estatesGeoJson as GeoJSON.FeatureCollection;
+          const fallbackFeatures = Array.isArray(fallback.features)
+            ? fallback.features
+            : [];
+
+          const liveFeatures = payload.features;
+
+          const featureKey = (feature: GeoJSON.Feature, index: number) => {
+            const props =
+              typeof feature.properties === "object" && feature.properties !== null
+                ? (feature.properties as Record<string, unknown>)
+                : {};
+
+            const geoid = String(props.geoid ?? "").trim();
+            const id = String(props.id ?? "").trim();
+
+            return geoid || id || `feature-${index}`;
+          };
+
+          const liveKeys = new Set(
+            liveFeatures.map((feature, index) => featureKey(feature, index))
+          );
+
+          const missingFallbackFeatures = fallbackFeatures.filter(
+            (feature, index) => !liveKeys.has(featureKey(feature, index))
+          );
+
+          setRawEstateCollection({
+            type: "FeatureCollection",
+            features: [...liveFeatures, ...missingFallbackFeatures],
+          });
+        }
+      } catch {
+        // Fallback to bundled data when API is unavailable.
+      }
+    }
+
+    loadLiveEstates();
+
+    return () => {
+      mounted = false;
+    };
+  }, []);
+
   const estates = useMemo<EstateCollection>(() => {
     try {
-      const raw = estatesGeoJson as GeoJSON.FeatureCollection;
+      const raw =
+        rawEstateCollection ?? (estatesGeoJson as GeoJSON.FeatureCollection);
       const rawFeatures = raw.features ?? [];
 
       const rejectedFeatures = rawFeatures.filter(
@@ -560,7 +620,7 @@ export function EstateExplorerMap({ selectedIsland, onChangeIsland }: Props) {
         features: [],
       };
     }
-  }, []);
+  }, [rawEstateCollection]);
 
   const visibleEstates = useMemo(() => {
     const normalizedQuery = query.trim().toLowerCase();
