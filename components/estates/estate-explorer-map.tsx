@@ -1021,6 +1021,17 @@ export function EstateExplorerMap({ selectedIsland, onChangeIsland }: Props) {
         });
       }
 
+      map.on("click", (event) => {
+        const hitFeatures = map.queryRenderedFeatures(event.point, {
+          layers: [...MAP_INTERACTIVE_LAYER_IDS],
+        });
+
+        if (hitFeatures.length === 0) {
+          setSelectedEstate(null);
+          setPickerValue("");
+        }
+      });
+
       mapRef.current = map;
       setMapReady(true);
     });
