@@ -36,6 +36,7 @@ type EstateFeatureProperties = {
   centroid: { lat: number | null; lng: number | null };
   internalPoint: { lat: number | null; lng: number | null };
   aliases?: string[];
+  searchTokens: string;
 };
 
 type EstateFeature = GeoJSON.Feature<
@@ -137,53 +138,50 @@ function resolveQuarterWithOverrides(args: {
   );
 }
 
+const MAP_ISLAND_ALIASES: Record<string, MapIslandValue> = {
+  all: "all",
+  "all islands": "all",
+  "all-islands": "all",
+  stt: "stt",
+  "st. thomas": "stt",
+  "st thomas": "stt",
+  "saint thomas": "stt",
+  stj: "stj",
+  "st. john": "stj",
+  "st john": "stj",
+  "saint john": "stj",
+  stx: "stx",
+  "st. croix": "stx",
+  "st croix": "stx",
+  "saint croix": "stx",
+};
+
+const RAW_ISLAND_ALIASES: Record<string, IslandCode> = {
+  stt: "stt",
+  "st. thomas": "stt",
+  "st thomas": "stt",
+  "saint thomas": "stt",
+  st_thomas: "stt",
+  stj: "stj",
+  "st. john": "stj",
+  "st john": "stj",
+  "saint john": "stj",
+  st_john: "stj",
+  stx: "stx",
+  "st. croix": "stx",
+  "st croix": "stx",
+  "saint croix": "stx",
+  st_croix: "stx",
+};
+
 function normalizeIslandCode(value: unknown): MapIslandValue {
-  if (
-    value === "all" ||
-    value === "stt" ||
-    value === "stj" ||
-    value === "stx"
-  ) {
+  if (value === "all" || value === "stt" || value === "stj" || value === "stx") {
     return value;
   }
 
   if (typeof value === "string") {
     const normalized = value.trim().toLowerCase();
-
-    if (
-      normalized === "all" ||
-      normalized === "all islands" ||
-      normalized === "all-islands"
-    ) {
-      return "all";
-    }
-
-    if (
-      normalized === "stt" ||
-      normalized === "st. thomas" ||
-      normalized === "st thomas" ||
-      normalized === "saint thomas"
-    ) {
-      return "stt";
-    }
-
-    if (
-      normalized === "stj" ||
-      normalized === "st. john" ||
-      normalized === "st john" ||
-      normalized === "saint john"
-    ) {
-      return "stj";
-    }
-
-    if (
-      normalized === "stx" ||
-      normalized === "st. croix" ||
-      normalized === "st croix" ||
-      normalized === "saint croix"
-    ) {
-      return "stx";
-    }
+    return MAP_ISLAND_ALIASES[normalized] ?? "all";
   }
 
   return "all";
@@ -193,38 +191,7 @@ function normalizeRawIsland(value: unknown): IslandCode | null {
   if (typeof value !== "string") return null;
 
   const normalized = value.trim().toLowerCase();
-
-  if (
-    normalized === "stt" ||
-    normalized === "st. thomas" ||
-    normalized === "st thomas" ||
-    normalized === "saint thomas" ||
-    normalized === "st_thomas"
-  ) {
-    return "stt";
-  }
-
-  if (
-    normalized === "stj" ||
-    normalized === "st. john" ||
-    normalized === "st john" ||
-    normalized === "saint john" ||
-    normalized === "st_john"
-  ) {
-    return "stj";
-  }
-
-  if (
-    normalized === "stx" ||
-    normalized === "st. croix" ||
-    normalized === "st croix" ||
-    normalized === "saint croix" ||
-    normalized === "st_croix"
-  ) {
-    return "stx";
-  }
-
-  return null;
+  return RAW_ISLAND_ALIASES[normalized] ?? null;
 }
 
 function normalizeEstateKey(value: string) {
@@ -239,6 +206,44 @@ function normalizeEstateKey(value: string) {
 
 function compactEstateKey(value: string) {
   return normalizeEstateKey(value).replace(/\s+/g, "");
+}
+
+const DIRECTIONAL_AND_MODIFIER_REGEX = /\b(north|south|east|west|northwest|northeast|southwest|southeast|northside|southside|eastend|westend|upper|lower|great|little)\b/gi;
+const ESTATE_WORD_REGEX = /(^|\s)(estate|est\.?)(?=\s|$)/gi;
+const RESOLVE_CANDIDATE_CACHE = new Map<string, string[]>();
+
+function normalizeEstateNameVariant(value: string) {
+  return value.replace(ESTATE_WORD_REGEX, " ").replace(/\s+/g, " ").trim();
+}
+
+function buildQuarterCandidates(baseName: string, fullName: string, aliases?: string[]) {
+  const cacheKey = `${baseName}__${fullName}__${(aliases ?? []).join("|")}`;
+  const cached = RESOLVE_CANDIDATE_CACHE.get(cacheKey);
+  if (cached) {
+    return cached;
+  }
+
+  const normalizedBase = normalizeEstateNameVariant(baseName);
+  const normalizedFull = normalizeEstateNameVariant(fullName);
+
+  const candidates = [
+    baseName,
+    fullName,
+    ...(aliases ?? []),
+    normalizedBase,
+    normalizedFull,
+    normalizedBase.replace(DIRECTIONAL_AND_MODIFIER_REGEX, "").trim(),
+    normalizedFull.replace(DIRECTIONAL_AND_MODIFIER_REGEX, "").trim(),
+    normalizedBase.replace(/\band\b/gi, "&"),
+    normalizedFull.replace(/\band\b/gi, "&"),
+    normalizedBase.replace(/&/g, "and"),
+    normalizedFull.replace(/&/g, "and"),
+  ]
+    .map((value) => String(value ?? "").trim())
+    .filter(Boolean);
+
+  RESOLVE_CANDIDATE_CACHE.set(cacheKey, candidates);
+  return candidates;
 }
 
 function isEstateFeatureCandidate(
@@ -294,22 +299,7 @@ function resolveQuarter(
   aliases?: string[]
 ) {
   const lookup = QUARTER_LOOKUPS[island];
-
-  const candidates = [
-    baseName,
-    fullName,
-    ...(aliases ?? []),
-    baseName.replace(/^estate\s+/i, ""),
-    fullName.replace(/^estate\s+/i, ""),
-    baseName.replace(/\b(north|south|east|west)\b/gi, "").trim(),
-    fullName.replace(/\b(north|south|east|west)\b/gi, "").trim(),
-    baseName.replace(/\band\b/gi, "&"),
-    fullName.replace(/\band\b/gi, "&"),
-    baseName.replace(/&/g, "and"),
-    fullName.replace(/&/g, "and"),
-  ]
-    .map((value) => String(value ?? "").trim())
-    .filter(Boolean);
+  const candidates = buildQuarterCandidates(baseName, fullName, aliases);
 
   for (const candidate of candidates) {
     const normalized = normalizeEstateKey(candidate);
@@ -580,6 +570,7 @@ export function EstateExplorerMap({ selectedIsland, onChangeIsland }: Props) {
                   toNullableNumber(centroid.lng),
               },
               aliases,
+              searchTokens: "",
             },
           };
         });
@@ -604,7 +595,15 @@ export function EstateExplorerMap({ selectedIsland, onChangeIsland }: Props) {
         };
       });
 
-      const unresolvedQuarterEstates = uniqueIdFeatures.filter(
+      const enrichedFeatures = uniqueIdFeatures.map((feature) => ({
+        ...feature,
+        properties: {
+          ...feature.properties,
+          searchTokens: buildSearchTokens(feature),
+        },
+      }));
+
+      const unresolvedQuarterEstates = enrichedFeatures.filter(
         (feature) => !feature.properties.quarter
       );
 
@@ -623,7 +622,7 @@ export function EstateExplorerMap({ selectedIsland, onChangeIsland }: Props) {
       }
 
       const idCounts = new Map<string, number>();
-      for (const feature of uniqueIdFeatures) {
+      for (const feature of enrichedFeatures) {
         const nextId = feature.properties.id;
         idCounts.set(nextId, (idCounts.get(nextId) ?? 0) + 1);
       }
@@ -638,7 +637,7 @@ export function EstateExplorerMap({ selectedIsland, onChangeIsland }: Props) {
 
       return {
         type: "FeatureCollection",
-        features: uniqueIdFeatures,
+        features: enrichedFeatures,
       };
     } catch (error) {
       console.error("Failed to normalize estate GeoJSON:", error);
@@ -661,7 +660,7 @@ export function EstateExplorerMap({ selectedIsland, onChangeIsland }: Props) {
 
       if (!normalizedQuery) return true;
 
-      return buildSearchTokens(feature).includes(normalizedQuery);
+      return feature.properties.searchTokens.includes(normalizedQuery);
     });
   }, [estates, activeIsland, query]);
 
