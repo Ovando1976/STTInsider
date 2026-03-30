@@ -38,6 +38,45 @@ const DEFAULT_PROFILE: ConciergeProfile = {
   vibe: "local-casual",
 };
 
+
+type ConciergeFunction = {
+  id: "brief" | "compare" | "itinerary" | "qa";
+  label: string;
+  description: string;
+  buildPrompt: (placeLabel: string, profile: ConciergeProfile) => string;
+};
+
+const NOTEBOOK_FUNCTIONS: ConciergeFunction[] = [
+  {
+    id: "brief",
+    label: "Trip Brief",
+    description: "Summarize the best plan in one concise executive brief.",
+    buildPrompt: (placeLabel, profile) =>
+      `Create a concise executive brief for ${placeLabel} with ${profile.duration} timing and a ${profile.vibe} vibe. Include priorities, risks, and fallback options.`,
+  },
+  {
+    id: "compare",
+    label: "Compare Options",
+    description: "Contrast 3 strong route options with pros/cons.",
+    buildPrompt: (placeLabel, profile) =>
+      `Compare 3 route options around ${placeLabel} for a ${profile.duration} outing (${profile.vibe} vibe). Include pros, tradeoffs, and who each option is best for.`,
+  },
+  {
+    id: "itinerary",
+    label: "Build Itinerary",
+    description: "Generate a step-by-step, timestamped itinerary.",
+    buildPrompt: (placeLabel, profile) =>
+      `Generate a timestamped itinerary around ${placeLabel} for ${profile.duration} with a ${profile.vibe} vibe. Include start time, transfer windows, and optional add-ons.`,
+  },
+  {
+    id: "qa",
+    label: "Q&A Mode",
+    description: "Answer likely traveler questions before they are asked.",
+    buildPrompt: (placeLabel, profile) =>
+      `Provide the top traveler Q&A for ${placeLabel} in ${profile.duration}, ${profile.vibe} mode: timing, budget, crowding, weather, and transport.`,
+  },
+];
+
 function buildAssistantReply(
   prompt: string,
   selectedPlace?: UnifiedPlace | null,
@@ -178,6 +217,11 @@ export function ConciergePanel({
     setDraft("");
   };
 
+  const handleNotebookFunction = (tool: ConciergeFunction) => {
+    const placeLabel = selectedPlace?.title ?? "St. Thomas";
+    handleSubmit(tool.buildPrompt(placeLabel, profile));
+  };
+
   return (
     <div className="mx-auto flex h-[74vh] max-w-4xl flex-col overflow-hidden rounded-[40px] border border-slate-100 bg-white shadow-2xl">
       <div className="flex items-center gap-4 border-b border-sky-100 bg-gradient-to-r from-sky-50 via-cyan-50 to-blue-50 p-6">
@@ -209,6 +253,22 @@ export function ConciergePanel({
               type="button"
             >
               {prompt}
+            </button>
+          ))}
+        </div>
+
+        <div className="grid gap-2 md:grid-cols-2">
+          {NOTEBOOK_FUNCTIONS.map((tool) => (
+            <button
+              key={tool.id}
+              type="button"
+              onClick={() => handleNotebookFunction(tool)}
+              className="rounded-2xl bg-white px-3 py-2 text-left ring-1 ring-slate-200 transition hover:ring-sky-300"
+            >
+              <div className="text-xs font-bold uppercase tracking-wider text-sky-700">
+                {tool.label}
+              </div>
+              <div className="text-xs text-slate-600">{tool.description}</div>
             </button>
           ))}
         </div>
