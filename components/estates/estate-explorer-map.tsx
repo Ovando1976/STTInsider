@@ -58,9 +58,11 @@ type Props = {
 
 const MAP_SOURCE_ID = "estates";
 const MAP_FILL_LAYER_ID = "estate-fills";
+const MAP_FILL_EXTRUSION_LAYER_ID = "estate-fills-extrusion";
 const MAP_LINE_LAYER_ID = "estate-lines";
 const MAP_SELECTED_LINE_LAYER_ID = "estate-selected-line";
 const MAP_SELECTED_FILL_LAYER_ID = "estate-selected-fill";
+const MAP_TERRAIN_SOURCE_ID = "mapbox-dem";
 
 const ISLAND_VIEWS: Record<
   IslandCode,
@@ -380,6 +382,16 @@ function buildLayerFilter(visibleIds: string[]): FilterSpecification {
   return ["in", ["get", "id"], ["literal", visibleIds]];
 }
 
+function buildEstateExtrusionHeightExpression(): mapboxgl.Expression {
+  return [
+    "+",
+    120,
+    ["*", ["mod", ["to-number", ["coalesce", ["get", "geoid"], "0"]], 11], 18],
+  ] as mapboxgl.Expression;
+}
+
+const ESTATE_EXTRUSION_HEIGHT_EXPRESSION = buildEstateExtrusionHeightExpression();
+
 function isTouchDevice() {
   if (typeof window === "undefined") return false;
   return "ontouchstart" in window || navigator.maxTouchPoints > 0;
@@ -399,6 +411,7 @@ export function EstateExplorerMap({ selectedIsland, onChangeIsland }: Props) {
   const [pickerValue, setPickerValue] = useState("");
   const [loadError, setLoadError] = useState<string | null>(null);
   const [mapReady, setMapReady] = useState(false);
+  const [viewMode, setViewMode] = useState<"2d" | "3d">("2d");
   const [rawEstateCollection, setRawEstateCollection] = useState<
     GeoJSON.FeatureCollection | null
   >(() => estatesGeoJson as GeoJSON.FeatureCollection);
@@ -853,6 +866,21 @@ export function EstateExplorerMap({ selectedIsland, onChangeIsland }: Props) {
       });
 
       map.addLayer({
+        id: MAP_FILL_EXTRUSION_LAYER_ID,
+        type: "fill-extrusion",
+        source: MAP_SOURCE_ID,
+        layout: {
+          visibility: "none",
+        },
+        paint: {
+          "fill-extrusion-color": QUARTER_COLOR_EXPRESSION,
+          "fill-extrusion-height": ESTATE_EXTRUSION_HEIGHT_EXPRESSION,
+          "fill-extrusion-base": 0,
+          "fill-extrusion-opacity": 0.82,
+        },
+      });
+
+      map.addLayer({
         id: MAP_LINE_LAYER_ID,
         type: "line",
         source: MAP_SOURCE_ID,
@@ -866,6 +894,13 @@ export function EstateExplorerMap({ selectedIsland, onChangeIsland }: Props) {
           ],
           "line-opacity": 0.92,
         },
+      });
+
+      map.addSource(MAP_TERRAIN_SOURCE_ID, {
+        type: "raster-dem",
+        url: "mapbox://mapbox.mapbox-terrain-dem-v1",
+        tileSize: 512,
+        maxzoom: 14,
       });
 
       map.addLayer({
@@ -974,6 +1009,47 @@ export function EstateExplorerMap({ selectedIsland, onChangeIsland }: Props) {
   }, [mapReady, syncLayerFilter]);
 
   useEffect(() => {
+    const map = mapRef.current;
+    if (!map || !mapReady) return;
+
+    const is3d = viewMode === "3d";
+
+    if (map.getLayer(MAP_FILL_LAYER_ID)) {
+      map.setLayoutProperty(
+        MAP_FILL_LAYER_ID,
+        "visibility",
+        is3d ? "none" : "visible"
+      );
+    }
+
+    if (map.getLayer(MAP_FILL_EXTRUSION_LAYER_ID)) {
+      map.setLayoutProperty(
+        MAP_FILL_EXTRUSION_LAYER_ID,
+        "visibility",
+        is3d ? "visible" : "none"
+      );
+      map.setFilter(MAP_FILL_EXTRUSION_LAYER_ID, buildLayerFilter(visibleEstateIds));
+    }
+
+    if (is3d) {
+      map.setTerrain({ source: MAP_TERRAIN_SOURCE_ID, exaggeration: 1.18 });
+      map.easeTo({
+        pitch: 56,
+        bearing: -18,
+        duration: 700,
+      });
+      return;
+    }
+
+    map.setTerrain(null);
+    map.easeTo({
+      pitch: 0,
+      bearing: 0,
+      duration: 600,
+    });
+  }, [mapReady, viewMode, visibleEstateIds]);
+
+  useEffect(() => {
     fitVisibleEstates();
   }, [fitVisibleEstates]);
 
@@ -1080,6 +1156,23 @@ export function EstateExplorerMap({ selectedIsland, onChangeIsland }: Props) {
               }`}
             >
               {label}
+            </button>
+          ))}
+        </div>
+
+        <div className="mt-3 flex gap-2">
+          {(["2d", "3d"] as const).map((mode) => (
+            <button
+              key={mode}
+              type="button"
+              onClick={() => setViewMode(mode)}
+              className={`rounded-full px-4 py-2 text-[11px] font-black uppercase tracking-[0.16em] transition ${
+                viewMode === mode
+                  ? "bg-slate-900 text-white shadow-[0_8px_24px_rgba(15,23,42,0.25)]"
+                  : "border border-slate-200 bg-white text-slate-700 hover:border-slate-300"
+              }`}
+            >
+              {mode === "2d" ? "2D map" : "3D terrain"}
             </button>
           ))}
         </div>
