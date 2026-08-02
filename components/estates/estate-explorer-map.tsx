@@ -419,7 +419,6 @@ export function EstateExplorerMap({ selectedIsland, onChangeIsland }: Props) {
   const [pickerValue, setPickerValue] = useState("");
   const [loadError, setLoadError] = useState<string | null>(null);
   const [mapReady, setMapReady] = useState(false);
-  const [viewMode, setViewMode] = useState<"2d" | "3d">("2d");
   const [rawEstateCollection, setRawEstateCollection] = useState<
     GeoJSON.FeatureCollection | null
   >(() => estatesGeoJson as GeoJSON.FeatureCollection);
@@ -453,14 +452,8 @@ export function EstateExplorerMap({ selectedIsland, onChangeIsland }: Props) {
 
             const geoid = String(props.geoid ?? "").trim();
             const id = String(props.id ?? "").trim();
-            const island = String(props.island ?? "").trim().toLowerCase();
-            const baseName = String(
-              props.baseName ?? props.basename ?? props.name ?? ""
-            )
-              .trim()
-              .toLowerCase();
 
-            return geoid || id || `${island}:${baseName}` || `feature-${index}`;
+            return geoid || id || `feature-${index}`;
           };
 
           const liveKeys = new Set(
