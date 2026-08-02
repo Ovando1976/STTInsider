@@ -6,6 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "test": "npm run lint && npm run typecheck",
     "fetch:usvi-estates": "tsx scripts/fetch-usvi-estates.ts",
     "seed:usvi-estates": "tsx scripts/seed-usvi-estates-firestore.ts",
     "lint": "next lint"

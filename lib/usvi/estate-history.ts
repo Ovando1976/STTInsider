@@ -353,7 +353,7 @@ const ESTATE_QUARTER_OVERRIDES_BY_KEY: Record<string, string> = {
   "stx:vi corporation land": "Company Quarter",
 };
 
-const RAW_ESTATE_HISTORY: EstateHistoryRecord[] = [
+const RAW_ESTATE_HISTORY_SEED: EstateHistoryRecord[] = [
   {
     slug: "adelphi-stt",
     geoid: "7803000030",
@@ -3687,7 +3687,84 @@ const RAW_ESTATE_HISTORY: EstateHistoryRecord[] = [
   },
 ];
 
-export const ESTATE_HISTORY = buildEstateHistory(RAW_ESTATE_HISTORY);
+function organizeRawEstateHistory(
+  seedRecords: EstateHistoryRecord[]
+): EstateHistoryRecord[] {
+  const deduped = dedupeRawEstateHistory(seedRecords);
+  const covered = new Set<string>();
+
+  for (const record of deduped) {
+    covered.add(`${record.island}:${normalizeEstateKey(record.baseName)}`);
+    for (const alias of record.aliases ?? []) {
+      covered.add(`${record.island}:${normalizeEstateKey(alias)}`);
+    }
+  }
+
+  const generatedMissing: EstateHistoryRecord[] = [];
+
+  for (const { island, name, quarter } of getAllQuarterEstateKeys()) {
+    const normalizedName = normalizeEstateKey(name);
+    const key = `${island}:${normalizedName}`;
+    if (covered.has(key)) continue;
+
+    const baseName = titleizeEstateName(name);
+
+    generatedMissing.push({
+      slug: `${normalizedName.replace(/\s+/g, "-")}-${island}-registry`,
+      baseName,
+      fullName: `Estate ${baseName}`,
+      island,
+      quarter,
+      aliases: [name],
+      historicalSummary:
+        "This estate is present in the quarter registry and has been added to complete the historical list.",
+      topographicNotes:
+        "Auto-generated from quarter registry coverage to ensure full estate indexing.",
+      sources: ["Quarter registry"],
+    });
+
+    covered.add(key);
+  }
+
+  return dedupeRawEstateHistory([...deduped, ...generatedMissing]);
+}
+
+const RAW_ESTATE_HISTORY = organizeRawEstateHistory(RAW_ESTATE_HISTORY_SEED);
+
+function titleizeEstateName(value: string) {
+  return value
+    .split(/\s+/)
+    .filter(Boolean)
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1).toLowerCase())
+    .join(" ");
+}
+
+function collapseEstateNameDuplicates(
+  records: EstateHistoryRecord[]
+): EstateHistoryRecord[] {
+  const merged = new Map<string, EstateHistoryRecord>();
+
+  for (const record of records) {
+    const key = `${record.island}:${normalizeEstateKey(record.baseName)}`;
+    const existing = merged.get(key);
+
+    if (!existing) {
+      merged.set(key, record);
+      continue;
+    }
+
+    merged.set(key, mergeDuplicateRawRecords(existing, record));
+  }
+
+  return Array.from(merged.values()).sort((a, b) => {
+    if (a.island !== b.island) return a.island.localeCompare(b.island);
+    return a.baseName.localeCompare(b.baseName);
+  });
+}
+
+export const ESTATE_HISTORY = collapseEstateNameDuplicates(
+  buildEstateHistory(RAW_ESTATE_HISTORY)
+);
 
 export function findEstateHistory(
   baseName: string,
@@ -3835,7 +3912,7 @@ export function listMissingEstateRecords() {
 export function listDuplicateEstateRecords() {
   const seen = new Map<string, EstateHistoryRecord[]>();
 
-  for (const record of RAW_ESTATE_HISTORY) {
+  for (const record of ESTATE_HISTORY) {
     const key = `${record.island}:${normalizeEstateKey(record.baseName)}`;
     const group = seen.get(key) ?? [];
     group.push(record);
@@ -3855,7 +3932,10 @@ export function listDuplicateEstateRecords() {
     }));
 }
 
-if (process.env.NODE_ENV === "development") {
+if (
+  process.env.NODE_ENV === "development" &&
+  process.env.NEXT_PUBLIC_DEBUG_ESTATE_HISTORY === "true"
+) {
   console.log("=== DUPLICATES IN RAW_ESTATE_HISTORY ===");
   console.log(listDuplicateEstateRecords());
 

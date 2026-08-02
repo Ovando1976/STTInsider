@@ -36,6 +36,7 @@ type EstateFeatureProperties = {
   centroid: { lat: number | null; lng: number | null };
   internalPoint: { lat: number | null; lng: number | null };
   aliases?: string[];
+  searchTokens: string;
 };
 
 type EstateFeature = GeoJSON.Feature<
@@ -57,9 +58,19 @@ type Props = {
 
 const MAP_SOURCE_ID = "estates";
 const MAP_FILL_LAYER_ID = "estate-fills";
+const MAP_FILL_EXTRUSION_LAYER_ID = "estate-fills-extrusion";
 const MAP_LINE_LAYER_ID = "estate-lines";
 const MAP_SELECTED_LINE_LAYER_ID = "estate-selected-line";
 const MAP_SELECTED_FILL_LAYER_ID = "estate-selected-fill";
+const MAP_SELECTED_EXTRUSION_LAYER_ID = "estate-selected-extrusion";
+const MAP_TERRAIN_SOURCE_ID = "mapbox-dem";
+const MAP_INTERACTIVE_LAYER_IDS = [
+  MAP_FILL_LAYER_ID,
+  MAP_FILL_EXTRUSION_LAYER_ID,
+] as const;
+const DEBUG_ESTATE_MAP =
+  process.env.NODE_ENV === "development" &&
+  process.env.NEXT_PUBLIC_DEBUG_ESTATE_MAP === "true";
 
 const ISLAND_VIEWS: Record<
   IslandCode,
@@ -99,6 +110,7 @@ const QUARTER_COLORS: Record<string, string> = {
   "Maho Quarter": "#84CC16",
   "Reef Bay Quarter": "#F97316",
   "Coral Bay Quarter": "#EF4444",
+  Unknown: "#64748B",
 };
 
 const ESTATE_QUARTER_OVERRIDES_BY_GEOID: Record<string, string> = {
@@ -136,53 +148,50 @@ function resolveQuarterWithOverrides(args: {
   );
 }
 
+const MAP_ISLAND_ALIASES: Record<string, MapIslandValue> = {
+  all: "all",
+  "all islands": "all",
+  "all-islands": "all",
+  stt: "stt",
+  "st. thomas": "stt",
+  "st thomas": "stt",
+  "saint thomas": "stt",
+  stj: "stj",
+  "st. john": "stj",
+  "st john": "stj",
+  "saint john": "stj",
+  stx: "stx",
+  "st. croix": "stx",
+  "st croix": "stx",
+  "saint croix": "stx",
+};
+
+const RAW_ISLAND_ALIASES: Record<string, IslandCode> = {
+  stt: "stt",
+  "st. thomas": "stt",
+  "st thomas": "stt",
+  "saint thomas": "stt",
+  st_thomas: "stt",
+  stj: "stj",
+  "st. john": "stj",
+  "st john": "stj",
+  "saint john": "stj",
+  st_john: "stj",
+  stx: "stx",
+  "st. croix": "stx",
+  "st croix": "stx",
+  "saint croix": "stx",
+  st_croix: "stx",
+};
+
 function normalizeIslandCode(value: unknown): MapIslandValue {
-  if (
-    value === "all" ||
-    value === "stt" ||
-    value === "stj" ||
-    value === "stx"
-  ) {
+  if (value === "all" || value === "stt" || value === "stj" || value === "stx") {
     return value;
   }
 
   if (typeof value === "string") {
     const normalized = value.trim().toLowerCase();
-
-    if (
-      normalized === "all" ||
-      normalized === "all islands" ||
-      normalized === "all-islands"
-    ) {
-      return "all";
-    }
-
-    if (
-      normalized === "stt" ||
-      normalized === "st. thomas" ||
-      normalized === "st thomas" ||
-      normalized === "saint thomas"
-    ) {
-      return "stt";
-    }
-
-    if (
-      normalized === "stj" ||
-      normalized === "st. john" ||
-      normalized === "st john" ||
-      normalized === "saint john"
-    ) {
-      return "stj";
-    }
-
-    if (
-      normalized === "stx" ||
-      normalized === "st. croix" ||
-      normalized === "st croix" ||
-      normalized === "saint croix"
-    ) {
-      return "stx";
-    }
+    return MAP_ISLAND_ALIASES[normalized] ?? "all";
   }
 
   return "all";
@@ -192,38 +201,7 @@ function normalizeRawIsland(value: unknown): IslandCode | null {
   if (typeof value !== "string") return null;
 
   const normalized = value.trim().toLowerCase();
-
-  if (
-    normalized === "stt" ||
-    normalized === "st. thomas" ||
-    normalized === "st thomas" ||
-    normalized === "saint thomas" ||
-    normalized === "st_thomas"
-  ) {
-    return "stt";
-  }
-
-  if (
-    normalized === "stj" ||
-    normalized === "st. john" ||
-    normalized === "st john" ||
-    normalized === "saint john" ||
-    normalized === "st_john"
-  ) {
-    return "stj";
-  }
-
-  if (
-    normalized === "stx" ||
-    normalized === "st. croix" ||
-    normalized === "st croix" ||
-    normalized === "saint croix" ||
-    normalized === "st_croix"
-  ) {
-    return "stx";
-  }
-
-  return null;
+  return RAW_ISLAND_ALIASES[normalized] ?? null;
 }
 
 function normalizeEstateKey(value: string) {
@@ -238,6 +216,44 @@ function normalizeEstateKey(value: string) {
 
 function compactEstateKey(value: string) {
   return normalizeEstateKey(value).replace(/\s+/g, "");
+}
+
+const DIRECTIONAL_AND_MODIFIER_REGEX = /\b(north|south|east|west|northwest|northeast|southwest|southeast|northside|southside|eastend|westend|upper|lower|great|little)\b/gi;
+const ESTATE_WORD_REGEX = /(^|\s)(estate|est\.?)(?=\s|$)/gi;
+const RESOLVE_CANDIDATE_CACHE = new Map<string, string[]>();
+
+function normalizeEstateNameVariant(value: string) {
+  return value.replace(ESTATE_WORD_REGEX, " ").replace(/\s+/g, " ").trim();
+}
+
+function buildQuarterCandidates(baseName: string, fullName: string, aliases?: string[]) {
+  const cacheKey = `${baseName}__${fullName}__${(aliases ?? []).join("|")}`;
+  const cached = RESOLVE_CANDIDATE_CACHE.get(cacheKey);
+  if (cached) {
+    return cached;
+  }
+
+  const normalizedBase = normalizeEstateNameVariant(baseName);
+  const normalizedFull = normalizeEstateNameVariant(fullName);
+
+  const candidates = [
+    baseName,
+    fullName,
+    ...(aliases ?? []),
+    normalizedBase,
+    normalizedFull,
+    normalizedBase.replace(DIRECTIONAL_AND_MODIFIER_REGEX, "").trim(),
+    normalizedFull.replace(DIRECTIONAL_AND_MODIFIER_REGEX, "").trim(),
+    normalizedBase.replace(/\band\b/gi, "&"),
+    normalizedFull.replace(/\band\b/gi, "&"),
+    normalizedBase.replace(/&/g, "and"),
+    normalizedFull.replace(/&/g, "and"),
+  ]
+    .map((value) => String(value ?? "").trim())
+    .filter(Boolean);
+
+  RESOLVE_CANDIDATE_CACHE.set(cacheKey, candidates);
+  return candidates;
 }
 
 function isEstateFeatureCandidate(
@@ -293,22 +309,7 @@ function resolveQuarter(
   aliases?: string[]
 ) {
   const lookup = QUARTER_LOOKUPS[island];
-
-  const candidates = [
-    baseName,
-    fullName,
-    ...(aliases ?? []),
-    baseName.replace(/^estate\s+/i, ""),
-    fullName.replace(/^estate\s+/i, ""),
-    baseName.replace(/\b(north|south|east|west)\b/gi, "").trim(),
-    fullName.replace(/\b(north|south|east|west)\b/gi, "").trim(),
-    baseName.replace(/\band\b/gi, "&"),
-    fullName.replace(/\band\b/gi, "&"),
-    baseName.replace(/&/g, "and"),
-    fullName.replace(/&/g, "and"),
-  ]
-    .map((value) => String(value ?? "").trim())
-    .filter(Boolean);
+  const candidates = buildQuarterCandidates(baseName, fullName, aliases);
 
   for (const candidate of candidates) {
     const normalized = normalizeEstateKey(candidate);
@@ -334,7 +335,7 @@ function buildQuarterColorExpression(): mapboxgl.Expression {
     expression.push(quarter, color);
   }
 
-  expression.push("#CBD5E1");
+  expression.push(QUARTER_COLORS.Unknown);
   return expression as mapboxgl.Expression;
 }
 
@@ -388,6 +389,16 @@ function buildLayerFilter(visibleIds: string[]): FilterSpecification {
 
   return ["in", ["get", "id"], ["literal", visibleIds]];
 }
+
+function buildEstateExtrusionHeightExpression(): mapboxgl.Expression {
+  return [
+    "+",
+    120,
+    ["*", ["mod", ["to-number", ["coalesce", ["get", "geoid"], "0"]], 11], 18],
+  ] as mapboxgl.Expression;
+}
+
+const ESTATE_EXTRUSION_HEIGHT_EXPRESSION = buildEstateExtrusionHeightExpression();
 
 function isTouchDevice() {
   if (typeof window === "undefined") return false;
@@ -480,7 +491,7 @@ export function EstateExplorerMap({ selectedIsland, onChangeIsland }: Props) {
         (feature) => !isEstateFeatureCandidate(feature)
       );
 
-      if (rejectedFeatures.length > 0) {
+      if (DEBUG_ESTATE_MAP && rejectedFeatures.length > 0) {
         console.log(
           "Rejected estate features:",
           rejectedFeatures.map((feature, index) => ({
@@ -573,15 +584,44 @@ export function EstateExplorerMap({ selectedIsland, onChangeIsland }: Props) {
                   toNullableNumber(centroid.lng),
               },
               aliases,
+              searchTokens: "",
             },
           };
         });
 
-      const unresolvedQuarterEstates = normalizedFeatures.filter(
+      const idUsage = new Map<string, number>();
+      const uniqueIdFeatures = normalizedFeatures.map((feature) => {
+        const baseId = feature.properties.id || feature.properties.geoid;
+        const seen = idUsage.get(baseId) ?? 0;
+        idUsage.set(baseId, seen + 1);
+
+        if (seen === 0) return feature;
+
+        const uniqueId = `${baseId}__${seen + 1}`;
+
+        return {
+          ...feature,
+          id: uniqueId,
+          properties: {
+            ...feature.properties,
+            id: uniqueId,
+          },
+        };
+      });
+
+      const enrichedFeatures = uniqueIdFeatures.map((feature) => ({
+        ...feature,
+        properties: {
+          ...feature.properties,
+          searchTokens: buildSearchTokens(feature),
+        },
+      }));
+
+      const unresolvedQuarterEstates = enrichedFeatures.filter(
         (feature) => !feature.properties.quarter
       );
 
-      if (unresolvedQuarterEstates.length > 0) {
+      if (DEBUG_ESTATE_MAP && unresolvedQuarterEstates.length > 0) {
         console.log(
           "Unresolved quarter estates:",
           unresolvedQuarterEstates.map((feature) => ({
@@ -596,7 +636,7 @@ export function EstateExplorerMap({ selectedIsland, onChangeIsland }: Props) {
       }
 
       const idCounts = new Map<string, number>();
-      for (const feature of normalizedFeatures) {
+      for (const feature of enrichedFeatures) {
         const nextId = feature.properties.id;
         idCounts.set(nextId, (idCounts.get(nextId) ?? 0) + 1);
       }
@@ -605,13 +645,13 @@ export function EstateExplorerMap({ selectedIsland, onChangeIsland }: Props) {
         .filter(([, count]) => count > 1)
         .map(([id, count]) => ({ id, count }));
 
-      if (duplicateIds.length > 0) {
+      if (DEBUG_ESTATE_MAP && duplicateIds.length > 0) {
         console.log("Duplicate estate ids:", duplicateIds);
       }
 
       return {
         type: "FeatureCollection",
-        features: normalizedFeatures,
+        features: enrichedFeatures,
       };
     } catch (error) {
       console.error("Failed to normalize estate GeoJSON:", error);
@@ -634,7 +674,7 @@ export function EstateExplorerMap({ selectedIsland, onChangeIsland }: Props) {
 
       if (!normalizedQuery) return true;
 
-      return buildSearchTokens(feature).includes(normalizedQuery);
+      return feature.properties.searchTokens.includes(normalizedQuery);
     });
   }, [estates, activeIsland, query]);
 
@@ -666,9 +706,18 @@ export function EstateExplorerMap({ selectedIsland, onChangeIsland }: Props) {
         .filter(Boolean) as string[]
     );
 
-    return Object.entries(QUARTER_COLORS).filter(([quarter]) =>
+    const entries = Object.entries(QUARTER_COLORS).filter(([quarter]) =>
       visibleQuarters.has(quarter)
     );
+    const hasUnknownQuarter = visibleEstates.some(
+      (feature) => !feature.properties.quarter
+    );
+
+    if (hasUnknownQuarter) {
+      entries.push(["Unknown", QUARTER_COLORS.Unknown]);
+    }
+
+    return entries;
   }, [visibleEstates]);
 
   const selectedHistory = selectedEstate
@@ -692,24 +741,37 @@ export function EstateExplorerMap({ selectedIsland, onChangeIsland }: Props) {
     const map = mapRef.current;
     if (!map || !map.getLayer(MAP_FILL_LAYER_ID)) return;
 
-    const filter = buildLayerFilter(visibleEstateIds);
+    const visibleFilter = buildLayerFilter(visibleEstateIds);
+    const selectedId = selectedEstate?.properties.id ?? "__none__";
 
-    map.setFilter(MAP_FILL_LAYER_ID, filter);
-    map.setFilter(MAP_LINE_LAYER_ID, filter);
+    map.setFilter(MAP_FILL_LAYER_ID, visibleFilter);
+    map.setFilter(MAP_LINE_LAYER_ID, visibleFilter);
+
+    if (map.getLayer(MAP_FILL_EXTRUSION_LAYER_ID)) {
+      map.setFilter(MAP_FILL_EXTRUSION_LAYER_ID, visibleFilter);
+    }
 
     if (map.getLayer(MAP_SELECTED_FILL_LAYER_ID)) {
       map.setFilter(MAP_SELECTED_FILL_LAYER_ID, [
         "all",
-        filter,
-        ["==", ["get", "id"], selectedEstate?.properties.id ?? "__none__"],
+        visibleFilter,
+        ["==", ["get", "id"], selectedId],
       ]);
     }
 
     if (map.getLayer(MAP_SELECTED_LINE_LAYER_ID)) {
       map.setFilter(MAP_SELECTED_LINE_LAYER_ID, [
         "all",
-        filter,
-        ["==", ["get", "id"], selectedEstate?.properties.id ?? "__none__"],
+        visibleFilter,
+        ["==", ["get", "id"], selectedId],
+      ]);
+    }
+
+    if (map.getLayer(MAP_SELECTED_EXTRUSION_LAYER_ID)) {
+      map.setFilter(MAP_SELECTED_EXTRUSION_LAYER_ID, [
+        "all",
+        visibleFilter,
+        ["==", ["get", "id"], selectedId],
       ]);
     }
   }, [visibleEstateIds, selectedEstate]);
@@ -811,9 +873,24 @@ export function EstateExplorerMap({ selectedIsland, onChangeIsland }: Props) {
           "fill-opacity": [
             "case",
             ["boolean", ["feature-state", "hover"], false],
-            0.42,
-            0.26,
+            0.48,
+            0.36,
           ],
+        },
+      });
+
+      map.addLayer({
+        id: MAP_FILL_EXTRUSION_LAYER_ID,
+        type: "fill-extrusion",
+        source: MAP_SOURCE_ID,
+        layout: {
+          visibility: "none",
+        },
+        paint: {
+          "fill-extrusion-color": QUARTER_COLOR_EXPRESSION,
+          "fill-extrusion-height": ESTATE_EXTRUSION_HEIGHT_EXPRESSION,
+          "fill-extrusion-base": 0,
+          "fill-extrusion-opacity": 0.82,
         },
       });
 
@@ -833,6 +910,13 @@ export function EstateExplorerMap({ selectedIsland, onChangeIsland }: Props) {
         },
       });
 
+      map.addSource(MAP_TERRAIN_SOURCE_ID, {
+        type: "raster-dem",
+        url: "mapbox://mapbox.mapbox-terrain-dem-v1",
+        tileSize: 512,
+        maxzoom: 14,
+      });
+
       map.addLayer({
         id: MAP_SELECTED_FILL_LAYER_ID,
         type: "fill",
@@ -841,6 +925,26 @@ export function EstateExplorerMap({ selectedIsland, onChangeIsland }: Props) {
         paint: {
           "fill-color": "#ffffff",
           "fill-opacity": 0.18,
+        },
+      });
+
+      map.addLayer({
+        id: MAP_SELECTED_EXTRUSION_LAYER_ID,
+        type: "fill-extrusion",
+        source: MAP_SOURCE_ID,
+        layout: {
+          visibility: "none",
+        },
+        filter: ["==", ["get", "id"], "__none__"],
+        paint: {
+          "fill-extrusion-color": "#ffffff",
+          "fill-extrusion-height": [
+            "+",
+            ESTATE_EXTRUSION_HEIGHT_EXPRESSION,
+            36,
+          ] as mapboxgl.Expression,
+          "fill-extrusion-base": 0,
+          "fill-extrusion-opacity": 0.28,
         },
       });
 
@@ -856,52 +960,69 @@ export function EstateExplorerMap({ selectedIsland, onChangeIsland }: Props) {
         },
       });
 
+      const clearHoverState = () => {
+        map.getCanvas().style.cursor = "";
+
+        const hoveredId = hoveredEstateIdRef.current;
+        if (hoveredId) {
+          map.setFeatureState(
+            { source: MAP_SOURCE_ID, id: hoveredId },
+            { hover: false }
+          );
+        }
+
+        hoveredEstateIdRef.current = null;
+      };
+
       if (!isTouchDevice()) {
-        map.on("mousemove", MAP_FILL_LAYER_ID, (event: MapLayerMouseEvent) => {
+        for (const layerId of MAP_INTERACTIVE_LAYER_IDS) {
+          map.on("mousemove", layerId, (event: MapLayerMouseEvent) => {
+            const feature = event.features?.[0] as unknown as
+              | EstateFeature
+              | undefined;
+            if (!feature?.properties?.id) return;
+
+            map.getCanvas().style.cursor = "pointer";
+
+            const previousId = hoveredEstateIdRef.current;
+            if (previousId && previousId !== feature.properties.id) {
+              map.setFeatureState(
+                { source: MAP_SOURCE_ID, id: previousId },
+                { hover: false }
+              );
+            }
+
+            hoveredEstateIdRef.current = feature.properties.id;
+
+            map.setFeatureState(
+              { source: MAP_SOURCE_ID, id: feature.properties.id },
+              { hover: true }
+            );
+          });
+
+          map.on("mouseleave", layerId, clearHoverState);
+        }
+      }
+
+      for (const layerId of MAP_INTERACTIVE_LAYER_IDS) {
+        map.on("click", layerId, (event: MapLayerMouseEvent) => {
           const feature = event.features?.[0] as unknown as
             | EstateFeature
             | undefined;
           if (!feature?.properties?.id) return;
-
-          map.getCanvas().style.cursor = "pointer";
-
-          const previousId = hoveredEstateIdRef.current;
-          if (previousId && previousId !== feature.properties.id) {
-            map.setFeatureState(
-              { source: MAP_SOURCE_ID, id: previousId },
-              { hover: false }
-            );
-          }
-
-          hoveredEstateIdRef.current = feature.properties.id;
-
-          map.setFeatureState(
-            { source: MAP_SOURCE_ID, id: feature.properties.id },
-            { hover: true }
-          );
-        });
-
-        map.on("mouseleave", MAP_FILL_LAYER_ID, () => {
-          map.getCanvas().style.cursor = "";
-
-          const hoveredId = hoveredEstateIdRef.current;
-          if (hoveredId) {
-            map.setFeatureState(
-              { source: MAP_SOURCE_ID, id: hoveredId },
-              { hover: false }
-            );
-          }
-
-          hoveredEstateIdRef.current = null;
+          focusEstate(feature);
         });
       }
 
-      map.on("click", MAP_FILL_LAYER_ID, (event: MapLayerMouseEvent) => {
-        const feature = event.features?.[0] as unknown as
-          | EstateFeature
-          | undefined;
-        if (!feature?.properties?.id) return;
-        focusEstate(feature);
+      map.on("click", (event) => {
+        const hitFeatures = map.queryRenderedFeatures(event.point, {
+          layers: [...MAP_INTERACTIVE_LAYER_IDS],
+        });
+
+        if (hitFeatures.length === 0) {
+          setSelectedEstate(null);
+          setPickerValue("");
+        }
       });
 
       mapRef.current = map;
@@ -939,32 +1060,64 @@ export function EstateExplorerMap({ selectedIsland, onChangeIsland }: Props) {
   }, [mapReady, syncLayerFilter]);
 
   useEffect(() => {
-    fitVisibleEstates();
-  }, [fitVisibleEstates]);
-
-  useEffect(() => {
     const map = mapRef.current;
     if (!map || !mapReady) return;
 
-    const selectedId = selectedEstate?.properties.id ?? "__none__";
-    const visibleFilter = buildLayerFilter(visibleEstateIds);
+    const is3d = viewMode === "3d";
+
+    if (map.getLayer(MAP_FILL_LAYER_ID)) {
+      map.setLayoutProperty(
+        MAP_FILL_LAYER_ID,
+        "visibility",
+        is3d ? "none" : "visible"
+      );
+    }
+
+    if (map.getLayer(MAP_FILL_EXTRUSION_LAYER_ID)) {
+      map.setLayoutProperty(
+        MAP_FILL_EXTRUSION_LAYER_ID,
+        "visibility",
+        is3d ? "visible" : "none"
+      );
+    }
 
     if (map.getLayer(MAP_SELECTED_FILL_LAYER_ID)) {
-      map.setFilter(MAP_SELECTED_FILL_LAYER_ID, [
-        "all",
-        visibleFilter,
-        ["==", ["get", "id"], selectedId],
-      ]);
+      map.setLayoutProperty(
+        MAP_SELECTED_FILL_LAYER_ID,
+        "visibility",
+        is3d ? "none" : "visible"
+      );
     }
 
-    if (map.getLayer(MAP_SELECTED_LINE_LAYER_ID)) {
-      map.setFilter(MAP_SELECTED_LINE_LAYER_ID, [
-        "all",
-        visibleFilter,
-        ["==", ["get", "id"], selectedId],
-      ]);
+    if (map.getLayer(MAP_SELECTED_EXTRUSION_LAYER_ID)) {
+      map.setLayoutProperty(
+        MAP_SELECTED_EXTRUSION_LAYER_ID,
+        "visibility",
+        is3d ? "visible" : "none"
+      );
     }
-  }, [selectedEstate, mapReady, visibleEstateIds]);
+
+    if (is3d) {
+      map.setTerrain({ source: MAP_TERRAIN_SOURCE_ID, exaggeration: 1.18 });
+      map.easeTo({
+        pitch: 56,
+        bearing: -18,
+        duration: 700,
+      });
+      return;
+    }
+
+    map.setTerrain(null);
+    map.easeTo({
+      pitch: 0,
+      bearing: 0,
+      duration: 600,
+    });
+  }, [mapReady, viewMode, visibleEstateIds, selectedEstate]);
+
+  useEffect(() => {
+    fitVisibleEstates();
+  }, [fitVisibleEstates]);
 
   useEffect(() => {
     if (selectedEstate?.properties?.id) {
@@ -976,6 +1129,19 @@ export function EstateExplorerMap({ selectedIsland, onChangeIsland }: Props) {
     setSelectedEstate(null);
     setPickerValue("");
   }, [activeIsland]);
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key !== "Escape") return;
+      setSelectedEstate(null);
+      setPickerValue("");
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
 
   useEffect(() => {
     if (!estates.features.length) {
@@ -1049,6 +1215,23 @@ export function EstateExplorerMap({ selectedIsland, onChangeIsland }: Props) {
           ))}
         </div>
 
+        <div className="mt-3 flex gap-2">
+          {(["2d", "3d"] as const).map((mode) => (
+            <button
+              key={mode}
+              type="button"
+              onClick={() => setViewMode(mode)}
+              className={`rounded-full px-4 py-2 text-[11px] font-black uppercase tracking-[0.16em] transition ${
+                viewMode === mode
+                  ? "bg-slate-900 text-white shadow-[0_8px_24px_rgba(15,23,42,0.25)]"
+                  : "border border-slate-200 bg-white text-slate-700 hover:border-slate-300"
+              }`}
+            >
+              {mode === "2d" ? "2D map" : "3D terrain"}
+            </button>
+          ))}
+        </div>
+
         <div className="mt-5 space-y-4">
           <FieldLabel label="Search estate" />
           <input
@@ -1097,6 +1280,18 @@ export function EstateExplorerMap({ selectedIsland, onChangeIsland }: Props) {
               </option>
             ))}
           </select>
+          {selectedEstate ? (
+            <button
+              type="button"
+              onClick={() => {
+                setSelectedEstate(null);
+                setPickerValue("");
+              }}
+              className="mt-2 text-xs font-semibold text-sky-700 hover:text-sky-900"
+            >
+              Clear selected estate
+            </button>
+          ) : null}
         </div>
 
         <div className="mt-5 rounded-[28px] border border-white/70 bg-white/85 p-4 shadow-[0_14px_40px_rgba(15,23,42,0.08)] backdrop-blur">
